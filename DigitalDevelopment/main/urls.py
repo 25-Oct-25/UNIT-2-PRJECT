@@ -9,5 +9,6 @@ urlpatterns = [
     path("future/", views.future_view, name="future_view"),
     path("impact/", views.impact_view, name="impact_view"),
     path("initiatives/", views.initiatives_view, name="initiatives_view"),
-    path("innovation/", views.innovation_view, name="innovation_view")
+    path("innovation/", views.innovation_view, name="innovation_view"),
+    path("extra/", views.extra_view, name="extra_view")
 ]

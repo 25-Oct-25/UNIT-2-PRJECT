@@ -32,3 +32,7 @@ def impact_view(request : HttpRequest):
 def fields_view(request : HttpRequest):
 
     return render( request, "main/fields.html")
+
+def extra_view(request : HttpRequest):
+
+    return render( request, "main/extra.html")

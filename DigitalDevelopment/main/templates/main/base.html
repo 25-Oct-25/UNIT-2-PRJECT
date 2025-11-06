@@ -4,10 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Phudu:wght@300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'images/logo-light.png' %}" type="image/x-icon">
     <title> {% block title %} {% endblock %} </title>
+    {% block styleDesign %} {% endblock %}
 </head>
+
 <body dir="rtl">
     <!--
         1- Header ( responsive navbar )
@@ -15,49 +20,51 @@
         3- Footer ( copyright / contact info / short links for other pages )
     -->
     <header>
+        <div class="logo">
+            <a href="/">
+                <img src="{% static 'images/logo-light-white.png' %}" alt="">
+            </a>
+        </div>
         <nav>
-            <ul>
+            <ul type="none">
                 <li>
-                    الرئيسية
+                    <a href="{% url 'main:home_view' %}">
+                         الرئيسية
+                    </a>
                 </li>
                 <li>
-                    تأثير التقنية
+                    <a href=" {% url 'main:impact_view' %} ">
+                        تأثير التقنية
+                    </a>
                 </li>
                 <li>
-                    المجالات التقنية
+                    <a href="{% url 'main:fields_view' %}">
+                        المجالات التقنية
+                    </a>
+                    
                 </li>
                 <li>
-                    المبادرات التقنية
+                    <a href="{% url 'main:initiatives_view' %}">
+                        المبادرات التقنية
+                    </a>
+                    
                 </li>
                 <li>
-                    التقنية و الإبتكار
+                    <a href="{% url 'main:innovation_view' %}">
+                        التقنية و الإبتكار
+                    </a>
+                    
                 </li>
                 <li>
-                    مستقبل التقنية
+                    <a href="{% url 'main:future_view' %}">
+                        مستقبل التقنية
+                    </a>
+                    
                 </li>
             </ul>
         </nav>
     </header>
-    <div class="colortest1">
-        <h1>
-            Nvey Blue : #000080
-        </h1>
-    </div>
-    <div class="colortest2">
-        <h1>
-            Green Emerald : #50C878
-        </h1>
-    </div>
-    <div class="colortest3">
-        <h1>
-            Cyan : #00FFFF
-        </h1>
-    </div>
-    <div class="colortest4">
-        <h1>
-            Teal : #008080
-        </h1>
-    </div>
+
     <main>
         {% block content %}
 
