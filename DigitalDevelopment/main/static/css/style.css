@@ -1,0 +1,45 @@
+/* --- colors ---*/
+/* ---
+
+المستقبل المشرق
+
+Nvey Blue : #000080
+Green Emerald : #50C878
+Cyan : #00FFFF
+Teal : #008080
+
+الحيوية الرقمية
+• األبيض / الرمادي الفاتح :كلون أساسي مهيمن) تصميم.(Minimalist
+• األسود أو الرمادي الداكن :للنصوص والعناوين الرئيسية.
+• األخضر النيون (Green Neon (أو األزرق الكهربائي :(Blue Electric (كلون "Accent "قوي لجذب
+االنتباه لألزرار والرسوم البيانية، يوحي بالطاقة الرقمية
+
+--- */
+
+.colortest1
+{
+    width: 100%;
+    height: 200px;
+    background-color: #000080;
+}
+
+.colortest2
+{
+    width: 100%;
+    height: 200px;
+    background-color: #50C878;
+}
+
+.colortest3
+{
+    width: 100%;
+    height: 200px;
+    background-color: #00FFFF;
+}
+
+.colortest4
+{
+    width: 100%;
+    height: 200px;
+    background-color: #008080;
+}

@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo-light.png' %}" type="image/x-icon">
+    <title> {% block title %} {% endblock %} </title>
+</head>
+<body dir="rtl">
+    <!--
+        1- Header ( responsive navbar )
+        2- Main background ( Light mood / Dark mood )
+        3- Footer ( copyright / contact info / short links for other pages )
+    -->
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    الرئيسية
+                </li>
+                <li>
+                    تأثير التقنية
+                </li>
+                <li>
+                    المجالات التقنية
+                </li>
+                <li>
+                    المبادرات التقنية
+                </li>
+                <li>
+                    التقنية و الإبتكار
+                </li>
+                <li>
+                    مستقبل التقنية
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="colortest1">
+        <h1>
+            Nvey Blue : #000080
+        </h1>
+    </div>
+    <div class="colortest2">
+        <h1>
+            Green Emerald : #50C878
+        </h1>
+    </div>
+    <div class="colortest3">
+        <h1>
+            Cyan : #00FFFF
+        </h1>
+    </div>
+    <div class="colortest4">
+        <h1>
+            Teal : #008080
+        </h1>
+    </div>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+</body>
+</html>
