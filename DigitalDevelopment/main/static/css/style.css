@@ -30,6 +30,8 @@ Teal : #008080
 
 header
 {
+    top: 0;
+    z-index: 2;
     position: fixed;
     width: 100%;
     height: 120px;
@@ -93,9 +95,29 @@ header nav ul li
 
 header nav ul li a
 {
+
     color: #000080;
+    font-size: 1rem;
     text-decoration: none;
     background-color: #50C878;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header nav ul li a:hover
+{
+    color: #00FFFF;
+    background-color: #000080;
+}
+
+.menu-toggle
+{
+    display: none;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #5dade2;
 }
 
 main
@@ -130,4 +152,79 @@ main
     width: 100%;
     height: 200px;
     background-color: #008080;
+}
+
+/* -- Making Responsive navbar -- */
+/* -- @media 768 phone screen size -- */
+@media (max-width: 768px)
+{
+    header .logo 
+    {
+        display: none;
+    }
+    header .navbar
+    {
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-radius: 0px;
+    }
+    .nav-links
+    {
+        border-radius: 10px;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        left: 0;
+        background-color: #50C878;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.01);
+        padding: 10px 0;
+        
+    }
+    .nav-links li 
+    {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-links a
+    {
+        height: 40px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-links a:hover
+    {
+        color: #00FFFF;
+        background-color: #000080;
+    }
+
+    .menu-toggle
+    {
+        display: block;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 1;
+        color: #000080;
+    }
+
+    .nav-links li
+    {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-links.active
+    {
+        display: flex;
+    }
+
 }
