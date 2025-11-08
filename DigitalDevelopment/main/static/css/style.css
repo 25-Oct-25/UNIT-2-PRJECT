@@ -19,13 +19,12 @@ Teal : #008080
 *
 {
     padding: 0;
-    margin: 0;
-    background-color: #F5F5F5;
+    margin: 0; 
+}
 
-    font-family: "Phudu", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
+body
+{
+    background-color: #F5F5F5;
 }
 
 header
@@ -123,37 +122,160 @@ header nav ul li a:hover
 main
 {
     width: 100%;
-    height: 150vh;
 }
-
-.colortest1
+/* --- Design Home Page --- */
+.home-section-one
 {
     width: 100%;
-    height: 200px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/static/images/bg-light.png');
+    }
+
+.home-section-one .intro-title
+{
+    width: 700px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 128, 0.1) 0px 10px 50px;
+}
+
+.home-section-one h1
+{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.home-section-one .intro-title 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.home-section-one .intro-title h2
+{
+    font-weight: bolder;
+    text-align: center;
+}
+
+.home-section-one .intro-title p
+{
+    padding: 30px;
+    text-align: center;
+}
+
+.home-section-one .btn
+{
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #F5F5F5;
+    text-decoration: none;
+    border-radius: 30px;
     background-color: #000080;
 }
 
-.colortest2
+.home-section-one .btn:hover
 {
-    width: 100%;
-    height: 200px;
+    color: #000080;
     background-color: #50C878;
 }
 
-.colortest3
+.home-section-two
 {
     width: 100%;
-    height: 200px;
-    background-color: #00FFFF;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.colortest4
+.home-section-two h1
+{
+    color: #50C878;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.home-section-two .section-two-content
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.home-section-two .section-two-content .card
+{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: rgba(80, 200, 120, 0.1) 0px 10px 50px;
+}
+
+.home-section-two .section-two-content .card h2
+{
+    color: #000080;
+}
+
+.home-section-two .btn
+{
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #000080;
+    text-decoration: none;
+    border-radius: 30px;
+    background-color: #50C878;
+}
+
+.home-section-two .btn:hover
+{
+    color: #F5F5F5;
+    background-color: #000080;
+}
+
+.home-section-three
 {
     width: 100%;
-    height: 200px;
-    background-color: #008080;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
+.home-section-three .section-three-content
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.home-section-three .section-three-content .card
+{
+    width: 300px;
+    height: 200px;
+    
+}
 /* -- Making Responsive navbar -- */
 /* -- @media 768 phone screen size -- */
 @media (max-width: 768px)
