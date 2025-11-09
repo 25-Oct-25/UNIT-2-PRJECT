@@ -101,6 +101,7 @@ header nav ul li a
     text-decoration: none;
     background-color: #50C878;
     padding: 10px;
+    font-size: large;
     border-radius: 10px;
 }
 
@@ -125,6 +126,14 @@ main
     width: 100%;
 }
 /* --- Design Home Page --- */
+.home-header
+{
+    width: 100%;
+    height: 123vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/static/images/bg-light.png');
+}
 .home-section-one
 {
     width: 100%;
@@ -134,12 +143,7 @@ main
     justify-content: center;
     flex-direction: column;
     gap: 30px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-    background-image: url('/static/images/bg-home-page-1.png.png');
-    }
+}
 
 .home-section-one h1
 {
@@ -148,15 +152,13 @@ main
 }
 .home-section-one .intro-title
 {
-    
-    width: 700px;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 128, 0.1) 0px 10px 50px;
+    width: 100%;
+    gap: 15px;
 }
 
 .home-section-one h1
@@ -164,14 +166,6 @@ main
     font-family:'Courier New', Courier, monospace;
 }
 
-.home-section-one .intro-title 
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-}
 .home-section-one .intro-title h2
 {
     font-weight: bolder;
@@ -180,8 +174,9 @@ main
 
 .home-section-one .intro-title p
 {
-    padding: 30px;
+    padding: 20px;
     text-align: center;
+    font-size: x-large;
 }
 
 .home-section-one .btn
@@ -192,6 +187,7 @@ main
     color: #F5F5F5;
     text-decoration: none;
     border-radius: 30px;
+    font-size: large;
     background-color: #000080;
 }
 
@@ -200,16 +196,26 @@ main
     color: #000080;
     background-color: #50C878;
 }
-
+/*
+.part-content-bg
+{
+    width: 100%;
+    height: 55vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/static/images/bg-blue-light-content-flip-1.png');      
+}
+*/
 .home-section-two
 {
     width: 100%;
-    height: 100vh;
+    height: 131vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 50px;
+    background-image: url('/static/images/bg-blue-green-content.png');
+    gap: 40px;
 }
 
 .home-section-two h1
@@ -236,6 +242,7 @@ main
     justify-content: center;
     flex-direction: column;
     border-radius: 30px;
+    background-color: #F5F5F5;
     box-shadow: rgba(80, 200, 120, 0.1) 0px 10px 50px;
 }
 
@@ -263,23 +270,21 @@ main
 
 .home-section-three
 {
-    gap: 50px;
+    gap: 100px;
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /*
-    background-image: url('/static/images/bg-content-ligth.png');
     background-size: cover;
     background-repeat: no-repeat;
-    */
+    
 }
 
 .home-section-three h1
 {
-    color: #000080;
+    color: #50C878;
     font-family:'Courier New', Courier, monospace;
 }
 
@@ -308,47 +313,6 @@ main
     color: rgb(212, 110, 255);
 }
 
-/* -- Design Tech In Saudi Page -- */
-
-.tech-page
-{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.tech-page .tech-page-header
-{
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    margin-top: 80px;
-    align-items:center;
-    justify-content: right;
-    background-repeat: no-repeat;
-    background-image: url('/static/images/bg-content.png');
-}
-
-.tech-page .tech-page-header p
-{
-    width: 590px;
-    height: 250px;
-    padding: 30px;
-    color: #000080;
-    font-size: xx-large;
-    margin-top: 15px;
-    margin-right: 100px;
-}
-
-.tech-page .tech-page-content
-{
-    width: 100%;
-    height: 120vh;
-    background-repeat: no-repeat;
-    background-image: url('/static/images/bg-blue-green-content.png');
-}
 
 /* -- Making Responsive navbar -- */
 /* -- @media 768 phone screen size -- */

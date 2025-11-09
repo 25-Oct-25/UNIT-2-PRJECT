@@ -5,30 +5,25 @@
 
 <!-- Page Style -->
  {% block styleDesign %} 
- <style>
-    main
-    {
-      /*
-        background-image: url('/static/images/kafd-it-dark.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        */
-    }
 
- </style>
 
  {% endblock %}
 
 <!-- Page Content -->
 {% block content %} 
+   <section class="home-header">
+
+   </section>
    <section class="home-section-one">
       <h1>
          التقنية في عالمنا
       </h1>
       <div class="intro-title">
-         <h2>
-            ما هي التقنية ؟!!
-         </h2>
+         <!--
+            <h2>
+               ما هي التقنية ؟!!
+            </h2>         
+         -->
          <p>
             التقنية هي أكثر من مجرد أجهزة و هواتف ذكية! <br>
             إنها المحرك الأساسي الذي يعيد تشكيل عالمنا اليوم. هي تطبيق المعرفة العلمية لحل المشكلات العملية بدءًا من التواصل الفوري 
@@ -39,7 +34,6 @@
       </div>   
       <a href="{% url 'main:techInSaudi_view' %}" class="btn"> التقنية في السعودية </a>
    </section>
-
    <section class="home-section-two">
       <h1>
          تأثير التقنية على محاور التنمية
@@ -61,7 +55,7 @@
             </h2>
          </div>
       </div>
-      <a href="" class="btn"> المزيد </a>
+      <a href="{% url 'main:impact_view' %}" class="btn"> المزيد </a>
    </section>
 
    <section class="home-section-three">
