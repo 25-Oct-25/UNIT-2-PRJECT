@@ -25,22 +25,6 @@ Teal : #008080
     font-style: normal;
 }
 
-/* -- Font Family Style 
-.beiruti-<uniquifier> {
-  font-family: "Beiruti", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-.noto-kufi-arabic-<uniquifier> {
-  font-family: "Noto Kufi Arabic", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
---*/
 body
 {
     background-color: #F5F5F5;
@@ -302,10 +286,20 @@ main
     font-weight: bolder;
 }
 
-.home-section-three .section-three-content
+.fields
 {
     display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    /* --
+    background: linear-gradient(45deg , #00bc44, #ffeb3b);
+    -- */
+}
+
+.fields-container
+{
     position: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -313,7 +307,7 @@ main
     padding: 100px 50px;
 }
 
-.home-section-three .section-three-content .card
+.fields-container .fields-card
 {
     position: relative;
     width: 350px;
@@ -321,28 +315,37 @@ main
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background: #F5F5F5;
+    background: #fff;
     border-radius: 20px;
-
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
     transition: 0.5s;
 }
 
-.home-section-three .section-three-content .card:hover
+.fields-container .fields-card:hover
 {
     height: 400px;
-    box-shadow: #00ffffa3 0px 10px 50px;
 }
 
-.home-section-three .section-three-content .card .img-box
+.fields-container .fields-card .imgBx
+{
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5;
+}
+
+.fields-container .fields-card:hover .imgBx
 {
     top: -100px;
     scale: 0.75;
-    background-color: #000080;
-    box-shadow: rgba(0, 0, 128, 0.547) 0px 10px 50px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
 }
 
-.home-section-three .section-three-content .card .img-box img
+.fields-container .fields-card:hover .imgBx img
 {
     position: absolute;
     top: 0;
@@ -352,7 +355,7 @@ main
     object-fit: cover;
 }
 
-.home-section-three .section-three-content .card .card-content
+.fields-container .fields-card .fields-content
 {
     position: absolute;
     top: 252px;
@@ -364,26 +367,26 @@ main
     transition: 0.5s;
 }
 
-.home-section-three .section-three-content .card:hover .card-content
+.fields-container .fields-card:hover .fields-content
 {
     top: 130px;
     height: 250px;
 }
 
-.home-section-three .section-three-content .card .card-content h2
+.fields-container .fields-card .fields-content h2
 {
     font-size: 1.5em;
     font-weight: 700;
     color: var(--clr);
 }
 
-.home-section-three .section-three-content .card .card-content p
+.fields-container .fields-card .fields-content p
 {
-    padding: 20px;
     color: #333;
+    padding: 30px;
 }
 
-.home-section-three .section-three-content .card .card-content a
+.fields-container .fields-card .fields-content a
 {
     position: relative;
     top: 15px;
@@ -394,6 +397,13 @@ main
     font-weight: 500;
     text-decoration: none;
     border-radius: 8px;
+}
+
+.fields-container .fields-card .fields-content a:hover
+{
+    color: var(--clr);
+    background-color: #F5F5F5;
+    box-shadow: var(--clr) 0px 3px 8px;
 }
 
 footer

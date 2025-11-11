@@ -1,5 +1,5 @@
 {% extends 'main/base.html' %}
-
+{% load static %}
 
 <!-- Page Title -->
 {% block title %} تنمية رقمية \ التقنية في السعودية {% endblock %}
@@ -30,7 +30,7 @@
       </div>   
       <a href="{% url 'main:techInSaudi_view' %}" class="btn"> التقنية في السعودية </a>
    </section>
-   <section class="home-section-two">
+   <section class="home-section-two" id="impact" >
       <h1>
          تأثير التقنية على محاور التنمية
       </h1>
@@ -59,12 +59,72 @@
 
       </div>
    </section>
-   <div class="section-title">
+   <div class="section-title" id="tech">
       <h1>
          مجالات تطور التقنية في المملكة
       </h1>      
    </div>
-   <section class="home-section-three">
+  <div class="fields">
+    <div class="fields-container">
+        <div class="fields-card" style="--clr:#000080">
+            <div class="imgBx">
+                <img src="{% static 'images/leap-logo.jpg' %}" alt="">
+            </div>
+            <div class="fields-content">
+                <h2>
+                      الذكاء الاصطناعي و علوم البيانات
+                </h2>
+               <p>
+                  يعدّ الذكاء الاصطناعي والبيانات الضخمة ركيزة أساسية لتحقيق أهداف رؤية 2030 ، و تعد الهيئة السعودية للبيانات والذكاء الاصطناعي (SDAIA) الجهة الرئيسية لتنفيذ الاستراتيجية الوطنية للبيانات والذكاء الاصطناعي (NDAI)، بهدف تحقيق الريادة العالمية في هذا المجال
+               </p>
+                <a href="{% url 'main:fields_view' %}">للمزيد</a>
+            </div>
+        </div>
+        <div class="fields-card" style="--clr:#505454">
+            <div class="imgBx">
+                <img src="{% static 'images/blackhat-logo.jpg' %}" alt="">
+            </div>
+            <div class="fields-content">
+               <h2>
+                  الأمن السيبراني
+               </h2>    
+               <p>
+                  تولي المملكة أهمية قصوى للأمن السيبراني لحماية بنيتها التحتية الرقمية ومشاريعها العملاقة (نيوم، البحر الأحمر)، وحققت إنجازات دولية بارزة في هذا المجال بفضل جهود الهيئة الوطنية للأمن السيبراني (NCA)
+               </p> 
+                <a href="{% url 'main:fields_view' %}">للمزيد</a>
+            </div>
+        </div>
+        <div class="fields-card" style="--clr:#008080">
+            <div class="imgBx">
+                <img src="{% static 'images/smartcity-logo.jpg' %}" alt="">
+            </div>
+            <div class="fields-content">
+               <h2>
+                  المدن الذكية
+               </h2>         
+               <p>
+                  تتصدر المملكة جهود تطوير المدن الذكية عالميًا، حيث تستخدم التقنيات المتقدمة لتحسين جودة الحياة، وتعزيز الاستدامة، وتقديم خدمات حضرية متقدمة، وذلك عبر مشاريع عملاقة ومبادرات في المدن القائمة
+               </p>  
+                <a href="{% url 'main:fields_view' %}">للمزيد</a>
+            </div>
+        </div>
+                <div class="fields-card" style="--clr:#cebd5e">
+            <div class="imgBx">
+                <img src="{% static 'images/fintech-logo.jpg' %}" alt="">
+            </div>
+            <div class="fields-content">
+               <h2>
+                  التقنية المالية
+               </h2>  
+               <p>
+                  يشكل قطاع التقنية المالية حجر الزاوية في برنامج تطوير القطاع المالي (FSDP) ضمن رؤية 2030، ويهدف إلى تحويل المملكة إلى مركز عالمي للابتكار المالي
+               </p>  
+                <a href="{% url 'main:fields_view' %}">للمزيد</a>
+            </div>
+        </div>
+    </div>
+</body> 
+<!--   <section class="home-section-three">
       <div class="section-three-content">
          <div class="card" style="--clr:#000080">
             <div class="img-box">
@@ -128,5 +188,5 @@
          </div>
       </div>
 
-   </section>
+   </section> -->
 {% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %} التأثير التقني على محاور التنمية {% endblock %}
+
+
+{% block content %}
+
+<section class="economey-impact">
+    <div class="header">
+        <video autoplay muted loop id="eco-video">
+            <source src="/static/images/econemy-rate.mp4" type="video/mp4" >
+            المتصفح لا يدعم تشغيل هذا النوع من الفيديوهات
+        </video>
+        <h1>
+            التطور الإقتصادي التقني
+        </h1>
+    </div>
+    <div class="economy-short-content">
+
+
+        <h2>
+            قادت التقنية ثورة في الإقتصاد السعودي حيث أن التجارة الإلكترونية شهدت نموًا هائلًا ، 
+            و خدمات التقنية المالية غيرت طريقة تعاملنا مع المال مع انتشار حلول الدفع 
+            الرقمي مثل "STC Pay" و "Apple Pay" و "Samsung Pay".
+            <br><br>
+            كما ساهمت الرقمنة في جعل الخدمات الحكومية مثل  ( منصة أبشر، و ناجز ) أكثر كفاءة و شفافية 
+            مما عزز بيئة الاستثمار و جذب رؤوس الأموال الأجنبية إلى قطاعات جديدة و واعدة.
+        </h2>
+        <div class="economy-short-content-examples">
+            <div class="img-box">
+                <img src="{% static 'images/applepay.png' %}" alt="apple pay logo">
+            </div>
+            <div class="img-box">
+                <img src="{% static 'images/samsungpay.png' %}" alt="samsung pay logo">
+            </div>
+            <!--
+                <div class="img-box">
+                    <img src="{% static 'images/stcpay.png' %}" alt="stc pay logo">
+                </div>            
+            -->
+
+            
+            
+            
+        </div>
+    </div>
+</section>
+<div class="fintech">
+    <div class="fintech-container">
+        <div class="fintech-card" style="--clr:#009688">
+            <div class="imgBx">
+                <img src="" alt="">
+            </div>
+            <div class="fintech-content">
+                <h2>
+                    card 1
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nemo, quasi ea assumenda sed minus sint magnam commodi! Laboriosam omnis voluptatum explicabo totam necessitatibus eligendi corporis assumenda quasi illum natus?
+                </p>
+                <a href="">Read me</a>
+            </div>
+        </div>
+        <div class="fintech-card" style="--clr:#ff3e7f">
+            <div class="imgBx">
+                <img src="" alt="">
+            </div>
+            <div class="fintech-content">
+                <h2>
+                    card 2
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nemo, quasi ea assumenda sed minus sint magnam commodi! Laboriosam omnis voluptatum explicabo totam necessitatibus eligendi corporis assumenda quasi illum natus?
+                </p>
+                <a href="">Read me</a>
+            </div>
+        </div>
+        <div class="fintech-card" style="--clr:#03a9f4">
+            <div class="imgBx">
+                <img src="" alt="">
+            </div>
+            <div class="fintech-content">
+                <h2>
+                    card 3
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nemo, quasi ea assumenda sed minus sint magnam commodi! Laboriosam omnis voluptatum explicabo totam necessitatibus eligendi corporis assumenda quasi illum natus?
+                </p>
+                <a href="">Read me</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="short-content">
+    <h2>
+        يشكل قطاع التقنية المالية حجر الزاوية في برنامج تطوير القطاع المالي (FSDP) ضمن رؤية 2030، ويهدف إلى تحويل المملكة إلى مركز عالمي للابتكار المالي
+    </h2>
+</div>
+
+{% endblock %}
