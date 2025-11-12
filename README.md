@@ -31,7 +31,9 @@ The design uses **Saudi green** as the main theme and keeps the overall style co
 
 ##  Technologies Used
 - **Framework:** Django  
-- **Languages:** HTML, CSS  
+- **Languages:** HTML, CSS, JavaScript  
+- **Usage:** JavaScript used for small interface enhancements (simple interactive behavior)
+
 
 ---
 
