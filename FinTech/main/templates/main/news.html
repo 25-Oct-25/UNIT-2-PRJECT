@@ -1,0 +1,65 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}FinTech News - Saudi Arabia{% endblock %}
+
+{% block body_class %}news-page{% endblock %}
+
+{% block content %}
+<main class="news-main">
+
+    <section class="intro">
+        <h2>Latest FinTech News</h2>
+        <p>Key developments and announcements in the Saudi financial technology sector.</p>
+    </section>
+
+    <div class="news-container">
+        
+        <div class="news-card">
+            <div class="card-content">
+                <span class="news-source">SAMA</span>
+                <h3>SAMA Grants License to 'Emarat Bank', the Fourth Digital Bank</h3>
+                <p>The Saudi Central Bank (SAMA) has officially licensed 'Emarat Bank', a new digital-only bank, to begin operations within the Kingdom. This move is part of the broader Financial Sector Development Program under Vision 2030 to enhance digital payments and financial inclusion.</p>
+                <div class="card-footer">
+                    <span class="news-date">10 November 2025</span>
+                    <a href="#" class="read-more-btn">
+                        Read More
+                        <span class="material-symbols-outlined">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <div class="card-content">
+                <span class="news-source">Fintech Saudi</span>
+                <h3>Fintech Saudi Report: Sector Grows 35% in 2025</h3>
+                <p>A new report by Fintech Saudi highlights impressive 35% year-over-year growth in the number of active fintech companies. The report credits the rapid adoption of digital payments and the success of the BNPL (Buy Now, Pay Later) sector, led by giants like Tamara and Tabby.</p>
+                <div class="card-footer">
+                    <span class="news-date">08 November 2025</span>
+                    <a href="#" class="read-more-btn">
+                        Read More
+                        <span class="material-symbols-outlined">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-card">
+            <div class="card-content">
+                <span class="news-source">Argaam</span>
+                <h3>WealthTech 'Derayah' Launches New AI-Powered Investment Manager</h3>
+                <p>Leading Saudi WealthTech firm Derayah has launched a new service utilizing artificial intelligence to offer automated, personalized investment portfolios. This aims to make sophisticated asset management accessible to a wider range of retail investors in the Kingdom.</p>
+                <div class="card-footer">
+                    <span class="news-date">05 November 2025</span>
+                    <a href="#" class="read-more-btn">
+                        Read More
+                        <span class="material-symbols-outlined">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+{% endblock %}

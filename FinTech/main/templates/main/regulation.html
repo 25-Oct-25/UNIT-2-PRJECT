@@ -1,0 +1,85 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Regulations - FinTech{% endblock %}
+
+{% block body_class %}regulations-page{% endblock %}
+
+{% block content %}
+<main class="regulations-main">
+
+    <section class="intro">
+        <h2>The Rulebook: How Saudi FinTech Thrives</h2>
+        <p>Innovation doesn't happen in chaos. It's built on a smart, evolving regulatory framework.</p>
+    </section>
+
+    <section class="regulators-section">
+        <h2 class="section-title">The Regulators (The Referees)</h2>
+        <div class="regulators-grid">
+            
+            <div class="regulator-card sama">
+                <span class="material-symbols-outlined card-icon">account_balance</span>
+                <h3>SAMA (Saudi Central Bank)</h3>
+                <p>The primary regulator for most FinTech activities. SAMA oversees payments, digital banking, and consumer finance, ensuring stability and security.</p>
+                <h4>Key Responsibilities:</h4>
+                <ul>
+                    <li>Licensing Digital Banks & E-wallets (like STC Pay)</li>
+                    <li>Regulating BNPL (Buy Now, Pay Later)</li>
+                    <li>Managing the Regulatory Sandbox</li>
+                    <li>Overseeing Open Banking</li>
+                </ul>
+            </div>
+            
+            <div class="regulator-card cma">
+                <span class="material-symbols-outlined card-icon">monitoring</span>
+                <h3>CMA (Capital Market Authority)</h3>
+                <p>The regulator for all FinTech related to investments and the stock market. The CMA ensures investor protection and market integrity.</p>
+                <h4>Key Responsibilities:</h4>
+                <ul>
+                    <li>Licensing WealthTech platforms (Robo-advisors)</li>
+                    <li>Regulating Crowdfunding (Debt & Equity)</li>
+                    <li>Supervising asset management apps</li>
+                    <li>Overseeing "FinTech Lab" (their version of the Sandbox)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="initiatives-section">
+        <h2 class="section-title">The Key Initiatives (The Rulebook)</h2>
+        <div class="initiatives-timeline">
+            
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <span class="material-symbols-outlined">science</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>The Regulatory Sandbox</h3>
+                    <p>This was the game-changer. The "Sandbox" allows startups to test new, innovative products in a live (but controlled) environment, under SAMA's supervision, before getting a full license. This is how giants like Tamara and Tabby were born.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <span class="material-symbols-outlined">dataset</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Open Banking Framework</h3>
+                    <p>A new mandate forcing traditional banks to create APIs. This allows authorized FinTech apps (with your permission) to access your bank data, enabling services like all-in-one budget trackers, smart investment tools, and faster loan applications.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <span class="material-symbols-outlined">rocket_launch</span>
+                </div>
+                <div class="timeline-content">
+                    <h3>Fintech Saudi</h3>
+                    <p>Not a regulator, but a government-backed *enabler*. Launched by SAMA and CMA, its entire mission is to act as a "coach" — accelerating the industry, connecting startups with investors, and building a community of talent to drive the sector forward.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+{% endblock %}

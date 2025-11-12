@@ -1,0 +1,107 @@
+{% extends 'main/base.html' %}
+
+{% block title %}History - FinTech{% endblock %}
+
+{% block body_class %}history-page{% endblock %}
+
+{% block content %}
+    <main class = "history-main">
+          <section class="intro">
+                <h2>History of FinTech</h2>
+                <p>Tracing the evolution of financial technology from its inception to the present day.</p>
+          </section>
+    
+          <div class ="main-btn">
+                <a href ="#early"> Early Developments</a>
+                <a href ="#internet"> The Internet Era</a>
+                <a href ="#modern"> Modern FinTech Innovations</a>
+                <a href ="#future"> The Future of FinTech</a>
+          </div>
+
+          <div class="timeline-container">
+            
+            <section id="early" class="timeline-era">
+                <h2><span>Phase 1:</span> Early Developments (1950s-1980s)</h2>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Diner's Club Card (1950)</h3>
+                        <p>The launch of the first credit card. It was the first time financial services were "charged" and disconnected from physical cash or checks.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>First ATM (1967)</h3>
+                        <p>Barclays Bank in London installs the first Automated Teller Machine (ATM), allowing customers to access cash 24/7 without a bank teller.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>SWIFT Founded (1973)</h3>
+                        <p>The creation of a global standardized network for secure financial messaging, which still powers most international bank transfers today.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="internet" class="timeline-era">
+                <h2><span>Phase 2:</span> The Internet Era (1990s-2008)</h2>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Online Banking (Mid-1990s)</h3>
+                        <p>Banks start offering services over the internet. Customers can check balances and pay bills online for the first time, moving banking from branches to desktops.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>PayPal (1998)</h3>
+                        <p>A key moment in FinTech. PayPal revolutionizes online payments, making e-commerce accessible by allowing easy digital payments between users and merchants.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="modern" class="timeline-era">
+                <h2><span>Phase 3:</span> Modern FinTech Innovations (2009-2018)</h2>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Bitcoin & Blockchain (2009)</h3>
+                        <p>Following the 2008 financial crisis, Bitcoin introduces the concept of decentralized digital currency and blockchain technology, inspiring a new wave of innovation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>The App Store & Mobile (2010s)</h3>
+                        <p>Smartphones and app stores put financial power in everyone's pocket. Companies like Square (payments) and Venmo (P2P transfers) are born.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Robo-Advisors (Early 2010s)</h3>
+                        <p>Platforms like Betterment use algorithms to automate investment management, making sophisticated investing accessible and low-cost for the average person.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="future" class="timeline-era">
+                <h2><span>Phase 4:</span> The Future: AI & Open Banking (2018-Present)</h2>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Open Banking (APIs)</h3>
+                        <p>Regulations force banks to open their data (via APIs), allowing third-party apps to build new services on top of existing bank accounts.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>AI & Machine Learning</h3>
+                        <p>Artificial Intelligence is now used everywhere, from real-time fraud detection and personalized financial advice to automated credit scoring.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Embedded Finance & BNPL</h3>
+                        <p>Financial services are "embedded" into non-financial apps (like Uber). Buy Now, Pay Later (BNPL) services like Tamara and Tabby integrate directly into e-commerce checkouts.</p>
+                    </div>
+                </div>
+            </section>
+
+          </div>
+    </main>
+{% endblock %}

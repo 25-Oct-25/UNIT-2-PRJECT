@@ -1,0 +1,80 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Future - FinTech{% endblock %}
+
+{% block body_class %}future-page{% endblock %}
+
+{% block content %}
+<main class="future-main">
+
+    <section class="intro">
+        <h2>The Future of FinTech</h2>
+        <p>Exploring the next wave of innovations set to redefine money, markets, and financial services.</p>
+    </section>
+
+    <div class="future-alternating-container">
+        
+        <section class="future-section">
+            <div class="section-icon">
+                <span class="material-symbols-outlined">psychology</span>
+            </div>
+            <div class="section-content">
+                <h3>AI & Hyper-Personalization</h3>
+                <p>Moving beyond chatbots to AI that acts as a true financial advisor, anticipating your needs and automating complex financial decisions in real-time.</p>
+            </div>
+        </section>
+
+        <section class="future-section section-reverse">
+            <div class="section-icon">
+                <span class="material-symbols-outlined">integration_instructions</span>
+            </div>
+            <div class="section-content">
+                <h3>Embedded Finance (BaaS)</h3>
+                <p>Financial services (like loans or insurance) will disappear into non-financial apps. You'll get a loan from your renovation app, not just your bank.</p>
+            </div>
+        </section>
+
+        <section class="future-section">
+            <div class="section-icon">
+                <span class="material-symbols-outlined">account_tree</span>
+            </div>
+            <div class="section-content">
+                <h3>Decentralized Finance (DeFi)</h3>
+                <p>Blockchain-based applications that aim to rebuild the entire financial system (lending, borrowing, trading) without intermediaries like banks.</p>
+            </div>
+        </section>
+
+        <section class="future-section section-reverse">
+            <div class="section-icon">
+                <span class="material-symbols-outlined">monetization_on</span>
+            </div>
+            <div class="section-content">
+                <h3>Central Bank Digital Currencies (CBDCs)</h3>
+                <p>Governments and central banks (like SAMA's "Project Aber") are exploring digital versions of their national currencies, changing how money moves.</p>
+            </div>
+        </section>
+
+        <section class="future-section">
+            <div class="section-icon">
+                <span class="material-symbols-outlined">developer_board</span>
+            </div>
+            <div class="section-content">
+                <h3>Quantum Computing</h3>
+                <p>The next frontier. Quantum computers could break current financial encryption, forcing a complete overhaul of security (Quantum-Resistant Cryptography).</p>
+            </div>
+        </section>
+
+        <section class="future-section section-reverse">
+            <div class="section-icon">
+                <span class="material-symbols-outlined">energy_savings_leaf</span>
+            </div>
+            <div class="section-content">
+                <h3>Green FinTech (ESG)</h3>
+                <p>Using technology to help individuals and companies invest in sustainable (ESG) projects, track their carbon footprint, and promote ethical finance.</p>
+            </div>
+        </section>
+
+    </div>
+
+</main>
+{% endblock %}

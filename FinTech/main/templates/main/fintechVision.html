@@ -1,0 +1,149 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}2030 Vision - FinTech{% endblock %}
+
+{% block body_class %}vision-page{% endblock %}
+
+{% block content %}
+<main class="vision-main">
+
+    <section class="intro">
+        <h2>FinTech: The Engine of Vision 2030</h2>
+        <p>FinTech is not just a sector; it's the core engine for achieving the ambitious goals of Saudi Arabia's Vision 2030.</p>
+    </section>
+
+    <div class="vision-pillars">
+        
+        <div class="pillar-card">
+            <span class="material-symbols-outlined card-icon">payments</span>
+            <h3>A Cashless Society</h3>
+            <p>The primary goal is to increase non-cash transactions to 70% by 2030. This is driven by e-wallets and digital payments, reducing reliance on physical cash.</p>
+        </div>
+        
+        <div class="pillar-card">
+            <span class="material-symbols-outlined card-icon">hub</span>
+            <h3>A Global FinTech Hub</h3>
+            <p>To position Riyadh as a top 10 global FinTech hub. Initiatives like 'Fintech Saudi' and the SAMA 'Regulatory Sandbox' are built to attract and grow startups.</p>
+        </div>
+        
+        <div class="pillar-card">
+            <span class="material-symbols-outlined card-icon">rocket_launch</span>
+            <h3>Economic Diversification</h3>
+            <p>Moving the economy beyond oil by empowering Small & Medium Enterprises (SMEs) with new digital financing, lending, and banking solutions.</p>
+        </div>
+
+    </div>
+
+    <section class="chart-container-css">
+        <h2 class="section-title">Top 5 Saudi FinTech Valuations</h2>
+        
+        <div class="css-chart-wrapper">
+            
+            <ul class="chart-y-axis">
+                <li>10B SAR</li>
+                <li>8B SAR</li>
+                <li>6B SAR</li>
+                <li>4B SAR</li>
+                <li>2B SAR</li>
+                <li>0B</li>
+            </ul>
+            
+            <div class="chart-grid">
+                <div class="chart-bar-container">
+                    
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height: 75%;"></div>
+                        <span class="bar-label">Jahez</span>
+                        <img src="{% static 'image/jahez.png' %}" alt="Jahez Logo" class="chart-bar-logo">
+                    </div>
+                    
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height: 56%;"></div>
+                        <span class="bar-label">Tabby</span>
+                        <img src="{% static 'image/tabby.png' %}" alt="Tabby Logo" class="chart-bar-logo">
+                    </div>
+                    
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height: 49%;"></div>
+                        <span class="bar-label">STC Pay</span>
+                        <img src="{% static 'image/stcpay.png' %}" alt="STC Pay Logo" class="chart-bar-logo">
+                    </div>
+                    
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height: 37.5%;"></div>
+                        <span class="bar-label">Tamara</span>
+                        <img src="{% static 'image/tamara.png' %}" alt="Tamara Logo" class="chart-bar-logo">
+                    </div>
+
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" style="height: 18%;"></div>
+                        <span class="bar-label">Foodics</span>
+                        <img src="{% static 'image/foodics.png' %}" alt="Foodics Logo" class="chart-bar-logo">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="company-showcase">
+        <h2 class="section-title">Saudi FinTech Champions</h2>
+        <div class="showcase-grid">
+
+            <a href ="https://www.jahez.net/index-en.html">
+                <div class="company-card">
+                    <div class="company-logo-bg">
+                        <img src="{% static 'image/jahez.png' %}" alt="Jahez Logo">
+                    </div>
+                    <h3>Jahez</h3>
+                    <p>A publicly traded giant, proving the high-growth potential of Saudi tech platforms.</p>
+                </div>
+            </a>
+
+            <a href ="https://tabby.ai/en-SA">
+                <div class="company-card">
+                    <div class="company-logo-bg">
+                        <img src="{% static 'image/tabby.png' %}" alt="Tabby Logo">
+                    </div>
+                    <h3>Tabby</h3>
+                    <p>Another BNPL giant and "Unicorn," showcasing the rapid growth of new payment models.</p>
+                </div>
+            </a>
+
+            <a href ="https://www.stcbank.com.sa">
+                <div class="company-card">
+                    <div class="company-logo-bg">
+                        <img src="{% static 'image/stcpay.png' %}" alt="STC Pay Logo">
+                    </div>
+                    <h3>STC Pay</h3>
+                    <p>The Kingdom's first "Unicorn," leading the digital wallet revolution with millions of users.</p>
+                </div>
+            </a>
+
+            <a href ="https://tamara.co/en-sa">
+                <div class="company-card">
+                    <div class="company-logo-bg">
+                        <img src="{% static 'image/tamara.png' %}" alt="Tamara Logo">
+                    </div>
+                    <h3>Tamara</h3>
+                    <p>A "Unicorn" dominating the "Buy Now, Pay Later" (BNPL) sector, transforming Saudi e-commerce.</p>
+                </div>
+            </a>
+
+            <a href ="https://www.foodics.com/en/">
+                <div class="company-card">
+                    <div class="company-logo-bg">
+                        <img src="{% static 'image/foodics.png' %}" alt="Foodics Logo">
+                    </div>
+                    <h3>Foodics</h3>
+                    <p>Leading cloud-based POS and restaurant management, (FoodTech) with strong payment integration.</p>
+                </div>
+            </a>
+            
+
+        </div>
+    </section>
+
+</main>
+{% endblock %}

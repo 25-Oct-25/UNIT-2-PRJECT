@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FinTech{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Black+Han+Sans&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+</head>
+<body class = "{% block body_class %}{% endblock %} {{ mode }}"> <header>
+        <h1>FinTech</h1>
+        <div class="nav">
+            <a href="{% url 'main:home' %}">Home</a>
+            <a href="{% url 'main:history' %}">History</a>
+            <a href="{% url 'main:ecosystem' %}">FinTech Ecosystem</a>
+            <a href="{% url 'main:vision' %}">2030 Vision</a> 
+            <a href="{% url 'main:future' %}">Future</a>
+            <a href="{% url 'main:news' %}">News</a>
+            <a href="{% url 'main:regulation' %}"> Regulations</a> </div>
+
+        <div class ="preference">
+            {% if mode == 'dark' %}
+                <a href="{% url 'main:toggle_mode' 'light' %}" class="mode-toggle-btn">
+                    <span class="material-symbols-outlined">sunny</span>
+                </a>
+            {% else %}
+                <a href="{% url 'main:toggle_mode' 'dark' %}" class="mode-toggle-btn">
+                    <span class="material-symbols-outlined">bedtime</span>
+                </a>
+            {% endif %}
+        </div>
+
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

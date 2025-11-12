@@ -1,0 +1,94 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Home - FinTech{% endblock %}
+
+{% block body_class %}home-page{% endblock %}
+
+{% block content %}
+   <main class = "home-main">
+        <section class="intro">
+            <h2>Welcome to FinTech
+            Your gateway to the future of understanding financial technology.</h2>
+        </section>
+
+        <div class ="main-btn">
+            <a href ="#def"> What is FinTech?</a>
+            <a href ="#implemintation"> Where FinTech is Implemented?</a>
+            <a href ="#goal"> Whats the main goal of FinTech?</a>
+            <a href ="#technologies"> FinTech Technologies</a>
+        </div>
+
+
+        <section class ="cards">
+            <div id="def" class ="def">
+                <h3>Definition of FinTech</h3>
+                <p>FinTech, short for "financial technology," is the use of technology to deliver and automate financial services and products, ranging from mobile banking and digital payments to complex areas like blockchain and artificial intelligence. It encompasses a wide range of applications that aim to improve, complement, or replace traditional financial services, making them more efficient, accessible, and convenient for both consumers and businesses. </p>
+            </div>
+            
+            <div id="implemintation" class ="implemintation">
+                <h3>Implementation of FinTech</h3>
+                <p>Fintech is implemented globally across various industries and sectors, from everyday personal finance management and mobile payments to business accounting, lending, and investment platforms.</p>
+                <h4>Implementations:</h4>
+                <ul>
+                    <li>
+                        Everyday consumers
+                        <p>
+                              (Apples Pay, Google Wallet, Venmo, PayPal)     
+                        </p>
+                    </li>
+                    <li>
+                        Businesses
+                        <p>
+                            Companies use fintech for payroll, taxes, accounting, and automating invoicing.
+                        </p>
+                    </li>
+                    <li>
+                        Inssurance
+                        <p>
+                            "Insurtech" companies are transforming the insurance industry with technology for policy management, claims processing, and risk assessment.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div id="goal" class ="goal">
+                <h3>Main Goal of FinTech</h3>
+                <p>The main goal of FinTech is to make financial services more accessible, efficient, and user-friendly by using technology to automate and improve traditional financial processes. This involves lowering costs, enhancing customer experience, and increasing financial inclusion for individuals and businesses through innovative solutions like mobile banking, digital payments, and AI-driven services.</p>
+            </div>
+            
+            <div id="technologies" class ="technologies">
+                <h3>FinTech Technologies</h3>
+                <p>
+                    Fintech uses a wide range of technologies including artificial intelligence (AI) and machine learning (ML), blockchain and distributed ledger technology, and cloud computing. 
+                </p>
+                <h4>Key Technologies in FinTech</h4>
+                <ol>
+                    <li>
+                        AI & ML
+                        <p>
+                            Used for fraud detection, customer service (chatbots).
+                        </p>
+                    </li>
+                    <li>
+                        Blockchain
+                        <p>
+                            Enables secure, transparent transactions (cryptocurrencies, smart contracts).
+                        </p>
+                    </li>
+                    <li>
+                        Cloud Computing
+                        <p>
+                            Provides scalable infrastructure for fintech applications and data storage.
+                        </p>
+                    </li>
+                    <li>
+                        Big Data Analytics
+                        <p>
+                            Enables the analysis of massive datasets to extract valuable insights for better decision-making and product development.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+   </main>
+{% endblock %}

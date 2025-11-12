@@ -1,0 +1,1928 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/* --Base Style-- */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    z-index: 10;
+}
+
+
+header h1 {
+    padding-left: 3rem;
+    font-family: oswald;
+    font-size: 3rem;
+    color: rgb(123, 228, 176);
+    background-color: rgb(123, 228, 176);
+
+    background-image: linear-gradient(
+    to right,
+    rgb(15, 97, 67) 20%,
+    rgb(123, 228, 176) 50%,
+    rgb(15, 97, 67) 80%
+    );
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation: shine 3s linear infinite;
+}
+
+header .nav {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(123, 228, 176);
+    padding: 1rem 1rem;
+    border-radius: 2rem;
+    margin-left: auto;
+    margin-right: 22rem;
+    gap:0.2rem;
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+header .nav a {
+    color: rgb(27, 50, 42);
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 1.2rem;
+    align-content: center;
+    font-family: oswald;
+    font-weight: bold;
+
+}
+
+header .preference {
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    margin-left: -6rem;
+    background-color: rgb(123, 228, 176);
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    color: rgb(27, 50, 42);
+}
+
+header .nav:hover{
+    transform: scale(1.02);
+    background-color: rgb(169, 220, 204);
+}
+
+
+.home-page,
+.history-page,
+.ecosystem-page,
+.vision-page,
+.future-page,
+.news-page,
+.regulations-page {
+    background-image: linear-gradient(to right, #1a1a1a, #4b4a4a); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* --Home Page Style-- */
+.home-page .home-main{
+    align-items: center;
+    padding: 8rem ;
+}
+
+.home-page .home-main .intro{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+
+.home-page .home-main .intro h2 {
+    font-family: oswald;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(
+    to bottom,
+    rgb(123, 228, 176),
+    rgb(80, 180, 130)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.home-main .main-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    background-image: linear-gradient(
+    to right,
+    rgb(123, 228, 176),
+    rgb(80, 180, 130) 
+    );
+    width: 70rem;
+    height: 3.2rem;
+    padding-left: 0.7rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1.2rem ;
+    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 20rem;
+}
+.home-main .main-btn a{
+    font-size: 1.5rem;
+    color: rgb(27, 50, 42);
+    text-decoration: none;
+    align-content: center;
+    font-family: oswald;
+    font-weight: bold;
+}
+
+.home-main .cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.home-main .cards h3{
+    color: rgb(123, 228, 176);
+    text-align: center;
+}
+
+
+.home-main .cards p,li, h4{
+    font-family: oswald;
+    color: white;
+    text-align: center;
+}
+.home-main .cards li{
+    margin-bottom: 1.4rem;  
+}
+.home-main .cards ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.def,
+.implemintation,
+.goal,
+.technologies {
+    gap:2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(30, 32, 34, 0.75); 
+    width:50%;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    margin-left:0;
+    border: 1px solid rgba(123, 228, 176, 0.1); 
+}
+.def { 
+    height: 19rem; 
+}
+.implemintation { 
+    height: 38rem; 
+    margin-left: auto;
+    
+ }
+.goal { 
+    height: 20rem; 
+}
+.technologies { 
+    height: 45rem; 
+    margin-left: auto; 
+}
+
+.def h3{
+    font-size: 2rem;    
+}
+.def p{
+    font-size: 1.2rem;
+}
+
+.implemintation h3{
+    font-size: 2rem;
+}
+.implemintation h4{
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.implemintation p{
+    font-size: 1.2rem;
+}
+
+.implemintation ol{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.implemintation li{
+    font-size: 1.6rem;
+    margin-left: 2rem;
+}
+.implemintation li p{
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.goal h3{
+    font-size: 2rem;
+}
+.goal p{
+    font-size: 1.2rem;
+}
+
+.technologies h3{
+    font-size: 2rem;
+}
+.technologies h4{
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.technologies ol{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.technologies li{
+    font-size: 1.6rem;
+    margin-left: 2rem;
+}
+.technologies li p{
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+
+
+.def ,.implemintation, .goal, .technologies{
+    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    animation: reveal-on-scroll linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    animation-fill-mode: backwards;
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+
+
+
+.def:hover, .implemintation:hover, .goal:hover, .technologies:hover{
+    box-shadow: 0 0 1rem rgba(123, 228, 176, 0.5); 
+    transform: scale(1.02);
+    background-color: rgba(40, 42, 44, 0.9); 
+}
+
+
+
+@keyframes shine {
+to {
+    background-position: -200% center;
+}
+}
+
+@keyframes reveal-on-scroll {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+}
+    to {
+        opacity: 1;
+        transform: translateY(0);
+}
+}
+
+/* --History Page Style-- */
+.history-page .history-main {
+    align-items: center;
+    padding: 8rem;
+}
+
+.history-page .intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+
+.history-page .main-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    background-image: linear-gradient(
+    to right,
+    rgb(123, 228, 176),
+    rgb(80, 180, 130)
+    );
+    width: 60rem;
+    height: 3.2rem;
+    padding-left: 0.7rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1.2rem ;
+    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 20rem;
+}
+
+.history-page .main-btn a{
+    font-size: 1.5rem;
+    color: rgb(27, 50, 42); 
+    text-decoration: none;
+    align-content: center;
+    font-family: oswald;
+    font-weight: bold;
+}
+
+
+.history-page .intro h2 {
+    font-family: oswald;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(
+    to bottom,
+    rgb(123, 228, 176),
+    rgb(80, 180, 130)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.history-page .intro p {
+    font-family: oswald;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 1rem auto;
+}
+
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 4px;
+    height: 99.5%;
+    background-image: linear-gradient(
+    to bottom,
+    rgb(123, 228, 176),
+    rgb(80, 180, 130)
+    );
+    border-radius: 2rem;
+}
+
+.timeline-era {
+    margin-bottom: 5rem;
+}
+
+.timeline-era h2 {
+    font-family: oswald;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 3rem;
+    padding-left: 3rem;
+}
+
+.timeline-era h2 span {
+    font-size: 1.8rem;
+    color: rgb(123, 228, 176);
+    display: block;
+    font-family: oswald;
+    font-weight: bold;
+}
+
+.timeline-item {
+    padding: 10px 0 20px 40px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    width: 15px;
+    height: 15px;
+    margin-top: 2.2rem;
+    border-radius: 50%;
+    background-color: rgb(123, 228, 176);
+    border: 4px solid rgb(123, 228, 176);
+    z-index: 1;
+}
+
+
+.timeline-content {
+    padding: 2rem 3rem;
+    background-color: rgba(30, 32, 34, 0.75);
+    border-radius: 1rem;
+    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(123, 228, 176, 0.1);
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+
+.timeline-content:hover {
+    box-shadow: 0 0 1rem rgba(123, 228, 176, 0.5);
+    transform: scale(1.02);
+    background-color: rgba(40, 42, 44, 0.9);
+}
+
+.timeline-content h3 {
+    font-family: oswald;
+    font-size: 1.8rem;
+    color: rgb(123, 228, 176);
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-family: oswald;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: left;
+}
+
+.timeline-item {
+    animation: reveal-on-scroll linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+}
+
+
+
+
+/* --Ecosystem Page Style-- */
+
+
+.ecosystem-page .ecosystem-main {
+    align-items: center;
+    padding: 8rem;
+}
+
+.ecosystem-page .intro {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+
+.ecosystem-page .intro h2 {
+    font-family: oswald;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(
+    to bottom,
+    rgb(123, 228, 176),
+    rgb(80, 180, 130)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.ecosystem-page .intro p {
+    font-family: oswald;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0.8;
+}
+
+.ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+
+.ecosystem-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background-color: rgba(30, 32, 34, 0.75);
+    border-radius: 4rem;
+    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(123, 228, 176, 0.1);
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+    animation: reveal-on-scroll linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    animation-fill-mode: backwards;
+}
+
+
+.ecosystem-card:hover {
+    box-shadow: 0 0 1rem rgba(123, 228, 176, 0.5);
+    transform: scale(1.02);
+    background-color: rgba(40, 42, 44, 0.9);
+}
+
+.ecosystem-card .card-icon {
+    font-size: 3.5rem;
+    color: rgb(123, 228, 176);
+    margin-bottom: 1rem;
+}
+
+.ecosystem-card h3 {
+    font-family: oswald;
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.ecosystem-card p {
+    font-family: oswald;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.ecosystem-card h4 {
+    font-family: oswald;
+    font-size: 1rem;
+    color: rgb(123, 228, 176);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.ecosystem-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ecosystem-card li {
+    font-family: oswald;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+/* --Vision Page Style-- */
+
+
+
+.vision-page .vision-main {
+    align-items: center;
+    padding: 8rem;
+}
+
+.vision-page .intro {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+
+.vision-page .intro h2 {
+    font-family: oswald;
+    font-size: 4rem;
+    text-align: center;
+    background-image: linear-gradient(
+    to bottom,
+    rgb(123, 228, 176),
+    rgb(80, 180, 130)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.vision-page .intro p {
+    font-family: oswald;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0.8;
+}
+
+.vision-page .vision-pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 6rem;
+}
+
+
+.vision-page .pillar-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background-color: rgba(30, 32, 34, 0.75);
+    border-radius: 4rem;
+    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(123, 228, 176, 0.1);
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+    animation: reveal-on-scroll linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    animation-fill-mode: backwards;
+}
+
+
+.vision-page .pillar-card:hover {
+    box-shadow: 0 0 1rem rgba(123, 228, 176, 0.5);
+    transform: scale(1.02);
+    background-color: rgba(40, 42, 44, 0.9);
+}
+
+.vision-page .pillar-card .card-icon {
+    font-size: 3.5rem;
+    color: rgb(123, 228, 176);
+    margin-bottom: 1rem;
+}
+
+.vision-page .pillar-card h3 {
+    font-family: oswald;
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.vision-page .pillar-card p {
+    font-family: oswald;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.vision-page .company-showcase {
+    margin-top: 6rem;
+}
+
+
+.vision-page .section-title {
+    font-family: oswald;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    background-image: linear-gradient(
+    to right,
+    rgb(123, 228, 176),
+    rgb(80, 180, 130)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.vision-page .showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.vision-page .showcase-grid a {
+    text-decoration: none;
+}
+
+
+.vision-page .company-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(30, 32, 34, 0.75);
+    border-radius: 4rem;
+    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(123, 228, 176, 0.1);
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+    animation: reveal-on-scroll linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    animation-fill-mode: backwards;
+}
+
+
+.vision-page .company-card:hover {
+    box-shadow: 0 0 1rem rgba(123, 228, 176, 0.5);
+    transform: scale(1.05);
+    background-color: rgba(40, 42, 44, 0.9);
+}
+
+.vision-page .company-logo-bg {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.vision-page .company-logo-bg img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 1rem;
+}
+
+.vision-page .company-card h3 {
+    font-family: oswald;
+    font-size: 1.5rem;
+    color: rgb(123, 228, 176);
+    margin-bottom: 0.5rem;
+}
+
+.vision-page .company-card p {
+    font-family: oswald;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+
+.vision-page .chart-container-css {
+    margin-bottom: 6rem;
+    padding: 2rem;
+    background-color: rgba(30, 32, 34, 0.75);
+    border-radius: 1rem;
+    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(123, 228, 176, 0.1);
+    animation: reveal-on-scroll linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    animation-fill-mode: backwards;
+}
+
+.vision-page .css-chart-wrapper {
+    position: relative;
+    max-width: 1000px;
+    height: 400px;
+    margin: 2rem auto 0 auto;
+    padding-left: 50px;
+    padding-bottom: 100px;
+    font-family: oswald;
+    color: white;
+}
+
+.vision-page .chart-y-axis {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 100px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.vision-page .chart-y-axis li {
+    list-style: none;
+    position: relative;
+}
+
+.vision-page .chart-y-axis li::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    width: 10px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.vision-page .chart-grid {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.vision-page .chart-bar-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 0 2rem;
+}
+
+.vision-page .chart-bar-group {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+
+.vision-page .chart-bar {
+    width: 70%;
+    background-image: linear-gradient(
+    to bottom,
+    rgb(123, 228, 176),
+    rgb(80, 180, 130)
+    );
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, background-image 0.3s ease, height 1s ease-out;
+    animation: bar-rise 1s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+@keyframes bar-rise {
+    from {
+    transform: scaleY(0);
+    }
+    to {
+    transform: scaleY(1);
+}
+}
+
+
+.vision-page .chart-bar-group:hover .chart-bar {
+    transform: scale(1.03);
+    background-image: linear-gradient(
+    to bottom,
+    rgb(150, 240, 190), 
+    rgb(123, 228, 176)
+    );
+}
+
+.vision-page .chart-bar-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 1rem;
+    padding: 5px;
+    object-fit: contain;
+    position: absolute; 
+    bottom: -70px;      
+    left: 50%;          
+    transform: translateX(-50%); 
+
+}
+
+.vision-page .bar-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    position: absolute; 
+    bottom: -30px;     
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+/* --Future Page Style-- */
+
+
+
+.future-page .future-main {
+    align-items: center;
+    padding: 8rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.future-page .intro {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+
+.future-page .intro h2 {
+    font-family: oswald;
+    font-size: 4rem;
+    text-align: center;
+    background-image: linear-gradient(
+    to bottom,
+    rgb(123, 228, 176),
+    rgb(80, 180, 130)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.future-page .intro p {
+    font-family: oswald;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0.8;
+}
+
+
+.future-page .future-alternating-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+
+.future-page .future-section {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+    animation: reveal-on-scroll linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    animation-fill-mode: both;
+}
+
+.future-page .section-icon {
+    flex-basis: 30%;
+}
+
+
+.future-page .section-icon .material-symbols-outlined {
+    font-size: 8rem;
+    color: rgb(123, 228, 176);
+    background-color: rgba(30, 32, 34, 0.75); 
+    padding: 2rem;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem rgba(123, 228, 176, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.future-page .future-section:hover .section-icon .material-symbols-outlined {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 0 2rem rgba(123, 228, 176, 0.6); 
+}
+
+
+.future-page .section-content {
+    flex-basis: 70%;
+}
+
+
+.future-page .section-content h3 {
+    font-family: oswald;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: left;
+    background-image: linear-gradient(
+    to right,
+    rgb(123, 228, 176),
+    rgb(80, 180, 130)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.future-page .section-content p {
+    font-family: oswald;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.future-page .section-reverse {
+    flex-direction: row-reverse;
+}
+
+
+
+
+/* --News Page Style-- */
+
+
+.news-page .news-main {
+    align-items: center;
+    padding: 8rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.news-page .intro {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+
+.news-page .intro h2 {
+    font-family: oswald;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(
+    to bottom,
+    rgb(123, 228, 176),
+    rgb(80, 180, 130)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.news-page .intro p {
+    font-family: oswald;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0.8;
+}
+
+.news-page .news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.news-page .news-card, .news-card-empty {
+    padding: 2.5rem;
+    background-color: rgba(30, 32, 34, 0.75);
+    border-radius: 1rem;
+    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(123, 228, 176, 0.1);
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+    animation: reveal-on-scroll linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    animation-fill-mode: backwards;
+}
+
+
+.news-page .news-card:hover {
+    box-shadow: 0 0 1rem rgba(123, 228, 176, 0.5);
+    transform: scale(1.02);
+    background-color: rgba(40, 42, 44, 0.9);
+}
+
+.news-page .news-source {
+    display: inline-block;
+    background-color: rgb(123, 228, 176);
+    color: rgb(27, 50, 42);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-family: oswald;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.news-page .news-card h3 {
+    font-family: oswald;
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.news-page .news-card p {
+    font-family: oswald;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+
+
+.news-page .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(123, 228, 176, 0.3);
+    padding-top: 1rem;
+}
+
+.news-page .news-date {
+    font-family: oswald;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.news-page .read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    background-color: rgba(123, 228, 176, 0.8);
+    color: rgb(27, 50, 42);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: oswald;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.news-page .read-more-btn:hover {
+background-color: white;
+color: rgb(27, 50, 42);
+transform: scale(1.05);
+}
+
+.news-page .read-more-btn .material-symbols-outlined {
+font-size: 1.2rem;
+}
+
+.news-page .news-card-empty {
+text-align: center;
+}
+.news-page .news-card-empty h3 {
+color: rgb(123, 228, 176);
+font-size: 1.8rem;
+margin-bottom: 1rem;
+}
+.news-page .news-card-empty p {
+color: white;
+font-size: 1.1rem;
+opacity: 0.8;
+}
+
+
+
+
+/* --Regulations Page Style-- */
+
+
+
+.regulations-page .regulations-main {
+    align-items: center;
+    padding: 8rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.regulations-page .intro {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.regulations-page .intro h2 {
+    font-family: oswald;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(
+    to bottom,
+    rgb(123, 228, 176),
+    rgb(80, 180, 130)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+.regulations-page .intro p {
+    font-family: oswald;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0.8;
+}
+
+.regulations-page .section-title {
+    font-family: oswald;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 4rem;
+    background-image: linear-gradient(
+    to right,
+    rgb(123, 228, 176),
+    rgb(80, 180, 130)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.regulations-page .regulators-section {
+    margin-bottom: 6rem;
+}
+
+.regulations-page .regulators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem;
+}
+
+
+.regulations-page .regulator-card {
+    padding: 2.5rem 2rem;
+    background-color: rgba(30, 32, 34, 0.75);
+    border-radius: 1rem;
+    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    border-top: 4px solid transparent;
+    border: 1px solid rgba(123, 228, 176, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    animation: reveal-on-scroll linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    animation-fill-mode: backwards;
+}
+
+
+.regulations-page .regulator-card:hover {
+    box-shadow: 0 0 1rem rgba(123, 228, 176, 0.5);
+    transform: scale(1.02);
+    background-color: rgba(40, 42, 44, 0.9);
+}
+
+
+.regulations-page .regulator-card.sama { 
+    border-top-color: rgb(123, 228, 176); 
+}
+.regulations-page .regulator-card.cma { 
+    border-top-color: rgb(80, 180, 130); 
+}
+
+.regulations-page .regulator-card .card-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+.regulations-page .regulator-card.sama .card-icon { 
+    color: rgb(123, 228, 176); 
+}
+.regulations-page .regulator-card.cma .card-icon { 
+    color: rgb(80, 180, 130); 
+} 
+
+.regulations-page .regulator-card h3 {
+    font-family: oswald;
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+.regulations-page .regulator-card p {
+    font-family: oswald;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    min-height: 80px;
+}
+.regulations-page .regulator-card h4 {
+    font-family: oswald;
+    font-size: 1.1rem;
+    color: rgb(123, 228, 176);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.regulations-page .regulator-card ul {
+    list-style-type: '✓ ';
+    list-style-position: outside;
+    padding-left: 1.5rem;
+}
+.regulations-page .regulator-card li {
+    font-family: oswald;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+
+
+.regulations-page .initiatives-section {
+    margin-bottom: 6rem;
+}
+
+
+
+
+.regulations-page .initiatives-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.regulations-page .initiatives-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50px; 
+    top: 10px;
+    bottom: 10px;
+    width: 4px;
+    background-image: linear-gradient(
+        to bottom, 
+        rgb(123, 228, 176),
+        rgb(80, 180, 130)
+    );
+    border-radius: 2px;
+}
+
+
+
+
+
+
+.regulations-page .timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    animation: reveal-on-scroll linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+    animation-fill-mode: both;
+}
+
+
+.regulations-page .timeline-icon {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(30, 32, 34, 0.75);
+    border: 4px solid rgb(123, 228, 176);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+}
+.regulations-page .timeline-icon .material-symbols-outlined {
+    font-size: 3.5rem;
+    color: rgb(123, 228, 176);
+}
+
+
+.regulations-page .timeline-content {
+    padding: 2rem;
+    background-color: rgba(30, 32, 34, 0.75);
+    border-radius: 1rem;
+    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(123, 228, 176, 0.1);
+    flex-grow: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.regulations-page .timeline-content:hover {
+    box-shadow: 0 0 1rem rgba(123, 228, 176, 0.5);
+    transform: scale(1.02);
+}
+
+.regulations-page .timeline-content h3 {
+font-family: oswald;
+font-size: 1.8rem;
+color: white;
+margin-bottom: 1rem;
+}
+.regulations-page .timeline-content p {
+font-family: oswald;
+color: white;
+font-size: 1.1rem;
+font-weight: 300;
+line-height: 1.6;
+}
+
+
+
+
+
+
+
+/* Light Mode Styles */
+
+body.light {
+    background-color: #FAF0E6; 
+}
+
+
+body.light header h1 {
+    background-image: linear-gradient(
+        to right,
+        rgb(15, 97, 67) 20%,  
+        rgb(27, 50, 42) 50%,  
+        rgb(15, 97, 67) 80%  
+    );
+    color: transparent;
+}
+body.light header .nav {
+    background-color: rgb(27, 50, 42);
+}
+body.light header .nav a {
+    color: rgb(222, 237, 231);
+}
+body.light header .preference {
+    background-color: rgb(27, 50, 42);
+    color: rgb(222, 237, 231);
+}
+body.light .mode-toggle-btn {
+    color: rgb(222, 237, 231);
+    text-decoration: none;
+}
+body.light header .nav:hover{
+    background-color: rgb(15, 97, 67);
+}
+
+
+body.light.home-page,
+body.light.history-page,
+body.light.ecosystem-page,
+body.light.vision-page,
+body.light.future-page,
+body.light.news-page,
+body.light.regulations-page {
+   background-image: linear-gradient(to right, #FDF5E6, #bbb3ac);
+    background-attachment: fixed;
+}
+
+ 
+body.light .home-main .cards h3,
+body.light .home-main .cards h4,
+body.light .home-main .cards p,
+body.light .home-main .cards li,
+body.light .timeline-era h2,
+body.light .timeline-content p,
+body.light .ecosystem-card h3,
+body.light .ecosystem-card p,
+body.light .ecosystem-card li,
+body.light .pillar-card h3,
+body.light .pillar-card p,
+body.light .company-card p,
+body.light .bar-label,
+body.light .section-content p,
+body.light .news-card h3,
+body.light .news-card p,
+body.light .regulator-card h3,
+body.light .regulator-card p,
+body.light .regulator-card li,
+body.light .timeline-content h3,
+body.light .timeline-content p {
+    color: rgb(27, 50, 42); 
+}
+body.light .home-main .intro h2,
+body.light .ecosystem-main .intro h2,
+body.light .history-main .intro h2,
+body.light .vision-main .intro h2,
+body.light .future-main .intro h2,
+body.light .news-main .intro h2,
+body.light .regulations-main .intro h2,
+body.light .regulations-main .section-title{
+    background-image: linear-gradient(
+        to right, 
+        rgb(15, 97, 67),
+        rgb(27, 50, 42) 
+    );
+}
+body.light .history-main .intro p,
+body.light .ecosystem-main .intro p,
+body.light .vision-main .intro p,
+body.light .future-main .intro p,
+body.light .news-main .intro p,
+body.light .regulations-main .intro p {
+    color: rgb(27, 50, 42);
+}
+
+
+body.light .history-main .main-btn{
+    background-image: linear-gradient(
+        to right, 
+        rgb(15, 97, 67),
+        rgb(48, 130, 100) 
+    );
+}
+
+
+
+
+
+
+body.light .history-page .intro p,
+body.light .ecosystem-page .intro p,
+body.light .vision-page .intro p,
+body.light .future-page .intro p,
+body.light .news-page .intro p,
+body.light .regulations-page .intro p {
+    color: rgb(27, 50, 42);
+    opacity: 0.8;
+}
+
+
+body.light .home-main .main-btn,
+body.light .history-page .main-btn {
+    background-image: linear-gradient(
+        to right, 
+        rgb(15, 97, 67),
+        rgb(48, 130, 100) 
+    );
+    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+body.light .home-main .main-btn a,
+body.light .history-page .main-btn a {
+    color: white;
+}
+
+
+body.light .def,
+body.light .implemintation,
+body.light .goal,
+body.light .technologies,
+body.light .pillar-card,
+body.light .timeline-content,
+body.light .ecosystem-card,
+body.light .pillar-card,
+body.light .company-card,
+body.light .chart-container-css,
+body.light .news-card, 
+body.light .news-card-empty,
+body.light .regulator-card,
+body.light .timeline-content {
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(27, 50, 42, 0.1);
+}
+
+
+
+
+body.light .def:hover,
+body.light .implemintation:hover,
+body.light .goal:hover,
+body.light .technologies:hover,
+body.light .timeline-content:hover,
+body.light .ecosystem-card:hover,
+body.light .pillar-card:hover,
+body.light .company-card:hover,
+body.light .news-card:hover,
+body.light .regulator-card:hover,
+body.light .timeline-content:hover {
+    box-shadow: 0 0 1rem rgba(15, 97, 67, 0.4);
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: scale(1.02);
+}
+
+
+body.light .timeline-container::before {
+    background-image: linear-gradient(
+        to bottom, 
+        rgb(15, 97, 67),
+        rgb(48, 130, 100) 
+    );
+}
+body.light .timeline-era h2 span {
+    color: rgb(15, 97, 67);
+}
+body.light .timeline-item::before {
+    background-color: rgb(15, 97, 67);
+    border: 4px solid rgb(15, 97, 67);
+}
+body.light .timeline-content h3 {
+    color: rgb(15, 97, 67);
+}
+
+
+body.light .ecosystem-card .card-icon {
+    color: rgb(15, 97, 67);
+}
+body.light .ecosystem-card h4 {
+    color: rgb(15, 97, 67);
+}
+
+
+body.light .pillar-card .card-icon {
+    color: rgb(15, 97, 67);
+}
+body.light .company-card h3 {
+    color: rgb(15, 97, 67);
+}
+body.light .company-showcase .section-title{
+    color: rgb(27, 50, 42);
+}
+
+body.light .chart-container-css {
+    background-color: rgba(255, 255, 255, 0.6); 
+}
+body.light .chart-container-css .section-title{
+    color: rgb(27, 50, 42);
+}
+body.light .css-chart-wrapper {
+    color: rgb(27, 50, 42);
+}
+body.light .chart-y-axis li{
+    color: rgb(27, 50, 42);
+}
+body.light .chart-y-axis li::after {
+    background: rgb(27, 50, 42);
+}
+body.light .chart-grid {
+    border-left: 2px solid rgba(27, 50, 42, 0.3);
+    border-bottom: 2px solid rgba(27, 50, 42, 0.3);
+}
+body.light .chart-bar {
+    background-image: linear-gradient(
+        to bottom, 
+        rgb(15, 97, 67),
+        rgb(48, 130, 100) 
+    );
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+body.light .chart-bar-group:hover .chart-bar {
+    background-image: linear-gradient(
+        to bottom, 
+        rgb(15, 97, 67),
+        rgb(27, 50, 42)
+    );
+}
+
+
+/* --- Future Page --- */
+body.light .section-icon .material-symbols-outlined {
+    color: rgb(15, 97, 67);
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 1rem rgba(27, 50, 42, 0.2);
+}
+body.light .future-section:hover .section-icon .material-symbols-outlined {
+    box-shadow: 0 0 2rem rgba(15, 97, 67, 0.6);
+}
+body.light .section-content h3 {
+    color: rgb(15, 97, 67);
+}
+
+/* --- News Page --- */
+body.light .news-source {
+    background-color: rgb(15, 97, 67);
+    color: white;
+}
+body.light .card-footer {
+    border-top: 1px solid rgba(27, 50, 42, 0.3);
+}
+body.light .news-date {
+    color: rgba(27, 50, 42, 0.7);
+}
+body.light .read-more-btn {
+    background-color: rgb(15, 97, 67);
+    color: white;
+}
+body.light .read-more-btn:hover {
+    background-color: rgb(27, 50, 42);
+    color: white;
+}
+body.light .news-card-empty h3 {
+    color: rgb(15, 97, 67);
+}
+body.light .news-card-empty p {
+    color: rgb(27, 50, 42);
+    opacity: 0.8;
+}
+
+/* --- Regulations Page --- */
+body.light .regulator-card.sama { border-top-color: rgb(15, 97, 67); }
+body.light .regulator-card.cma { border-top-color: rgb(48, 130, 100); }
+
+body.light .regulator-card.sama .card-icon { color: rgb(15, 97, 67); }
+body.light .regulator-card.cma .card-icon { color: rgb(48, 130, 100); }
+body.light .regulator-card h4 {
+    color: rgb(15, 97, 67);
+}
+body.light .initiatives-timeline::before {
+    background-image: linear-gradient(
+        to bottom, 
+        rgb(15, 97, 67),
+        rgb(48, 130, 100) 
+    );
+}
+body.light .timeline-icon {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 4px solid rgb(15, 97, 67);
+    box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+}
+body.light .timeline-icon .material-symbols-outlined {
+    color: rgb(15, 97, 67);
+}
+
+@media (max-width: 1000px) {
+    .home-page .home-main,
+    .history-page .history-main,
+    .ecosystem-page .ecosystem-main,
+    .vision-page .vision-main,
+    .future-page .future-main,
+    .news-page .news-main,
+    .regulations-page .regulations-main {
+        padding: 6rem 2rem;
+    }
+
+    .home-main .main-btn,
+    .history-page .main-btn {
+        width: 90%;
+    }
+
+    header .nav {
+        margin-right: auto;
+    }
+    header .preference {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    header .nav {
+        margin-right: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1rem 0.5rem;
+    }
+    header .nav a {
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+    
+    .home-page .home-main,
+    .history-page .history-main,
+    .ecosystem-page .ecosystem-main,
+    .vision-page .vision-main,
+    .future-page .future-main,
+    .news-page .news-main,
+    .regulations-page .regulations-main {
+        padding: 4rem 1.5rem;
+    }
+
+    .home-main .main-btn,
+    .history-page .main-btn {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 6rem;
+    }
+    .home-main .main-btn a,
+    .history-page .main-btn a {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .home-main .cards {
+        gap: 3rem;
+    }
+    
+    .def,
+    .implemintation,
+    .goal,
+    .technologies {
+        width: 100%;
+        margin-left: 0;
+        height: auto;
+    }
+
+    .future-page .future-section,
+    .future-page .section-reverse {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .future-page .section-icon {
+        flex-basis: auto;
+    }
+    .future-page .section-content {
+        flex-basis: auto;
+        text-align: center;
+    }
+    .future-page .section-content h3 {
+        text-align: center;
+    }
+    .future-page .section-content p {
+        text-align: center;
+    }
+    .future-page .section-icon .material-symbols-outlined {
+        font-size: 6rem;
+    }
+
+    .timeline-container {
+        margin: 3rem auto;
+    }
+    .timeline-container::before {
+        left: 5px;
+    }
+    .timeline-item {
+        padding: 10px 0 20px 30px;
+    }
+    .timeline-item::before {
+        left: -3px;
+        top: 30px;
+        width: 12px;
+        height: 12px;
+    }
+    .timeline-era h2 {
+        padding-left: 1.5rem;
+        font-size: 2rem;
+    }
+    .timeline-content {
+        padding: 1.5rem;
+    }
+    
+    .history-page .main-btn {
+        margin-bottom: 6rem;
+    }
+    
+    .ecosystem-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .vision-page .css-chart-wrapper {
+        padding-left: 40px;
+        padding-bottom: 120px;
+        height: 350px;
+    }
+    .vision-page .chart-y-axis {
+        font-size: 0.8rem;
+        width: 40px;
+        bottom: 120px;
+    }
+    .vision-page .bar-label {
+        font-size: 0.8rem;
+    }
+    .vision-page .chart-bar-logo {
+        bottom: -70px;
+    }
+    .vision-page .bar-label {
+        bottom: -35px;
+    }
+    
+    .regulations-page .regulators-grid {
+        grid-template-columns: 1fr;
+    }
+    .regulations-page .initiatives-timeline::before {
+        left: 30px;
+    }
+    .regulations-page .timeline-item {
+        gap: 1.5rem;
+    }
+    .regulations-page .timeline-icon {
+        width: 60px;
+        height: 60px;
+    }
+    .regulations-page .timeline-icon .material-symbols-outlined {
+        font-size: 2.5rem;
+    }
+}
