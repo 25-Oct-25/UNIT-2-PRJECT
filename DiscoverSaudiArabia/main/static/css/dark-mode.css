@@ -1,0 +1,222 @@
+.dark-mode {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-color: #f5f5f5; 
+    --card-hover: #3a3a3a;
+    --input-bg-dark: #3a3a3a; 
+}
+.dark-mode body {
+    background-color: var(--bg-primary);
+    color: var(--text-color);
+}
+.dark-mode .navbar {
+    background-color: var(--bg-secondary);
+}
+.dark-mode .navbar a {
+    color: var(--text-color);
+}
+.dark-mode .navbar a:hover {
+    color: #4a90e2; 
+}
+.dark-mode .destinations-section {
+    background-color: var(--bg-secondary);
+}
+.dark-mode .destinations-section h2 {
+    color: var(--text-color);
+}
+.dark-mode .city-details-section {
+    background-color: var(--bg-primary) !important; 
+}
+.dark-mode .core-mission-title {
+    color: var(--text-color) !important;
+}
+.dark-mode .attraction-card {
+    background-color: #2a2a2a;
+    border-left-color: #4a90e2 !important; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    color: var(--text-color); 
+}
+
+.dark-mode .attraction-card h3,
+.dark-mode .attraction-card p {
+    color: var(--text-color);
+    opacity: 0.9; 
+}
+.dark-mode .activities-section {
+    background-color: var(--bg-secondary);
+}
+.dark-mode .activities-section h2 {
+    color: var(--text-color);
+}
+.dark-mode .activity-item p {
+    color:   #9935d7 !important;
+    font-weight: bold !important;
+}
+.dark-mode .activity-item i {
+    color: #9935d7;
+}
+.dark-mode .featured-events-section {
+    background-color: var(--bg-primary);
+}
+.dark-mode .theme-toggle-btn {
+    background-color: #444; 
+    border-color: #666;
+}
+.dark-mode .theme-toggle-btn #sunIcon {
+    opacity: 0;
+    transform: translateX(-15px);
+}
+.dark-mode .theme-toggle-btn #moonIcon {
+    opacity: 1;
+    transform: translateX(15px);
+    color: #4a90e2;
+}
+.dark-mode footer {
+    background-color: var(--bg-secondary);
+    color: var(--text-color);
+}
+.dark-mode label {
+    color: var(--text-color) !important;
+}
+
+.dark-mode .city-details-section input:not([type="submit"]),
+.dark-mode .city-details-section textarea {
+    background-color: #3a3a3a !important; 
+    color: var(--text-color) !important; 
+    border: 1px solid #666 !important;
+}
+
+.dark-mode .city-details-section input::placeholder,
+.dark-mode .city-details-section textarea::placeholder {
+    color: #aaa !important; 
+    opacity: 1 !important; 
+}
+
+.dark-mode .city-details-section .form-control:focus {
+    border-color: #4a90e2 !important;
+    box-shadow: 0 0 0 0.1rem rgba(74, 144, 226, 0.2) !important;
+}
+
+.dark-mode .contact-details h4 i {
+    color: #4a90e2; 
+}
+.dark-mode .our-values {
+    background-color: var(--bg-secondary) !important; 
+    color: var(--text-color); 
+    padding: 40px 0; 
+}
+.dark-mode .our-values h2 {
+    color: var(--text-color) !important; 
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.dark-mode .our-values .value-item {
+    background-color: #2a2a2a; 
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.dark-mode .our-values .value-item i {
+    color: #4a90e2; 
+    font-size: 40px; 
+    margin-bottom: 15px;
+}
+.dark-mode .our-values .value-item p {
+    color: var(--text-color);
+    opacity: 0.8; 
+    font-size: 1rem;
+    line-height: 1.6;
+}
+@media (max-width: 768px) {
+    .dark-mode .our-values .values-grid-icons {
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px;
+    }
+    .dark-mode .our-values .value-item {
+        width: 90%; 
+        margin: 10px 0;
+    }
+}
+.about-mission-grid {
+    display: grid !important; 
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px !important;
+}
+@media (max-width: 768px) { 
+    .about-mission-grid {
+        grid-template-columns: 1fr !important; 
+        gap: 20px !important; 
+    }
+}
+.dark-mode .alula-fade-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/static/images/alula1.png'); /* تعديل الخلفية */
+}
+.dark-mode .alula-fade-hero .hero-content h1,
+.dark-mode .alula-fade-hero .hero-content p {
+    color: var(--text-color); 
+}
+.dark-mode .activities-section {
+    background-color: var(--bg-secondary); 
+}
+.dark-mode .activities-section h2 {
+    color: var(--text-color);  
+}
+.dark-mode .activity-card-item {
+    background-color: #333;  
+    color: var(--text-color); 
+}
+.dark-mode .city-details-section {
+    background-color: var(--bg-primary); 
+    color: var(--text-color); 
+}
+
+.dark-mode .city-details-section h2 {
+    color: var(--text-color); 
+}
+.dark-mode .city-details-section h2 {
+    color: var(--text-color); 
+}
+.dark-mode .attraction-card h3,
+.dark-mode .attraction-card p {
+    color: var(--text-color); 
+}
+
+
+/*  contact دارك مود ال */
+.dark-mode .contact-section-container {
+    background-color: var(--bg-secondary); 
+    color: var(--text-color); 
+}
+.dark-mode .contact-map {
+    background-color: #2a2a2a;  
+    border-color: #666;  
+}
+.dark-mode .contact-form {
+    background-color: #333; 
+    border-color: #666; 
+    color: var(--text-color); 
+}
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+    background-color: #444; 
+    color: var(--text-color); 
+    border-color: #666; 
+}
+.dark-mode .primary-btn {
+    background-color: #4a90e2; 
+}
+.dark-mode .contact-details {
+    background-color: #333; 
+    color: var(--text-color);
+}
+.dark-mode .contact-details p {
+    color: var(--text-color); 
+}
+.dark-mode .contact-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('/static/images/contact-hero-bg.jpg'); /* تأكد من تغيير الخلفية هنا */
+}

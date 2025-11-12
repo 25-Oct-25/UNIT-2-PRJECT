@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Home | Discover Saudi Arabia
+{% endblock title %}
+{% block content %}
+    <div class="hero-section" dir="ltr"> 
+        <div class="hero-content" style="text-align: left;">
+            <h1>Discover the Beauty of Saudi Arabia</h1>
+            <p>From ancient historical wonders to modern cities, we offer you a comprehensive guide for a unique travel experience filled with culture, history, and stunning nature.</p>
+          
+        </div>
+    </div>
+
+    <section class="destinations-section" dir="ltr">
+        <h2>Explore Our Featured Destinations </h2>
+        <div class="destinations-grid">
+            
+            <div class="destination-card-container">
+                <div class="destination-card riyadh-card">
+                    <div class="card-face card-front">
+                        <div class="card-text">
+                            <h3>Riyadh</h3>
+                            <p>The Kingdom's Beating Heart</p>
+                        </div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-text">
+                            <h3>Riyadh Season & History</h3>
+                            <p>Home to the massive Riyadh Season entertainment events, it blends modern skyscrapers with historic sites like Al-Masmak Fort and the bustling Boulevard City.</p>
+                            <a href="{% url 'main:riyadh' %}" ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="destination-card-container">
+                <div class="destination-card jeddah-card">
+                    <div class="card-face card-front">
+                        <div class="card-text">
+                            <h3>Jeddah</h3>
+                            <p>Bride of the Red Sea</p>
+                        </div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-text">
+                            <h3>Historical & Coastal Hub</h3>
+                            <p>A coastal gateway city famous for the UNESCO World Heritage site Al-Balad (Historic Jeddah), the King Fahd's Fountain, and its vibrant Red Sea Corniche.</p>
+                            <a href="{% url 'main:jeddah' %}" ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="destination-card-container">
+                <div class="destination-card alula-card">
+                    <div class="card-face card-front">
+                        <div class="card-text">
+                            <h3>AlUla</h3>
+                            <p>Ancient Archaeological Wonders</p>
+                        </div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-text">
+                            <h3>The Nabataean Legacy</h3>
+                            <p>Explore Hegra (Madain Saleh), Saudi Arabia's first UNESCO site, featuring magnificent preserved tombs carved into desert rocks, alongside the Old Town and Elephant Rock.</p>
+                            <a href="{% url 'main:alula' %}" ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination-card-container">
+                <div class="destination-card abha-card">
+                    <div class="card-face card-front">
+                        <div class="card-text">
+                            <h3>Abha</h3>
+                            <p>The Green Jewel of the South</p>
+                        </div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-text">
+                            <h3>Mountain Retreat</h3>
+                            <p>Known for its cool climate, high mountains (like Jabal Soudah), and stunning natural beauty. Perfect for nature lovers, hiking, and enjoying traditional Asiri architecture.</p>
+                            <a href="{% url 'main:abha' %}" ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="destination-card-container">
+                <div class="destination-card khobar-card">
+                    <div class="card-face card-front">
+                        <div class="card-text">
+                            <h3>Khobar</h3>
+                            <p>Gateway to the Eastern Province</p>
+                        </div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-text">
+                            <h3>Coastal & Business Center</h3>
+                            <p>A vibrant, modern city overlooking the Arabian Gulf, famed for its beautiful Corniche, sophisticated malls, and proximity to the King Fahd Causeway to Bahrain.</p>
+                            <a href="{% url 'main:khobar' %}" ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="destination-card-container">
+                <div class="destination-card tabuk-card">
+                    <div class="card-face card-front">
+                        <div class="card-text">
+                            <h3>Tabuk</h3>
+                            <p>Land of Ancient Artifacts</p>
+                        </div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-text">
+                            <h3>The NEOM Region</h3>
+                            <p>Known for its historical significance and proximity to futuristic projects like NEOM, Tabuk offers diverse landscapes, including beaches and occasional snow in the winter.</p>
+                            <a href="{% url 'main:tabuk' %}"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="vision-section" dir="ltr">
+        <div class="vision-content">
+            <h2>Saudi Tourism Vision 2030</h2>
+            <p>Witness the Kingdom's transformation as we open our doors to the world. We offer a blend of culture, history, and unmatched natural beauty.</p>
+            <a href="{% url 'main:about' %}" ></a>
+        </div>
+        <a href="{% url 'main:activities' %}" class="btn event-btn">Explore More Activities</a>
+    </div>
+</section>
+
+    </section>
+{% endblock content %}

@@ -1,0 +1,50 @@
+.about-mission-grid {
+    display: grid !important; 
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px !important;
+}
+@media (max-width: 768px) { 
+    .about-mission-grid {
+        grid-template-columns: 1fr !important; 
+        gap: 20px !important; 
+    }
+}
+
+.page-nav-btn {
+    position: fixed;
+    top: 50%; 
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5em;
+    z-index: 1050; 
+    transition: background-color 0.3s, opacity 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.page-nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.prev-btn {
+    right: 20px; 
+}
+.next-btn {
+    left: 20px; 
+}
+.dark-mode .page-nav-btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+.dark-mode .page-nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.prev-btn i {
+    transform: rotate(180deg);
+}

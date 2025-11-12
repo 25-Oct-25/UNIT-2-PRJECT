@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="hero-section alula-fade-hero">
+  <div class="hero-image-fader">
+    <div class="hero-image alula-fader-1"></div>
+    <div class="hero-image alula-fader-2"></div>
+    <div class="hero-image alula-fader-3"></div>
+  </div>
+
+  <div class="hero-content">
+    <h1>Al-Ula: The Ancient Wonder</h1>
+    <p>A stunning desert landscape home to 200,000 years of human history.</p>
+  </div>
+</section>
+
+
+
+    <section class="activities-section">
+        <h2>Top Activities</h2>
+
+        <div class="activity-grid">
+            <div class="col-md-4 mb-4">
+                <div class="attraction-image-card" style="background-image: url('{% static 'images/alula-card.jpg' %}');">
+                    <h3>Hegra (Madain Saleh)</h3>
+                    <p>The first UNESCO World Heritage site in Saudi Arabia, featuring monumental tombs carved into sandstone.</p>
+                    <a href="https://www.bing.com/ck/a?!&&p=7dc74b3983e5aa782e86539cb258b1959efb13d8ec8fa33d3a7d507174a0b963JmltdHM9MTc2MjY0NjQwMA&ptn=3&ver=2&hsh=4&fclid=3a680f01-e76b-6082-0122-1979e6626186&psq=%d9%88%d9%8a+%d8%a8%d9%88%d9%83&u=a1aHR0cHM6Ly93ZWJvb2suY29tLw" class="booking-link-text">Book Tickets</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="attraction-image-card" style="background-image: url('{% static 'images/alula1.png' %}');">
+                    <h3>Elephant Rock (Jabal AlFil)</h3>
+                    <p>A magnificent natural sandstone structure resembling an elephant, sculpted by wind and water.</p>
+                    <a href="https://www.bing.com/ck/a?!&&p=a443e22b81673a9cd2fabb7eda93299dc1e120a8cbbe0bb6deb864916e43ebe9JmltdHM9MTc2MjkwNTYwMA&ptn=3&ver=2&hsh=4&fclid=3a680f01-e76b-6082-0122-1979e6626186&psq=%d9%85%d8%b1%d8%ac%d8%b9+%d8%ac%d8%a8%d9%84+%d8%a7%d9%84%d9%81%d9%8a%d9%84&u=a1aHR0cHM6Ly9zYXVkaXBlZGlhLmNvbS9hcnRpY2xlLzU1ODIvJUQ4JUFBJUQ4JUE3JUQ4JUIxJUQ5JThBJUQ4JUFFLyVEOSU4NSVEOCVCOSVEOCVBNyVEOSU4NCVEOSU4NS0lRDklODgtJUQ4JUEyJUQ4JUFCJUQ4JUE3JUQ4JUIxLyVEOCVBQyVEOCVBOCVEOSU4NC0lRDglQTclRDklODQlRDklODElRDklOEElRDklODQ" class="booking-link-text">Plan Tour</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="attraction-image-card" style="background-image: url('{% static 'images/alula2.png' %}');">
+                    <h3>Old Town</h3>
+                    <p>A labyrinth of more than 900 mud-brick houses, dating back to the 12th century.</p>
+                    <a href="https://www.bing.com/ck/a?!&&p=7dc74b3983e5aa782e86539cb258b1959efb13d8ec8fa33d3a7d507174a0b963JmltdHM9MTc2MjY0NjQwMA&ptn=3&ver=2&hsh=4&fclid=3a680f01-e76b-6082-0122-1979e6626186&psq=%d9%88%d9%8a+%d8%a8%d9%88%d9%83&u=a1aHR0cHM6Ly93ZWJvb2suY29tLw" class="booking-link-text">Explore Heritage</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+{% endblock content %}

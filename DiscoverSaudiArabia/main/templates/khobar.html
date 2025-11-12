@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <section class="city-page-hero khobar-fade-hero">
+        <div class="hero-content">
+            <h1>Al Khobar: The Pearl of the Eastern Region</h1>
+            <p>A modern coastal city known for its shopping, dining, and gateway to Bahrain.</p>
+        </div>
+    </section>
+
+    <section class="city-details-section" id="activities">
+        <div class="container py-5">
+            <h2 class="section-title">Top Activities</h2>
+
+            <div class="activity-grid">
+                <div class="col-md-4 mb-4">
+                    <div class="attraction-image-card" style="background-image: url('/static/images/khobar.jpg');">
+                        <h3>Corniche Sunset Walk</h3>
+                        <p>Stroll the waterfront promenade with parks and sea breeze.</p>
+                        <a href="#" class="booking-link-text">Plan Walk</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="attraction-image-card" style="background-image: url('/static/images/khobar1.png');">
+                        <h3>King Fahd Causeway View</h3>
+                        <p>Catch panoramic views of the iconic causeway linking Bahrain.</p>
+                        <a href="https://www.bing.com/ck/a?!&&p=1c8812e672c6611f86f24f0b208374814a41d32a17b9942c6b897d4133c2edcbJmltdHM9MTc2MjkwNTYwMA&ptn=3&ver=2&hsh=4&fclid=3a680f01-e76b-6082-0122-1979e6626186&psq=%d9%85%d8%b1%d8%ac%d8%b9+%d9%84%d9%84%d8%b4%d8%b1%d9%82%d9%8a%d8%a9+%d8%a7%d9%84%d8%ae%d8%a8%d8%b1&u=a1aHR0cHM6Ly9zZGEuZ292LnNhLw" class="booking-link-text">View Spots</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="attraction-image-card" style="background-image: url('/static/images/khobar2.png');">
+                        <h3>Half Moon Bay Beach</h3>
+                        <p>Relax on the sandy gulf shores or try water activities.</p>
+                        <a href="#" class="booking-link-text">Beach Day</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+
+{% endblock content %}

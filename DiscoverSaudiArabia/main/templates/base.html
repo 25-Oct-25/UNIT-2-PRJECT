@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Discover Saudi Arabia{% endblock %}</title> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/city_theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dark-mode.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+</head>
+<body id="body" class="{% if dark_mode %} dark-mode {% endif %}">
+
+    <nav class="navbar">
+        <a href="{% url 'main:home' %}">Home</a> 
+        <a href="{% url 'main:about' %}">About Us</a>
+        <a href="{% url 'main:contact' %}">Contact</a>
+        <a href="{% url 'main:riyadh' %}">Riyadh</a>
+        <a href="{% url 'main:jeddah' %}">Jeddah</a>
+        <a href="{% url 'main:alula' %}">AlUla</a>
+        <a href="{% url 'main:abha' %}">Abha</a>
+        <a href="{% url 'main:khobar' %}">Khobar</a>
+        <a href="{% url 'main:tabuk' %}">Tabuk</a>
+        
+        <div class="navbar-spacer"></div>
+
+        <button id="toggleTheme" class="theme-toggle-btn">
+            <i id="sunIcon" class="fas fa-sun active-icon"></i> 
+            <i id="moonIcon" class="fas fa-moon inactive-icon"></i> 
+        </button>
+    </nav>
+    
+    {% if 'riyadh' in request.path or 'jeddah' in request.path or 'alula' in request.path or 'abha' in request.path or 'khobar' in request.path or 'tabuk' in request.path %}
+        <a href="#" id="prevCityBtn" class="page-nav-btn prev-btn" style="display: none;">
+            <i class="fas fa-chevron-right"></i>
+        </a>
+        <a href="#" id="nextCityBtn" class="page-nav-btn next-btn" style="display: none;">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+    {% endif %}
+
+    {% if messages %}
+        {% endif %}
+
+    <div class="content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2025 Discover Saudi Arabia</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script src="{% static 'js/main.js' %}"></script>
+    
+</body>
+</html>

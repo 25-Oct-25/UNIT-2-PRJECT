@@ -1,0 +1,67 @@
+/* ================================================= */
+/* 🏆 الحل القاطع والنهائي لصفحة About Us 🏆 */
+/* (لفرض العرض الأفقي وتجاوز أي تعارضات) */
+/* ================================================= */
+.about-mission-grid {
+    display: grid !important; 
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px !important;
+}
+
+/* 🛑 لضمان أنها تعود عمود واحد على الجوال (Mobile Fix) 🛑 */
+@media (max-width: 768px) { 
+    .about-mission-grid {
+        grid-template-columns: 1fr !important; 
+        gap: 20px !important; 
+    }
+}
+
+/* ================================================= */
+/* 🚀 تنسيق أزرار التنقل بين الصفحات (الأسهم) 🚀 */
+/* ================================================= */
+.page-nav-btn {
+    position: fixed;
+    top: 50%; /* وسط عمودي */
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex; /* لتمكين توسيط الأيقونة */
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5em;
+    z-index: 1050; /* فوق كل شيء تقريباً */
+    transition: background-color 0.3s, opacity 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.page-nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev-btn {
+    right: 20px; /* السهم السابق (Right/يمين) */
+}
+
+.next-btn {
+    left: 20px; /* السهم التالي (Left/يسار) */
+}
+
+/* 🌙 Dark Mode Support 🌙 */
+.dark-mode .page-nav-btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.dark-mode .page-nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* تعديل اتجاه السهم ليناسب RTL */
+.prev-btn i {
+    transform: rotate(180deg);
+}
