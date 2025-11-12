@@ -1,0 +1,112 @@
+{% extends 'tourism_app/base.html' %}
+{% load static %}
+{% block title %} Riyadh {% endblock %}
+
+{% block content %}
+<!-- Riyadh Hero -->
+    <section class="py-20 bg-gradient-to-br from-[var(--secondary)] to-[var(--primary)] text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-6">Riyadh</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">The Capital - Where Tradition Meets Modern Innovation</p>
+        </div>
+    </section>
+
+    <!-- Riyadh Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+                <div class="slide-in-left">
+                    <h2 class="text-3xl font-black mb-6 gradient-text">Discover Riyadh</h2>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        Riyadh is the modern capital of Saudi Arabia, a bustling metropolis that seamlessly blends ultra-modern architecture with traditional Saudi culture. From towering skyscrapers to historical forts, Riyadh offers a diverse urban experience.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">Kingdom Centre</h4>
+                            <p>Iconic skyscraper with a sky bridge offering panoramic city views.</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">Masmak Fortress</h4>
+                            <p>Historical clay and mud-brick fort, a symbol of Saudi unification.</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">Diriyah</h4>
+                            <p>The original home of the Saudi royal family and a UNESCO World Heritage site.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-xl slide-in-right">
+                    <img src="{% static 'tourism_app/img/fesal.jpg' %}" 
+                         alt="Riyadh" class="w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <!-- Modern Landmarks -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-8 text-center gradient-text">Modern Landmarks</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover fade-in">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1586724237565-7c5a8f5c6f48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="Kingdom Centre" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 text-gray-900">
+                            <h3 class="text-xl font-black mb-2">Kingdom Centre</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">302-meter skyscraper with luxury shopping and sky bridge</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-[var(--accent)] font-bold">Architectural Marvel</span>
+                                <span class="bg-[var(--primary)] text-white text-sm px-3 py-1 rounded-full">Landmark</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover fade-in">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544628936-7a0e8e4c3b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="Boulevard Riyadh City" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 text-gray-900">
+                            <h3 class="text-xl font-black mb-2">Boulevard Riyadh City</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Entertainment district with theme parks and cultural events</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-[var(--accent)] font-bold">Entertainment Hub</span>
+                                <span class="bg-[var(--secondary)] text-white text-sm px-3 py-1 rounded-full">Modern</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Historical Sites -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-8 text-center gradient-text">Historical Sites</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="glass p-6 rounded-2xl fade-in">
+                        <h3 class="text-xl font-black mb-4">Masmak Fortress</h3>
+                        <p class="mb-4">This clay and mud-brick fort played a crucial role in the unification of Saudi Arabia. Today, it houses a museum that showcases artifacts and exhibits from the unification era.</p>
+                        <div class="flex items-center text-[var(--accent)]">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>Open daily 8AM - 9PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="glass p-6 rounded-2xl fade-in">
+                        <h3 class="text-xl font-black mb-4">Diriyah</h3>
+                        <p class="mb-4">The original home of the Saudi royal family and the first Saudi state. This UNESCO World Heritage site features restored mud-brick buildings, museums, and cultural centers.</p>
+                        <div class="flex items-center text-[var(--accent)]">
+                            <i class="fas fa-landmark mr-2"></i>
+                            <span>UNESCO World Heritage Site</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <div class="text-center">
+                <a href="{% url 'index_view' %}#Places" class="inline-flex items-center bg-[var(--primary)] text-white font-bold py-3 px-8 rounded-full transition duration-500 transform hover:scale-105">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Places
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

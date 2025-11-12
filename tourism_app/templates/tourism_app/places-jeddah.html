@@ -1,0 +1,120 @@
+{% extends 'tourism_app/base.html' %}
+{% load static %}
+{% block title %} Jeddah {% endblock %}
+
+{% block content %}
+    <!-- Jeddah Hero -->
+    <section class="py-20 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-6">Jeddah</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">The Bride of the Red Sea - Where Tradition Meets Modernity</p>
+        </div>
+    </section>
+
+    <!-- Jeddah Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+                <div class="rounded-2xl overflow-hidden shadow-xl slide-in-left">
+                    <img src="{% static 'tourism_app/img/jeddah_hous2.jpg' %}" 
+                         alt="Jeddah" class="w-full h-auto object-cover">
+                </div>
+                <div class="slide-in-right">
+                    <h2 class="text-3xl font-black mb-6 gradient-text">Explore Jeddah</h2>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        Jeddah is a vibrant port city on the Red Sea, known for its historic Al-Balad district, stunning corniche, and modern shopping malls. As the gateway to the holy cities of Mecca and Medina, Jeddah blends tradition with contemporary life.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">Al-Balad Historical District</h4>
+                            <p>Explore the UNESCO World Heritage site with its traditional coral houses.</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">King Fahd's Fountain</h4>
+                            <p>Witness the world's tallest fountain, reaching up to 312 meters.</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">Red Sea Beaches</h4>
+                            <p>Enjoy pristine beaches and coral reefs perfect for diving and snorkeling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Attractions -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-8 text-center gradient-text">Top Attractions in Jeddah</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover fade-in">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1580052614387-03ceb7c16d8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="Al-Balad" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 text-gray-900">
+                            <h3 class="text-xl font-black mb-2">Al-Balad</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Historic district with traditional architecture and bustling souks</p>
+                            <span class="inline-block bg-[var(--primary)] text-white text-sm px-3 py-1 rounded-full">UNESCO Site</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover fade-in">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1571887259330-7d3a71ff9313?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                                 alt="Corniche" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 text-gray-900">
+                            <h3 class="text-xl font-black mb-2">Jeddah Corniche</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">30km coastal resort area with parks, beaches, and restaurants</p>
+                            <span class="inline-block bg-[var(--accent)] text-white text-sm px-3 py-1 rounded-full">Coastal</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover fade-in">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544628936-7a0e8e4c3b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="Floating Mosque" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 text-gray-900">
+                            <h3 class="text-xl font-black mb-2">Floating Mosque</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Stunning mosque that appears to float on the Red Sea</p>
+                            <span class="inline-block bg-[var(--secondary)] text-white text-sm px-3 py-1 rounded-full">Religious</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Travel Tips -->
+            <div class="bg-white dark:bg-[var(--dark)] rounded-2xl p-8 mb-12">
+                <h2 class="text-3xl md:text-4xl font-black mb-6 text-center gradient-text">Jeddah Travel Tips</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="fade-in ">
+                        <h3 class="text-xl font-black mb-4">Best Time to Visit</h3>
+                        <p class="mb-4">October to April offers the most pleasant weather for exploring Jeddah's outdoor attractions.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Winter (Nov-Feb): Mild temperatures, perfect for sightseeing</li>
+                            <li>Spring (Mar-Apr): Warm but comfortable for beach activities</li>
+                            <li>Summer (May-Sep): Very hot and humid, best for indoor activities</li>
+                        </ul>
+                    </div>
+                    <div class="fade-in">
+                        <h3 class="text-xl font-black mb-4">Getting Around</h3>
+                        <p class="mb-4">Jeddah has various transportation options to explore the city comfortably.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Taxis and ride-sharing services widely available</li>
+                            <li>Rental cars for more flexibility</li>
+                            <li>Walking ideal in Al-Balad historic area</li>
+                            <li>Public buses connect major areas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <div class="text-center">
+                <a href="{% url 'index_view' %}#Places" class="inline-flex items-center bg-[var(--primary)] text-white font-bold py-3 px-8 rounded-full transition duration-500 transform hover:scale-105">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Places
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

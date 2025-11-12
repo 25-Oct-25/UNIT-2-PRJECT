@@ -1,0 +1,170 @@
+{% extends 'tourism_app/base.html' %}
+{% load static %}
+{% block title %} Travel Planning {% endblock %}
+
+{% block content %}
+    <!-- Planning Hero -->
+    <section class="py-20 bg-gradient-to-br from-[var(--accent)] to-[var(--secondary)] text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-6">Travel Planning</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Everything you need to plan your perfect Saudi Arabian adventure</p>
+        </div>
+    </section>
+
+    <!-- Planning Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+                <div class="slide-in-left">
+                    <h2 class="text-3xl font-black mb-6 gradient-text">Plan Your Journey</h2>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        Planning your trip to Saudi Arabia is easier than ever. With the new tourist visa system and improved infrastructure, visitors can explore the Kingdom's wonders with convenience.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-[var(--primary)] p-2 rounded-full mr-3 mt-1">
+                                <i class="fas fa-passport text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Visa Requirements</h4>
+                                <p>Check eligibility for e-visa or visa on arrival for many nationalities.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-[var(--primary)] p-2 rounded-full mr-3 mt-1">
+                                <i class="fas fa-hotel text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Accommodation</h4>
+                                <p>Wide range of options from luxury hotels to traditional guesthouses.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-[var(--primary)] p-2 rounded-full mr-3 mt-1">
+                                <i class="fas fa-map-signs text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Transportation</h4>
+                                <p>Modern airports, expanding rail network, and well-maintained roads.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-xl slide-in-right">
+                    <img src="https://images.unsplash.com/photo-1578558422230-4d0194e1441c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Travel Planning" class="w-full h-auto object-cover">
+                </div>
+            </div>
+
+            <!-- Essential Information -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-8 text-center gradient-text">Essential Information</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-[var(--dark)] rounded-2xl p-6 card-hover fade-in">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[var(--primary)] p-3 rounded-full mr-4">
+                                <i class="fas fa-money-bill-wave text-white"></i>
+                            </div>
+                            <h3 class="font-black text-lg text-[var(--light)]">Currency</h3>
+                        </div>
+                        <p class="text-[var(--light)]">Saudi Riyal (SAR) is the official currency. Credit cards widely accepted.</p>
+                    </div>
+
+                    <div class="bg-[var(--dark)] rounded-2xl p-6 card-hover fade-in">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[var(--accent)] p-3 rounded-full mr-4">
+                                <i class="fas fa-language text-white"></i>
+                            </div>
+                            <h3 class="font-black text-lg text-[var(--light)]">Language</h3>
+                        </div>
+                        <p class="text-[var(--light)]">Arabic is official language. English widely spoken in tourist areas.</p>
+                    </div>
+
+                    <div class="bg-[var(--dark)] rounded-2xl p-6 card-hover fade-in">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[var(--secondary)] p-3 rounded-full mr-4">
+                                <i class="fas fa-plug text-white"></i>
+                            </div>
+                            <h3 class="font-black text-lg text-[var(--light)]">Electricity</h3>
+                        </div>
+                        <p class="text-[var(--light)]">220V/60Hz. Type G plugs (British 3-pin) are standard.</p>
+                    </div>
+
+                    <div class="bg-[var(--dark)] rounded-2xl p-6 card-hover fade-in">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-[var(--primary)] p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <h3 class="font-black text-lg text-[var(--light)]">Time Zone</h3>
+                        </div>
+                        <p class="text-[var(--light)]">Arabian Standard Time (AST) - UTC+3. No daylight saving.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Travel Checklist -->
+            <div class="bg-[var(--dark)] rounded-2xl p-8 mb-12">
+                <h2 class="text-3xl md:text-4xl font-black mb-6 text-center gradient-text">Travel Checklist</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="fade-in">
+                        <h3 class="text-xl font-black mb-4 text-[var(--light)]">Before You Go</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[var(--accent)] mr-3 mt-1"></i>
+                                <span class="text-[var(--light)]">Apply for tourist visa online</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[var(--accent)] mr-3 mt-1"></i>
+                                <span class="text-[var(--light)]">Book accommodations in advance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[var(--accent)] mr-3 mt-1"></i>
+                                <span class="text-[var(--light)]">Check passport validity (6+ months)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[var(--accent)] mr-3 mt-1"></i>
+                                <span class="text-[var(--light)]">Get travel insurance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[var(--accent)] mr-3 mt-1"></i>
+                                <span class="text-[var(--light)]">Download essential apps</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fade-in">
+                        <h3 class="text-xl font-black mb-4 text-[var(--light)]">What to Pack</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[var(--accent)] mr-3 mt-1"></i>
+                                <span class="text-[var(--light)]">Lightweight, modest clothing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[var(--accent)] mr-3 mt-1"></i>
+                                <span class="text-[var(--light)]">Comfortable walking shoes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[var(--accent)] mr-3 mt-1"></i>
+                                <span class="text-[var(--light)]">Sunscreen and sunglasses</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[var(--accent)] mr-3 mt-1"></i>
+                                <span class="text-[var(--light)]">Power adapter</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-[var(--accent)] mr-3 mt-1"></i>
+                                <span class="text-[var(--light)]">Basic first aid kit</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <div class="text-center">
+                <a href="{% url 'index_view' %}#discover" class="inline-flex items-center bg-[var(--primary)] text-white font-bold py-3 px-8 rounded-full transition duration-500 transform hover:scale-105">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Discover
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'tourism_app/css/styles.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass sticky top-0 z-50 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-full flex items-center justify-center text-white font-bold text-xl glow">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <span class="ml-3 text-xl font-black gradient-text">Saudi Arabia</span>
+                </div>
+                
+                <div class="hidden lg:flex space-x-8">
+                    <a href="{% url 'index_view' %}" class="nav-link text-lg font-medium active">Home</a>
+                    <a href="{% url 'index_view' %}#about" class="nav-link text-lg font-medium active">About</a>
+                    <a href="{% url 'index_view' %}#discover" class="nav-link text-lg font-medium">Discover</a>
+                    <a href="{% url 'index_view' %}#Places" class="nav-link text-lg font-medium">Places</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="theme-toggle p-2 rounded-full transition">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                    
+                    <div class="lg:hidden">
+                        <button id="menu-toggle" class="text-[var(--light)] focus:outline-none text-xl">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-6 pb-4 space-y-4">
+                <a href="{% url 'index_view' %}" class="block py-2 text-lg font-medium border-l-4 border-[var(--primary)] pl-4 active">Home</a>
+                <a href="#about" class="block py-2 text-lg font-medium">About</a>
+                <a href="#discover" class="block py-2 text-lg font-medium">Discover</a>
+                <a href="#Places" class="block py-2 text-lg font-medium">Places</a>
+            </div>
+        </div>
+    </nav>
+
+    {%block content %} {% endblock %}
+    
+    <!-- Footer -->
+    <footer class="bg-gradient-to-t from-[var(--dark)] to-[#050811] py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <div class="mb-6 lg:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] rounded-full flex items-center justify-center text-white font-bold">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <span class="ml-3 text-lg font-black gradient-text">Saudi Arabia</span>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">Land of Wonders, Heart of Arabia</p>
+                </div>
+                
+              <!-- <div class="flex space-x-6">
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Home</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">About</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Discover</a>
+                    <a href="index.html" class="text-gray-400 hover:text-[var(--accent)] transition">Places</a>
+                </div> -->
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 Saudi Arabia Tourism. All rights reserved.</p>
+            </div>
+        </div>
+        <!-- Dynamic Shapes -->
+        <div class="absolute -bottom-32 -right-32 w-80 h-80 bg-[var(--secondary)] opacity-5 rounded-full floating"></div>
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-[var(--accent)] opacity-5 morph"></div>
+    
+    </footer>
+
+    <script src="{% static 'tourism_app/js/script.js' %}"></script>
+
+</body>
+</html>

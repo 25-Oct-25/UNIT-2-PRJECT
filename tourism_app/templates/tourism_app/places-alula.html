@@ -1,0 +1,116 @@
+{% extends 'tourism_app/base.html' %}
+{% load static %}
+{% block title %} Al-Ula {% endblock %}
+
+{% block content %}
+    <!-- Al-Ula Hero -->
+    <section class="py-20 bg-gradient-to-br from-[var(--accent)] to-[var(--secondary)] text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-6">Al-Ula</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">The World's Largest Living Museum - A Journey Through Time</p>
+        </div>
+    </section>
+
+    <!-- Al-Ula Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+                <div class="rounded-2xl overflow-hidden shadow-xl slide-in-left">
+                    <img src="https://images.unsplash.com/photo-1629363837246-8a4dcebad11c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2067&q=80" 
+                         alt="Al-Ula" class="w-full h-auto object-cover">
+                </div>
+                <div class="slide-in-right">
+                    <h2 class="text-3xl font-black mb-6 gradient-text">Visit Al-Ula</h2>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        Al-Ula is a breathtaking archaeological site in northwestern Saudi Arabia, home to magnificent rock formations, ancient tombs, and historical sites that date back thousands of years. It's often described as the world's largest open-air museum.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">Hegra (Madain Saleh)</h4>
+                            <p>Saudi Arabia's first UNESCO World Heritage site with Nabatean tombs.</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">Elephant Rock</h4>
+                            <p>A massive rock formation resembling an elephant with its trunk touching the ground.</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl card-hover">
+                            <h4 class="font-bold text-lg mb-2">Old Town of Al-Ula</h4>
+                            <p>Explore the ancient mudbrick city that was inhabited until the 20th century.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Attractions -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-8 text-center gradient-text">Main Attractions</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover fade-in">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1547996167-8d47ccf3c266?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                                 alt="Hegra" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 text-gray-900">
+                            <h3 class="text-xl font-black mb-2">Hegra Archaeological Site</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">The southern capital of the Nabatean kingdom with 111 monumental tombs</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-[var(--accent)] font-bold">UNESCO Heritage</span>
+                                <span class="bg-[var(--primary)] text-white text-sm px-3 py-1 rounded-full">Historical</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl overflow-hidden shadow-lg card-hover fade-in">
+                        <div class="h-64 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1586902197503-e71026292412?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                                 alt="Elephant Rock" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 text-gray-900">
+                            <h3 class="text-xl font-black mb-2">Elephant Rock</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Iconic rock formation that resembles an elephant, especially stunning at sunset</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-[var(--accent)] font-bold">Natural Wonder</span>
+                                <span class="bg-[var(--secondary)] text-white text-sm px-3 py-1 rounded-full">Geological</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visitor Information -->
+            <div class="bg-white rounded-2xl p-8 mb-12">
+                <h2 class="text-3xl md:text-4xl font-black mb-6 text-center gradient-text">Visitor Information</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8  text-black">
+                    <div class="fade-in">
+                        <h3 class="text-xl font-black mb-4">Best Time to Visit</h3>
+                        <p class="mb-4">Al-Ula is best visited between October and April when temperatures are mild and perfect for exploration.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>October-April: Ideal weather for outdoor activities</li>
+                            <li>Winter months: Perfect for daytime exploration</li>
+                            <li>Spring: Beautiful desert blooms</li>
+                            <li>Summer: Very hot, limited to early morning and evening</li>
+                        </ul>
+                    </div>
+                    <div class="fade-in">
+                        <h3 class="text-xl font-black mb-4">Travel Tips</h3>
+                        <p class="mb-4">Make the most of your Al-Ula experience with these helpful tips.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Book guided tours in advance</li>
+                            <li>Wear comfortable walking shoes</li>
+                            <li>Carry water and sun protection</li>
+                            <li>Respect archaeological sites and guidelines</li>
+                            <li>Consider staying overnight for star gazing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <div class="text-center">
+                <a href="{% url 'index_view' %}#Places" class="inline-flex items-center bg-[var(--primary)] text-white font-bold py-3 px-8 rounded-full transition duration-500 transform hover:scale-105">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Places
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

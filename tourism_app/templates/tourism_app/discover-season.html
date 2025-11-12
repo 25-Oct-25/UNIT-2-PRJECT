@@ -1,0 +1,139 @@
+{% extends 'tourism_app/base.html' %}
+{% load static %}
+{% block title %} Best Seasons {% endblock %}
+
+{% block content %}
+
+    <!-- Season Hero -->
+    <section class="py-20 bg-gradient-to-br from-[var(--secondary)] to-[var(--primary)] text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-6">Best Seasons to Visit</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Find the perfect time for your Saudi Arabian adventure</p>
+        </div>
+    </section>
+
+    <!-- Season Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+                <div class="rounded-2xl overflow-hidden shadow-xl slide-in-left">
+                    <img src="{% static 'tourism_app/img/winter.jpg' %}" 
+                         alt="Saudi Seasons" class="w-full h-auto object-cover">
+                </div>
+                <div class="slide-in-right">
+                    <h2 class="text-3xl font-black mb-6 gradient-text">When to Visit</h2>
+                    <p class="mb-6 text-lg leading-relaxed">
+                        The best time to visit Saudi Arabia depends on the regions you plan to explore and the activities you're interested in. Each season offers unique experiences across the Kingdom's diverse landscapes.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="glass p-4 rounded-xl card-hover text-gray-900">
+                            <h4 class="font-bold text-lg mb-2">Winter (November - February)</h4>
+                            <p>Perfect for exploring deserts and historical sites with mild temperatures.</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl card-hover text-gray-900">
+                            <h4 class="font-bold text-lg mb-2">Spring (March - April)</h4>
+                            <p>Ideal for witnessing the beautiful bloom in the southern regions.</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl card-hover text-gray-900">
+                            <h4 class="font-bold text-lg mb-2">Autumn (September - October)</h4>
+                            <p>Great for coastal activities with pleasant weather.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seasonal Activities -->
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-black mb-8 text-center gradient-text">Seasonal Activities</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl p-6 text-center card-hover fade-in text-gray-900">
+                        <div class="bg-[var(--primary)] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-sun text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-black mb-2">Desert Exploration</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Best in winter for comfortable temperatures</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl p-6 text-center card-hover fade-in text-gray-900">
+                        <div class="bg-[var(--accent)] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-umbrella-beach text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-black mb-2">Beach Activities</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Perfect in autumn along the Red Sea coast</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl p-6 text-center card-hover fade-in text-gray-900">
+                        <div class="bg-[var(--secondary)] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-hiking text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-black mb-2">Mountain Trekking</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Ideal in spring in the Asir region</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl p-6 text-center card-hover fade-in text-gray-900">
+                        <div class="bg-[var(--primary)] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-landmark text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-black mb-2">Cultural Sites</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Enjoyable year-round with seasonal variations</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regional Climate Guide -->
+            <div class="bg-white dark:bg-[var(--dark-brown)] rounded-2xl p-8 mb-12 text-gray-900">
+                <h2 class="text-3xl md:text-4xl font-black mb-6 text-center gradient-text">Regional Climate Guide</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="border-b-2 border-[var(--primary)]">
+                                <th class="pb-4 font-black">Region</th>
+                                <th class="pb-4 font-black">Winter</th>
+                                <th class="pb-4 font-black">Spring</th>
+                                <th class="pb-4 font-black">Summer</th>
+                                <th class="pb-4 font-black">Autumn</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-200 dark:border-gray-700">
+                                <td class="py-4 font-medium">Central (Riyadh)</td>
+                                <td class="py-4">Mild (10-20°C)</td>
+                                <td class="py-4">Warm (20-30°C)</td>
+                                <td class="py-4">Hot (30-45°C)</td>
+                                <td class="py-4">Warm (25-35°C)</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 dark:border-gray-700">
+                                <td class="py-4 font-medium">Western (Jeddah)</td>
+                                <td class="py-4">Warm (20-30°C)</td>
+                                <td class="py-4">Hot (25-35°C)</td>
+                                <td class="py-4">Very Hot (30-40°C)</td>
+                                <td class="py-4">Warm (25-35°C)</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 dark:border-gray-700">
+                                <td class="py-4 font-medium">Southern (Abha)</td>
+                                <td class="py-4">Cool (5-15°C)</td>
+                                <td class="py-4">Mild (15-25°C)</td>
+                                <td class="py-4">Warm (20-30°C)</td>
+                                <td class="py-4">Mild (15-25°C)</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 font-medium">Northern (Al-Ula)</td>
+                                <td class="py-4">Cool (5-18°C)</td>
+                                <td class="py-4">Mild (15-28°C)</td>
+                                <td class="py-4">Hot (25-40°C)</td>
+                                <td class="py-4">Mild (15-30°C)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <div class="text-center">
+                <a href="{% url 'index_view' %}#discover " class="inline-flex items-center bg-[var(--primary)] text-white font-bold py-3 px-8 rounded-full transition duration-500 transform hover:scale-105">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Discover
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
