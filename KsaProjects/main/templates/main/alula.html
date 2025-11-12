@@ -1,0 +1,63 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Alula Project{% endblock %}
+
+{% block content %}
+
+<div class="background-container">
+
+    <div class="hero">
+        <h1>Alula</h1>
+        <p>Where History, Nature, and Imagination Unite.</p>
+        <p>AlUla is a living museum of ancient civilizations and timeless beauty.</p>
+    </div>
+
+    <div class="photos-section">
+        <div class="photo-card-square">
+            <img src="../static/images/alula1.jpg">
+        </div>
+
+        <div class="photo-card focus">
+            <img src="../static/images/alula2.jpg">
+        </div>
+
+        <div class="photo-card-square">
+            <img src="../static/images/alula3.jpg">
+        </div>
+
+        <div class="photo-card">
+            <img src="../static/images/alula4.jpg">
+        </div>
+    </div>
+
+
+    <div class="brief animated-block">
+
+        <p>Home to boundless cultural treasures, including Saudi Arabia’s first UNESCO World Heritage site, AlUla is
+            transforming into a once-in-a-lifetime experience for visitors from around the world.
+            <br><br>
+            With over 200,000 years of largely underexplored history, including the Nabataean city of Hegra, the ancient
+            Kingdoms Dadanite and Lihyanite, and AlUla Old Town, AlUla’s rich heritage and bright future are open to
+            explore.
+            <br><br>
+            The Royal Commission for AlUla is committed to a sustainable and responsible approach to the area’s urban,
+            economic, and heritage development. Initiatives across archaeology, tourism, culture, education, and the
+            arts
+            are helping open this extraordinary destination to the world, all while preserving the area's remarkable
+            natural
+            and historic character.
+            <br><br>
+            Explore how Vision 2030 is transforming the Kingdom into a global destination for history, heritage,
+            culture,
+            and nature.
+        </p>
+    </div>
+    <div class="project-vid">
+        <video width="620" height="340" controls class="animated-block">
+            <source src="../static/video/alula.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+{% endblock %}

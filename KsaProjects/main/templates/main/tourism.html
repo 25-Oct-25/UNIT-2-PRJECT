@@ -1,0 +1,76 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Tourism Projects{% endblock %}
+
+{% block content %}
+
+<div class="projects-wrap">
+    <h1 id="title">Vision 2030 Projects in The Tourism Field</h1>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="img-box">
+                <img src="../static/images/deseret_rock1.jpg">
+            </div>
+            <div class="content">
+                <h2>Desert Rock</h2>
+                <p>Immerse yourself in a world of luxury and breathtaking beauty. Desert Rock promises to deliver an
+                    unforgettable experience.</p>
+                <a href="{% url 'main:deseret_rock' %}" class="more-btn">Discover More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-box">
+                <img src="../static/images/redSea-global.png">
+            </div>
+            <div class="content">
+                <h2>Red Sea Global</h2>
+                <p>Come and discover the beauty and adventure that awaits you at The Red Sea, a pioneering luxury
+                    regenerative tourism destination.</p>
+                <a href="{% url 'main:redsea_global' %}" class="more-btn">Discover More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-box">
+                <img src="../static/images/alula.jpg">
+            </div>
+            <div class="content">
+                <h2>AlUla</h2>
+                <p>Home to boundless cultural treasures.
+                    AlUla is transforming into a once-in-a-lifetime experience for visitors from around the world.
+                </p>
+                <a href="{% url 'main:alula' %}" class="more-btn">Discover More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-box">
+                <img src="../static/images/amaala.jpg">
+            </div>
+            <div class="content">
+                <h2>Amaala</h2>
+                <p>Inspired by art, wellness, and the purity of the red sea, AMAALA is the world’s first integrated
+                    family wellness destination.</p>
+                <a href="{% url 'main:amaala' %}" class="more-btn">Discover More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-box">
+                <img src="../static/images/Sindalah.png">
+            </div>
+            <div class="content">
+                <h2>Sindalah</h2>
+                <p>A luxury island destination where the beauty of nature blends with sustainable design,
+                    advanced technology and captivating architecture.</p>
+                <a href="{% url 'main:sindalah' %}" class="more-btn">Discover More</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

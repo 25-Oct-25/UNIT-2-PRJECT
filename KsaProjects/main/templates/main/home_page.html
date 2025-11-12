@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+{% block title %}HomePage{% endblock %}
+
+{% block content %}
+
+
+<div class="hero-container">
+
+  <div class="hero-content">
+
+    <h1 class="animated-title">KSA 2030 Tourism Projects</h1>
+
+    <div class="hero-sub">
+      <h3>Saudi Arabia Vision for Tourism Transformation</h3>
+      <h3>World-class destinations, authentic culture, and responsible development<br>— powered by Saudi Vision for
+        Tourism</h3>
+    </div>
+
+    <a href="{% url 'main:tourism' %}" class="projects-btn">Discover Projects</a>
+
+  </div>
+</div>
+
+    {% endblock %}
