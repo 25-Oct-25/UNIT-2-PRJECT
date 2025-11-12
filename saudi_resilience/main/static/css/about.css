@@ -1,0 +1,11 @@
+/* صور عن السعودية */
+.about-gallery img {
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transition: transform .3s ease;
+}
+
+/* تكبير بسيط */
+.about-gallery img:hover {
+  transform: scale(1.03);
+}

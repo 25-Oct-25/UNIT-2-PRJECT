@@ -1,0 +1,56 @@
+/*  الهيرو ونزول النص تحت*/
+.hero-gif {
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  padding-bottom: 80px;
+  background: url("../images/hero.gif") center/cover repeat;
+}
+
+/* كرت اقتباس الملك */
+.king-quote {
+  max-width: 900px;
+  margin: 10px auto 0;
+  padding: 30px 30px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+  text-align: justify;
+}
+
+/* صورة داخل كرت الاقتباس */
+.king-quote img {
+  width: 100px;
+  height: 120px;
+  border-radius: 20%;
+  object-fit: cover;
+  border: 2px solid color-mix(in oklab, var(--green) 40%, #fff);
+}
+
+/* نص الاقتباس */
+.king-quote blockquote {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* تعريف أسفل الاقتباس */
+.king-quote .byline {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* استجابة الجوال */
+@media (max-width: 576px) {
+  .king-quote {
+    grid-template-columns: 1fr;
+    text-align: center;
+    text-align: justify;
+  }
+}

@@ -1,0 +1,84 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Education — Remote and Resilient{% endblock %}
+
+{% block content %}
+
+<!-- هيدر بخلفية -->
+<header class="hero-gif" style="background:url('/static/images/education.jpg') center/cover no-repeat;">
+  <div class="overlay"></div>
+  <div class="hero-content reveal">
+    <h1>Education</h1>
+    <p> Learning Without Interruption</p>
+  </div>
+</header>
+
+<!-- محتوى الصفحة -->
+<section class="page-section reveal">
+  <h2 class="section-title">Systemic Continuity & Inclusion</h2>
+  <p class="lead-muted">
+    The education ecosystem delivered remote learning nationwide through LMS platforms, secure e-assessment,
+    and teacher development — ensuring access, quality, and inclusion.
+  </p>
+
+  <!-- كروت النقاط التعليمية -->
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">LMS & Content Operations</h5>
+          <p class="card-text">Versioned content libraries, live + recorded lessons, and analytics ensured pacing and coverage.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Secure e-Assessment</h5>
+          <p class="card-text">Identity checks and monitored sessions protected integrity while providing rapid feedback loops.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Remote Learning Continuity</h5>
+          <p class="card-text">Madrasati delivered cloud-hosted classrooms, monitored pacing, and governed e-assessments — ensuring inclusive, uninterrupted education nationwide.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Accessibility & Inclusion</h5>
+          <p class="card-text">Multimodal access, captioning, device support, and special-needs accommodations at scale.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- الفيديو و الاقتباس -->
+<section class="page-section reveal">
+  <h3 class="section-title" style="margin-top:9px;">The fourth UNESCO report recognized Saudi Arabia’s effective educational response during the COVID-19 pandemic.</h3>
+
+  <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow my-5">
+    <iframe
+      src="https://www.youtube.com/embed/yo5F0zqlsp8?si=K6XbHGN1R0HYfO84&rel=0&modestbranding=1"
+      title="Saudi Education — Remote Learning Journey"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <blockquote class="film-quote reveal">
+    “While everything paused, education in Saudi Arabia continued.”
+  </blockquote>
+</section>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Film — Hard Phase (مرحلة صعبة){% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/film.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- هيدر بخلفية -->
+<header class="hero-gif" style="background:url('/static/images/film.jpg') center/cover no-repeat;">
+  <div class="overlay"></div>
+  <div class="hero-content reveal">
+    <h1>Hard Phase — <span dir="rtl">مرحلة صعبة</span></h1>
+    <p>A cinematic story of resilience and hope.</p>
+  </div>
+</header>
+
+<!-- محتوى الصفحة -->
+<section class="page-section">
+
+  <!-- فيديو -->
+  <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow mb-4 reveal">
+    <iframe
+      src="https://www.youtube.com/embed/lYRcyCrLmww?si=ZpZtLo5Yi62hSEPF&rel=0&modestbranding=1"
+      title="Hard Phase"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- الملخص -->
+  <div class="callout reveal">
+    <div class="callout-title">Synopsis</div>
+    <p class="mb-0">
+      Set during a global uncertainty, “Hard Phase” follows everyday heroes who turned challenge into transformation —
+      echoing a nation’s resilient spirit.
+    </p>
+  </div>
+
+  <!-- اقتباس -->
+  <blockquote class="film-quote reveal">
+    “Through every hardship we gained strength, and through every challenge, a vision for tomorrow was born.”
+  </blockquote>
+</section>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+/* تغميق خلفية الهيرو للفيلم */
+header.hero-gif .overlay {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* عنوان الفيلم داخل الهيرو */
+header.hero-gif .hero-content h1 {
+  font-weight: 800;
+  font-size: clamp(28px, 5vw, 48px);
+  margin-bottom: 10px;
+  text-shadow: 0 6px 25px rgba(0,0,0,.5);
+}
+
+/* وصف الفيلم داخل الهيرو */
+header.hero-gif .hero-content p {
+  opacity: .9;
+  font-size: clamp(14px, 2vw, 18px);
+  max-width: 600px;
+  margin: 0 auto;
+}

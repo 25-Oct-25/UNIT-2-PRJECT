@@ -1,0 +1,18 @@
+/* تنسيق الحقول والقائمة بنفس الستايل */
+.contact-form .form-control,
+.contact-form .form-select {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+/* زر إرسال البريد */
+.btn-outline-secondary {
+  border-color: var(--border);
+  color: var(--ink);
+}
+
+/* هوفر زر البريد */
+.btn-outline-secondary:hover {
+  background: var(--blue);
+  color: #fff;
+}

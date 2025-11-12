@@ -1,0 +1,53 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Home — Saudi Resilience{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!--  هيدر فيه صوره متحركه بالخلفية في التنسيق-->
+<header class="hero-gif">
+  <div class="overlay"></div> <!-- لتعتيم -->
+  <div class="hero-content reveal">
+    <h1>Saudi Resilience</h1>
+    <p>From Challenge to Renaissance — Unity and Vision.</p>
+  </div>
+</header>
+
+<!-- كروت القطاعات -->
+<section class="page-section reveal">
+  <h2 class="section-title">Main Sectors</h2>
+  <p class="lead-muted">Discover how Saudi Arabia transformed across every sector.</p>
+
+  <div class="row g-3">
+    {% for c in cards %}
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card h-100">
+        <img class="card-img-top" src="{{ c.bg }}" alt="{{ c.name }}">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ c.name }}</h5>
+          <p class="card-text">{{ c.desc }}</p>
+          <a href="{% url c.url_name %}" class="btn btn-primary mt-auto">Explore</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- اقتباس الملك سلمان -->
+<section class="page-section pt-0 reveal">
+  <div class="king-quote">
+    <img src="static/images/king.jpg" alt="صوره الملك سلمان حفطه الله">
+    <div>
+      <blockquote>
+        “All government sectors, led by the Ministry of Health, are exerting all their capabilities to take the necessary measures to protect the health of citizens and residents. This crisis will become a part of history that proves humanity’s confrontation with one of the hardships that the world is facing. It is a phase that will pass and fade, despite its severity, bitterness, and difficulty.”
+      </blockquote>
+      <div class="byline">— King Salman bin Abdulaziz</div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

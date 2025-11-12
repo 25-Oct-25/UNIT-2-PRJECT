@@ -1,0 +1,84 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Economy — Recovery and Empowerment{% endblock %}
+
+{% block content %}
+
+<!-- هيدر بخلفية -->
+<header class="hero-gif" style="background:url('/static/images/economy.jpg') center/cover no-repeat;">
+  <div class="overlay"></div>
+  <div class="hero-content reveal">
+    <h1>Economy</h1>
+    <p>Economic Strength Through Smart Intervention.</p>
+  </div>
+</header>
+
+<!-- محتوى الصفحة -->
+<section class="page-section reveal">
+  <h2 class="section-title">Targeted Relief & Growth</h2>
+  <p class="lead-muted">
+    Calibrated interventions protected jobs and liquidity, safeguarded timelines for strategic projects,
+    and accelerated entrepreneurship — guided by real-time indicators.
+  </p>
+
+  <!-- كروت النقاط -->
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Liquidity & Credit Preservation</h5>
+          <p class="card-text">The Saudi Central Bank deployed zero-cost financing, deferred loan payments, and guaranteed lending programs to sustain SME cashflows and prevent solvency erosion.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">SME Survival & Digital Migration</h5>
+          <p class="card-text">Fast-track e-commerce onboarding, logistics credits, and cloud-service vouchers enabled SMEs to maintain operations and access new digital markets despite mobility restrictions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Supply-Chain Continuity & Critical Imports</h5>
+          <p class="card-text">Proactive inventory management, accelerated customs clearance, and priority lanes for medical and food supplies ensured uninterrupted availability across the Kingdom.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Megaproject Safeguarding</h5>
+          <p class="card-text">Strict operational protocols protected timelines for Vision 2030 megaprojects, maintaining construction momentum and investor confidence despite global slowdowns.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- الفيديو و الاقتباس -->
+<section class="page-section reveal">
+  <h3 class="section-title" style="margin-top:9px;">Saudi Arabia’s Global Performance in Combating the COVID-19 Pandemic</h3>
+
+  <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow my-5">
+    <iframe
+      src="https://www.youtube.com/embed/TqGeEpPS9jU?si=ywnI--boCgm1H1uV&rel=0&modestbranding=1"
+      title="Saudi Economy — Recovery and Empowerment"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <blockquote class="film-quote reveal">
+    “The Kingdom of Saudi Arabia ranked first globally.”
+  </blockquote>
+</section>
+
+{% endblock %}

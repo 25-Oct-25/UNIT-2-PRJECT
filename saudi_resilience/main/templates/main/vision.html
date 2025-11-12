@@ -1,0 +1,84 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Vision 2030 — Transformation Pathway{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'css/vision.css' %}">{% endblock %}
+
+{% block content %}
+
+<!-- هيدر بخلفية -->
+<header class="hero-gif" style="background:url('/static/images/vision.jpg') center/cover;">
+  <div class="overlay"></div>
+</header>
+
+<!-- محتوى الصفحة -->
+<section class="page-section">
+  <h2 class="section-title reveal">Vision 2030</h2>
+  <p class="lead-muted reveal">
+    From resilience to innovation — Saudi Arabia’s journey toward a diversified, empowered, and globally competitive future.
+  </p>
+
+  <!-- الخط الزمني -->
+  <section class="page-section" id="timeline-section">
+    <h3 class="timeline-heading reveal">Transformation Timeline</h3>
+
+    <ol class="timeline reveal">
+
+      <!-- إطلاق الرؤية -->
+      <li class="timeline-item reveal">
+        <h4>2016 — Launch of Vision 2030</h4>
+        <p>Vision 2030 announced to diversify the economy and reduce oil dependence — a roadmap led by H.R.H. Crown Prince Mohammed bin Salman.</p>
+      </li>
+
+      <!-- التحول الوطني -->
+      <li class="timeline-item reveal">
+        <h4>2017 — National Transformation Program</h4>
+        <p>Government agencies began modernization through the National Transformation Program — focusing on digital services, performance, and transparency.</p>
+      </li>
+
+      <!-- المشاريع الكبرى -->
+      <li class="timeline-item reveal">
+        <h4>2019 — Giga Projects Begin</h4>
+        <p>Launch of NEOM, The Red Sea, Qiddiya, and AMAALA — creating new economic and tourism sectors while attracting global investment.</p>
+      </li>
+
+      <!-- تسارع الرؤية وقت كورونا -->
+      <li class="timeline-item reveal">
+        <h4>2020 — Resilience During COVID-19</h4>
+        <p>The pandemic became a real-world test of Vision 2030, accelerating digital transformation and proving the nation’s unity and adaptability.</p>
+        <ul>
+          <li>Nationwide remote learning via <strong>Madrasati</strong> and <strong>IEN</strong> platforms.</li>
+          <li>Health digitization with <strong>Tawakkalna</strong> and <strong>Sehhaty</strong> apps.</li>
+          <li>Expansion of e-government services and remote work systems.</li>
+          <li>Financial support programs for citizens and small businesses.</li>
+          <li>Advanced data systems enabled real-time national decisions.</li>
+        </ul>
+        <p class="timeline-ref">Source: Vision 2030 Reports (2020–2021), MCIT, MOH</p>
+      </li>
+
+      <!-- الاعتراف العالمي -->
+      <li class="timeline-item reveal">
+        <h4>2021–2023 — Global Recognition</h4>
+        <p>Saudi Arabia achieved record milestones in digital government, economic diversification, and social empowerment.</p>
+        <ul>
+          <li><strong>Women’s workforce participation</strong> exceeded Vision 2030 target, reaching <strong>37%</strong> in 2022 (target was 30%).</li>
+          <li>Ranked among the top 10 globally in digital government maturity (UN e-Government Index 2022).</li>
+          <li>Hosting of global summits like LEAP and FII, reinforcing Saudi’s innovation leadership.</li>
+        </ul>
+        <p class="timeline-ref">Source: GASTAT, Vision 2030 Reports, UN e-Government Index</p>
+      </li>
+
+      <!-- رؤية 2030 -->
+      <li class="timeline-item reveal">
+        <h4>2030 — Vision Realized</h4>
+        <p>A thriving, diversified economy built on innovation, renewable energy, and human capital — a global model for sustainable growth.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ملاحظة -->
+  <div class="callout reveal">
+    <strong>Insight:</strong> Vision 2030 is not just a plan — it’s a mindset of continuous progress and resilience.
+  </div>
+</section>
+
+{% endblock %}

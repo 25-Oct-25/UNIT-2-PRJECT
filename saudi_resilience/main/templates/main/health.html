@@ -1,0 +1,127 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Health — A Nation’s Priority{% endblock %}
+
+{% block content %}
+
+<!-- هيدر بخلفية -->
+<header class="hero-gif" style="background:url('/static/images/health.jpg') center/cover no-repeat;">
+  <div class="overlay"></div>
+  <div class="hero-content reveal">
+    <h1>Health</h1>
+    <p>National Strength in Every Crisis</p>
+  </div>
+</header>
+
+<!-- إنجازات الصحة -->
+<section class="page-section reveal">
+  <h2 class="section-title">Health Achievements</h2>
+  <p class="lead-muted">Saudi Arabia built one of the most efficient public-health ecosystems.</p>
+
+  <div class="row g-3">
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Emergency Response</h5>
+          <p class="card-text">Integrated national centers managed crises efficiently and ensured equal medical access for all citizens and residents.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Digital Health</h5>
+          <p class="card-text">Applications like Sehhaty and Tawakkalna connected people to vital health services instantly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- احصائيات الصحة -->
+<section class="page-section reveal">
+  <h3 class="section-title mt-2">Key Statistics</h3>
+
+  <p class="lead-muted covid-text">
+    Saudi Arabia demonstrated remarkable health leadership during the COVID-19 pandemic —
+    expanding nationwide vaccination campaigns, mobilizing medical staff, and supporting the global community.
+  </p>
+
+  <div class="stat-grid mt-4">
+    <div class="stat">
+      <div class="num" data-target="68500000">0</div>
+      <div class="label">Vaccines Given</div>
+    </div>
+    <div class="stat">
+      <div class="num" data-target="590">0</div>
+      <div class="label">Vaccination Centers</div>
+    </div>
+    <div class="stat">
+      <div class="num" data-target="240000">0</div>
+      <div class="label">Medical Staff</div>
+    </div>
+    <div class="stat">
+      <div class="num" data-target="10000000">0</div>
+      <div class="label">USD Donated to WHO</div>
+    </div>
+  </div>
+</section>
+
+<!-- الفيديو و الاقتباس و المراجع حقت الاحصائيات-->
+<section class="page-section reveal">
+  <h3 class="section-title mt-2">Saudi Arabia’s Efforts in Combating COVID-19</h3>
+
+  <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow my-5">
+    <iframe
+      src="https://www.youtube.com/embed/npkGd_n6SX0?si=Mv5HMkTVdTfe11Bq&rel=0&modestbranding=1"
+      title="Saudi Health — National Efforts During COVID-19"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <blockquote class="film-quote reveal">
+    “Human First — The guiding principle of Saudi Arabia during the COVID-19 pandemic.”
+  </blockquote>
+
+  <div class="sources reveal text-center mt-5 small" style="color:var(--muted);">
+    <strong>Sources:</strong>
+    <a href="https://tradingeconomics.com/saudi-arabia/coronavirus-vaccination-total" target="_blank">Trading Economics</a> •
+    <a href="https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%AA%D8%B7%D8%B9%D9%8A%D9%85_%D8%B6%D8%AF_%D9%81%D9%8A%D8%B1%D9%88%D8%B3_%D9%83%D9%88%D9%86%D8%A7_%D9%81%D9%8A_%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9" target="_blank">Wikipedia — COVID-19 Vaccination in Saudi Arabia</a> •
+    <a href="https://www.moh.gov.sa/en/Ministry/Statistics/book/Pages/default.aspx" target="_blank">MOH Statistical Yearbook 2021 (Medical Staff)</a> •
+    <a href="https://www.spa.gov.sa/w1283983" target="_blank">Saudi Press Agency (SPA)</a>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const nums = document.querySelectorAll(".num");
+
+  nums.forEach(num => {
+    const target = +num.dataset.target;
+    let count = 0;
+
+    const update = () => {
+      count += target / 200;
+
+      if (count < target) {
+        num.textContent = Math.floor(count);
+        const scale = 1 + Math.sin(count / target * Math.PI) * 0.2;  // تكبير خفيف أثناء العد
+        num.style.transform = `scale(${scale})`;
+        num.style.transition = "transform 0.1s ease-out";
+        requestAnimationFrame(update);
+      } else {
+        num.textContent = target.toLocaleString('en-US');
+        num.style.transform = "scale(1)";
+      }
+    };
+
+    update();
+  });
+});
+</script>
+
+{% endblock %}

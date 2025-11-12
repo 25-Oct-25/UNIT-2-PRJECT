@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}About Saudi Arabia{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'css/about.css' %}">{% endblock %}
+
+{% block content %}
+
+<!-- هيدر بخلفية -->
+<header class="hero-gif" style="background:url('/static/images/ksa.jpg') center/cover;">
+  <div class="overlay"></div>
+</header>
+
+<!-- محتوى الصفحة -->
+<section class="page-section reveal">
+  <h2 class="section-title reveal">About Saudi Arabia</h2>
+  <p class="lead-muted reveal">A nation of deep heritage and bold transformation — where culture, faith, and future meet.</p>
+
+  <!-- الصور -->
+  <div class="row g-3 about-gallery reveal">
+    <div class="col-md-4">
+      <img class="img-fluid" src="{% static 'images/ksa1.jpg' %}" alt="ربي اجعل هذا البلد امنا">
+    </div>
+    <div class="col-md-4">
+      <img class="img-fluid" src="{% static 'images/ksa2.jpg' %}" alt="عشت فخر المسلمين">
+    </div>
+    <div class="col-md-4">
+      <img class="img-fluid" src="{% static 'images/ksa3.png' %}" alt="علم السعودية">
+    </div>
+  </div>
+
+  <!-- تعامل السعودية مع الازمات  -->
+  <p style="text-align:justify; max-width:1000px; margin:22px auto 0; color:#64748b; line-height:1.8;">
+    By the grace of Allah, and through the wisdom of its leadership and the steadfastness of its people, the Kingdom of Saudi Arabia has long demonstrated a profound balance between faith and action — placing trust in Allah while mobilizing every possible resource to protect its people and sustain progress. Guided by firm leadership and collective responsibility, the nation turns adversity into advancement, ensuring that challenges become catalysts for innovation and unity. This enduring approach, rooted in belief and diligence, has made Saudi Arabia not only resilient in crises but a global model of purposeful transformation.
+  </p>
+</section>
+
+{% endblock %}

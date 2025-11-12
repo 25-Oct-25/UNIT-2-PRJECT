@@ -1,0 +1,89 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Contact — Saudi Resilience{% endblock %}
+
+{% block content %}
+
+<!-- هيدر بخلفية -->
+<header class="hero-gif" style="background:url('/static/images/contact.jpg') center/cover;">
+  <div class="overlay"></div>
+</header>
+
+<!-- محتوى الصفحة -->
+<section class="page-section reveal">
+
+  <!-- عنوان الصفحة -->
+  <h2 class="section-title">Send Us a Message</h2>
+  <p class="lead-muted">
+    For inquiries or heartfelt messages celebrating the Kingdom’s resilience and vision.
+  </p>
+
+  <!-- تنبيه النجاح بعد الارسال ما راح يطلع الا لو كان فيه رساله -->
+  {% if sent %}
+    <div class="alert alert-success rounded-3 shadow-sm mt-4 mx-auto text-center"
+        role="alert"
+        style="max-width:700px; font-size:0.9rem;">
+      ✅ Thank you{% if name %}, {{ name }}{% endif %}! Your message has been received successfully.
+    </div>
+  {% endif %}
+
+  <!-- النموذج -->
+  <div class="d-flex justify-content-center">
+    <div style="max-width:700px; width:100%;">
+
+      <!-- نموذج التواصل -->
+      <form method="post" class="card shadow-sm border-0 contact-form">
+        {% csrf_token %}
+        <div class="card-body d-flex flex-column gap-3">
+
+          <!-- الاسم -->
+          <div>
+            <label class="form-label">Full Name</label>
+            <input name="name" type="text" class="form-control" placeholder="Your name">
+          </div>
+
+          <!-- البريد الإلكتروني -->
+          <div>
+            <label class="form-label">Email Address</label>
+            <input name="email" type="email" class="form-control" placeholder="name@example.com">
+          </div>
+
+          <!-- نوع الرسالة -->
+          <div>
+            <label class="form-label">Message Type</label>
+            <select name="topic" class="form-select">
+              <option selected disabled>Choose type...</option>
+              <option>Inquiry</option>
+              <option>Message of Appreciation</option>
+              <option>Idea / Suggestion</option>
+              <option>National Expression</option>
+            </select>
+          </div>
+
+          <!-- الرسالة وهنا تم التحديد انها مطلوبه-->
+          <div>
+            <label class="form-label">Message</label>
+            <textarea name="message" class="form-control" rows="5"
+                      placeholder="Write your message..." required></textarea>
+          </div>
+
+          <!-- الأزرار -->
+          <div class="mt-3 d-flex gap-2 justify-content-end">
+            <button class="btn btn-primary px-4" type="submit">Send Message</button>
+            <a class="btn btn-outline-secondary"
+               href="mailto:al-maha2244@hotmail.com?subject=Message%20to%20Saudi%20Resilience">
+               Send via Email
+            </a>
+          </div>
+        </div>
+      </form>
+
+      <!-- الملاحظة -->
+      <div class="callout mt-4 reveal">
+        <strong>Note:</strong> This contact form is symbolic for the project scope. No data is stored.
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
