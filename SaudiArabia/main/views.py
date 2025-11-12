@@ -4,8 +4,6 @@ from django.shortcuts import resolve_url
 from django.shortcuts import redirect
 
 
-# Create your views here.
-
 def index_view(request: HttpRequest):
     font_size = request.COOKIES.get('font_size', 'normal')
     return render(request, "main/index.html", {'font_size': font_size})
