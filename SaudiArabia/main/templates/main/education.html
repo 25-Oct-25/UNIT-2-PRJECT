@@ -1,0 +1,80 @@
+{%extends 'main/base.html'%}
+{%load static%}
+
+<title>{%block title%}Educational Achievements{%endblock%}</title>
+
+{%block content%}
+
+
+
+
+<main class="edu-main">
+    <h1 class="title">Educational Saudi Achievements</h1>
+    <p class="intro">Saudi students, supported primarily by the King Abdulaziz and His
+        Companions Foundation for Giftedness and Creativity (Mawhiba)
+        and the Ministry of Education, have achieved remarkable success
+        on the global stage, particularly in STEM fields.</p>
+
+    <section class="achievement">
+        <div class="profile-header">
+            <h2 class="title-accent">ISEF</h2>
+            <h1>International Science Fairs</h1>
+        </div>
+
+        <div class="profile-content">
+            <div class="image-container">
+                <img src="{%static 'images/isef.jpg'%}" alt="" class="profile-photo">
+            </div>
+
+
+            <div class="second-text-block">
+                <p>Saudi students have established <span class="highlight-text">a strong presence at major global
+                        innovation events</span>, most notably the International
+                    Science and Engineering Fair (ISEF). Represented by the
+                    <span class="highlight-text">Mawhiba program</span>, the Kingdom's young researchers
+                    <span class="highlight-text">consistently achieve high award tallies each year</span>,
+                    frequently <span class="highlight-text">securing more than 25 Grand and Special Awards</span>
+                    in diverse fields like energy, chemistry, and biomedical
+                    engineering. This continuous success has resulted in <span class="highlight-text">a substantial
+                        cumulative record of over 185 international awards in ISEF alone since 2007</span>, affirming
+                    their aptitude
+                    for original scientific research and innovation.
+                </p>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="achievement">
+        <div class="profile-header">
+            <h2 class="title-accent">Olympiads</h2>
+            <h1>International Olympiads</h1>
+        </div>
+
+        <div class="profile-content">
+            <div class="second-image-container">
+                <img src="{%static 'images/mawhiba-olympiad.jpg'%}" alt="" class="second-profile-photo">
+            </div>
+            <div class="second-text-block">
+                <p>The Kingdom's students demonstrate <span class="highlight-text">academic excellence across a broad
+                        range of scientific disciplines</span> by winning
+                    numerous medals in the International Scientific Olympiads.
+                    These competitions span fields such as <span class="highlight-text">Mathematics (IMO), Chemistry
+                        (IChO), Physics (IPhO), and Biology (IBO)</span>.
+                    Through consistent preparation and participation, Saudi
+                    teams have collectively garnered <span class="highlight-text">an impressive cumulative total of over
+                        795 international awards across all Olympiads</span>,
+                    including <span class="highlight-text">Gold, Silver, and Bronze medals</span>, cementing Saudi
+                    Arabia's position as <span class="highlight-text">a top-performing nation among Arab countries in
+                        rigorous academic contests</span>.</p>
+
+
+
+            </div>
+        </div>
+    </section>
+</main>
+{%endblock%}

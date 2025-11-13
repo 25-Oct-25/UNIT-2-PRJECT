@@ -1,0 +1,83 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" {%if 'mode' in request.COOKIES%} class="dark-mode" {%endif%}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=DM+Serif+Text:ital@0;1&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <title>{%block title%}{%endblock%}</title>
+    {%block style%}{%endblock%}
+</head>
+<body>
+    <nav class="header-nav">
+        <a href="/" class="text-changer-link">
+            <div class="text-changer">
+                <p class="intro-text">I AM</p>
+                <div class="words-container">
+                    <span class="word">SAUDI</span>
+                    <span class="word">A LEADER</span>
+                    <span class="word">SUCCESSFUL</span>
+                    <span class="word">AN INSPIRATION</span>
+                    <span class="word">SAUDI</span>
+                </div>    
+            </div>
+        </a>
+
+
+        <div class="menu-toggle" id="menuToggle">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+
+        <div class="header-links" id="headerLinks">
+            <a href="{%url 'main:home_view'%}">Home</a>
+            <a href="{%url 'main:science_view'%}">Science</a>
+            <a href="{%url 'main:education_view'%}">Education</a>
+            <a href="{%url 'main:sports_view'%}">Sports</a>
+            <a href="{%url 'main:art_view'%}">Art & Culture</a>
+            <a href="{%url 'main:esports_view'%}">E-sport</a>
+            <a href="{%url 'main:about_view'%}">About</a>
+        </div>
+
+        <div class="theme">
+            <a href="{%url 'main:mode_view' 'light'%}?page={{request.path}}"><span class="material-symbols-outlined {% if not 'mode' in request.COOKIES %} active {%endif%}">light_mode</span></a>
+            <a href="{%url 'main:mode_view' 'dark'%}?page={{request.path}}"><span class="material-symbols-outlined {% if 'mode' in request.COOKIES %} active {%endif%}">dark_mode</span></a>
+        </div>
+    </nav>
+
+    {%block content%}
+    {%endblock%}
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const headerLinks = document.getElementById('headerLinks');
+            
+            if (menuToggle && headerLinks) {
+                menuToggle.addEventListener('click', function() {
+                    headerLinks.classList.toggle('active');
+                });
+                
+               
+                const navLinks = headerLinks.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        headerLinks.classList.remove('active');
+                    });
+                });
+            }
+            
+
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    headerLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

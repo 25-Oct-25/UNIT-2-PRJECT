@@ -1,0 +1,75 @@
+{%extends 'main/base.html'%}
+{%load static%}
+
+
+{%block title%}Saudi successes{%endblock%}
+
+
+{%block content%}
+
+<main class="home-page-main">
+    <div class="home-page-text">
+        <h1 class="title">Kingdom of Saudi Arabia</h1>
+        <div class="paragraph">
+            <p>Saudi Arabia is a nation undergoing <span class="highlight-text">a massive transformation</span>,
+                moving rapidly from its historical identity as a conservative
+                kingdom primarily defined by its role as the birthplace of
+                Islam and a global leader in the oil industry. For decades,
+                its strength lay in its vast energy reserves and its spiritual
+                significance. Today, guided by the bold <span class="highlight-text">Vision 2030 framework</span>,
+                Saudi Arabia has embarked on <span class="highlight-text">an ambitious journey to diversify its economy,
+                    empower its youth, and reform its society</span>, resulting
+                in remarkable achievements like <span class="highlight-text">the flourishing of arts, entertainment, and
+                    non-oil sectors</span> through broad social changes
+                and widespread infrastructural development. Looking forward, the
+                Kingdom is focused on <span class="highlight-text">pioneering the future through giga-projects like
+                    NEOM</span>, becoming <span class="highlight-text">a global hub for technology and finance</span>,
+                and driving significant international engagement in
+                sports and tourism, solidifying its place as <span class="highlight-text">a dynamic and influential
+                    player on the world stage</span>.</p>
+
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <a href="{%url 'main:science_view'%}">
+                <h2>SCIENCE</h2>
+                <p>Explore groundbreaking Saudi innovations and scientific discoveries shaping the future</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="{%url 'main:education_view'%}">
+                <h2>EDUCATION</h2>
+                <p>Discover Saudi Arabia's transformative educational reforms and academic excellence</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="{%url 'main:sports_view'%}">
+                <h2>SPORTS</h2>
+                <p>Witness Saudi athletes breaking records and achieving global sporting glory</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="{%url 'main:art_view'%}">
+                <h2>ART & CULTURE</h2>
+                <p>Experience the vibrant renaissance of Saudi arts and cultural heritage</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="{%url 'main:esports_view'%}">
+                <h2>E-SPORTS</h2>
+                <p>Meet Saudi gaming champions dominating the global esports arena</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="{%url 'main:about_view'%}">
+                <h2>ABOUT US</h2>
+                <p>earn about our mission to showcase Saudi Arabia's remarkable achievements</p>
+            </a>
+        </div>
+    </div>
+</main>
+
+{%endblock%}
