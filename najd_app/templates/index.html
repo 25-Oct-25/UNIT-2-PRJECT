@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="animated-bg"></div>
+    
+    <div class="hero-content">
+        <h1 class="hero-title">Where Heritage Meets the Horizon</h1>
+        <p data-aos="fade-up" data-aos-delay="200">رحلة عبر الزمن من جذور التاريخ إلى آفاق المستقبل</p>
+        <button class="cta-button" data-aos="fade-up" data-aos-delay="400">اكتشف الرحلة</button>
+    </div>
+</section>
+
+<main>
+    <section class="intro-section">
+        <h2 data-aos="fade-right">رحلة من التراث إلى الأفق</h2>
+        <p data-aos="fade-right" data-aos-delay="200">من عمق التاريخ في الدرعية إلى مستقبل نيوم، رحلة تروي قصة التحول والطموح</p>
+    </section>
+
+    <section class="journey-sections">
+        <div class="city-card" id="riyadh" data-aos="fade-up">
+            <div class="city-content">
+                <h3>مدينة الرياض</h3>
+                <p>الانطلاق من العاصمة الحديثة، قلب المملكة النابض بالحياة والتطور. الرياض تمثل البداية المعاصرة لرحلة تمتد من الحاضر المتطور إلى المستقبل الطموح.</p>
+                <a href="{% url 'riyadh' %}" class="cta-button" style="margin-top: 1rem; padding: 10px 25px; font-size: 1rem;">استكشف الرياض</a>
+            </div>
+            <div class="city-image">
+                <img src="{% static 'img/scene1.jpg' %}" alt="الرياض" class="content-image">
+            </div>
+        </div>
+        <div class="city-card" id="diriyah" data-aos="fade-up" data-aos-delay="100">
+            <div class="city-content">
+                <h3>الدرعية</h3>
+                <p>الجذور التاريخية التي بدأت منها الدولة السعودية، رمز الأصالة والتراث. هنا حيث تلتقي جذور الماضي مع طموحات المستقبل.</p>
+                <a href="{% url 'diriyah' %}" class="cta-button" style="margin-top: 1rem; padding: 10px 25px; font-size: 1rem;">استكشف الدرعية</a>
+            </div>
+            <div class="city-image">
+                <img src="{% static 'img/scene2.jpg' %}" alt="الدرعية" class="content-image">
+            </div>
+        </div>
+        <div class="city-card" id="dhurma" data-aos="fade-up" data-aos-delay="200">
+            <div class="city-content">
+                <h3>محافظة ضرماء</h3>
+                <p>الانفتاح العمراني والترفيهي مع مشاريع مثل القدية، نقطة التحول نحو المستقبل.</p>
+                <a href="{% url 'dhurma' %}" class="cta-button" style="margin-top: 1rem; padding: 10px 25px; font-size: 1rem;">استكشف ضرما</a>
+            </div>
+            <div class="city-image">
+                <img src="{% static 'img/scene3.jpg' %}" alt="ضرماء" class="content-image">
+            </div>
+        </div>
+
+        <div class="city-card" id="marat" data-aos="fade-up" data-aos-delay="300">
+            <div class="city-content">
+                <h3>محافظة مرات</h3>
+                <p>كانت طريق الحجاز التاريخي، وستكون طريق نيوم القادم، صلة الوصل بين الماضي والمستقبل.</p>
+                <a href="{% url 'marat' %}" class="cta-button" style="margin-top: 1rem; padding: 10px 25px; font-size: 1rem;">استكشف مرات</a>
+            </div>
+            <div class="city-image">
+                <img src="{% static 'img/marat.jpg' %}" alt="مرات" class="content-image">
+            </div>
+        </div>
+
+        <div class="city-card" id="shaqra" data-aos="fade-up" data-aos-delay="400">
+            <div class="city-content">
+                <h3>محافظة شقراء</h3>
+                <p>التراث الأصيل الذي تحافظ عليه الرؤية، جسر بين الأصالة والمعاصرة.</p>
+                <a href="{% url 'shaqra' %}" class="cta-button" style="margin-top: 1rem; padding: 10px 25px; font-size: 1rem;">استكشف شقراء</a>
+            </div>
+            <div class="city-image">
+                <img src="{% static 'img/scene5.jpg' %}" alt="شقراء" class="content-image">
+            </div>
+        </div>
+
+        <div class="city-card" id="neom" data-aos="fade-up" data-aos-delay="500">
+            <div class="city-content">
+                <h3>نيوم</h3>
+                <p>الأفق المستقبلي الذي تمضي نحوه المملكة، تجسيد حي لرؤية 2030.</p>
+                <a href="{% url 'neom' %}" class="cta-button" style="margin-top: 1rem; padding: 10px 25px; font-size: 1rem;">استكشف نيوم</a>
+            </div>
+            <div class="city-image">
+                <img src="{% static 'img/neom.jpg' %}" alt="نيوم" class="content-image">
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

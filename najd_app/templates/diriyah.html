@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}DIRIYAH - From Riyadh to Neom{% endblock %}
+
+{% block content %}
+<section class="city-hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">DIRIYAH</h1>
+        </div>
+    </div>
+</section>
+<main class="city-main">
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-content" data-aos="fade-right">
+                    <h2>الدرعية: مهد الدولة السعودية</h2>
+                    <p>الدرعية ليست مجرد موقع تراثي، ولكنها المكان الذي تأسست فيه الدولة السعودية الأولى عام 1744م. تمثل الدرعية الرمز الأبرز للتراث الوطني والجذور التاريخية العميقة للمملكة العربية السعودية، حيث كانت عاصمة الدولة السعودية الأولى.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>1744</h3>
+                            <p>سنة التأسيس</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>أولى</h3>
+                            <p>عاصمة الدولة</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>تراث</h3>
+                            <p>اليونسكو</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content" data-aos="fade-left" data-aos-delay="200">
+                    <img src="{% static 'img/diriyah.jpg' %}" alt="بوابة الدرعية التاريخية" class="content-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section alt-section">
+        <div class="container">
+            <div class="content-grid reverse">
+                <div class="image-content" data-aos="fade-right" data-aos-delay="200">
+                    <img src="{% static 'img/museum.jpg' %}" alt="متحف الدرعية" class="content-image">
+                </div>
+                <div class="text-content" data-aos="fade-left">
+                    <h2>بوابة التاريخ: متحف الدرعية</h2>
+                    <p>متحف الدرعية يروي قصة تأسيس الدولة السعودية بأساليب عرض متطورة. يضم المتحف مقتنيات أثرية نادرة ووثائق تاريخية تعود إلى عهد الإمام محمد بن سعود، مؤسس الدولة السعودية الأولى.</p>
+                    <ul class="feature-list">
+                        <li>مقتنيات أثرية تعود للقرن الثامن عشر</li>
+                        <li>وثائق تأسيس الدولة السعودية الأولى</li>
+                        <li>عروض تفاعلية عن حياة الإمام محمد بن سعود</li>
+                        <li>قاعات عرض بتقنيات حديثة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-content" data-aos="fade-right">
+                    <h2>قصر سلوى: قلب الدرعية النابض</h2>
+                    <p>قصر سلوى يمثل التحفة المعمارية الأبرز في الدرعية، حيث كان المقر الرئيسي لحكام الدولة السعودية الأولى. يتميز القصر بتصميمه النجدي التقليدي وموقعه الاستراتيجي في حي الطريف، المدرج على قائمة اليونسكو للتراث العالمي.</p>
+                    <div class="heritage-info">
+                        <div class="info-item">
+                            <i class="fas fa-archway"></i>
+                            <span>أكبر مبنى طيني في العالم</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-university"></i>
+                            <span>مقر حكام الدولة السعودية الأولى</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-globe-americas"></i>
+                            <span>موقع تراث عالمي لليونسكو</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content" data-aos="fade-left" data-aos-delay="200">
+                    <img src="{% static 'img/salwa.jpg' %}" alt="قصر سلوى التاريخي" class="content-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="navigation-section">
+        <div class="container">
+            <div class="cta-buttons">
+                <a href="{% url 'riyadh' %}" class="cta-button secondary">
+                    <i class="fas fa-arrow-right"></i> الرياض
+                </a>
+                <a href="{% url 'index' %}" class="cta-button secondary">
+                    <i class="fas fa-home"></i> الرئيسية
+                </a>
+                <a href="{% url 'dhurma' %}" class="cta-button">
+                    ضرما <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

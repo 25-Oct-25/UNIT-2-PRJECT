@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}SHAQRA - From Riyadh to Neom{% endblock %}
+
+{% block content %}
+<section class="city-hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">SHAQRA</h1>
+        </div>
+    </div>
+</section>
+<main class="city-main">
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-content" data-aos="fade-right">
+                    <h2>شقراء: بوابة التراث النجدي</h2>
+                    <p>تعتبر شقراء العاصمة الإدارية لمنطقة الوشم، وتتميز بموقعها الاستراتيجي وتاريخها العريق. تجمع بين الأصالة التراثية والمعاصرة الحديثة، مما يجعلها نموذجاً للتوازن بين الماضي والحاضر.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>عاصمة</h3>
+                            <p>الوشم</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>تراث</h3>
+                            <p>حي</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>إبداع</h3>
+                            <p>معاصر</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content" data-aos="fade-left" data-aos-delay="200">
+                    <img src="{% static 'img/Shaqra.png' %}" alt="شقراء العامة" class="content-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section alt-section">
+        <div class="container">
+            <div class="content-grid reverse">
+                <div class="image-content" data-aos="fade-right" data-aos-delay="200">
+                    <img src="{% static 'img/shaqra2.jpg' %}" alt="شقراء التراثية" class="content-image">
+                </div>
+                <div class="text-content" data-aos="fade-left">
+                    <h2>شقراء التراثية: درة الوشم</h2>
+                    <p>تمثل شقراء التراثية القلب التاريخي للمحافظة، حيث تحافظ على الطابع المعماري الأصيل والتراث الغني. تضم المنطقة العديد من المعالم التاريخية التي تروي قصص الأجداد وتحكي تاريخ المنطقة العريق.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-content" data-aos="fade-right">
+                    <h2>قصر السبيعي: تحفة معمارية</h2>
+                    <p>يعد قصر السبيعي واحداً من أبرز القصور التاريخية في السعودية، تم بناؤه على الطراز الأندلسي الإسلامي. كان الملك عبد العزيز رحمه الله يستريح في هذا القصر خلال سفره بين الرياض والمناطق الأخرى، مما يضفي عليه قيمة تاريخية كبيرة.</p>
+                    <div class="heritage-info">
+                        <div class="info-item">
+                            <i class="fas fa-archway"></i>
+                            <span>طراز أندلسي إسلامي</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-crown"></i>
+                            <span>مكان استراحة الملك عبد العزيز</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-landmark"></i>
+                            <span>أبرز القصور التاريخية</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content" data-aos="fade-left" data-aos-delay="200">
+                    <img src="{% static 'img/shaqra3.jpg' %}" alt="قصر السبيعي" class="content-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section alt-section">
+        <div class="container">
+            <div class="content-grid reverse">
+                <div class="image-content" data-aos="fade-right" data-aos-delay="200">
+                    <img src="{% static 'img/shaqra4.jpg' %}" alt="المسرح الروماني" class="content-image">
+                </div>
+                <div class="text-content" data-aos="fade-left">
+                    <h2>المسرح الروماني: منصة الإبداع</h2>
+                    <p>صمم المسرح الروماني المهندس محمد بن سعد البواردي ليصبح منصة ثقافية رائدة. تقام فيه الحفلات الغنائية خلال الأعياد والمناسبات، كما استضاف مؤخراً حفلات موسم الرياض 2025، مما يجعله مركزاً للفنون والترفيه في المنطقة.</p>
+                    <div class="heritage-info">
+                        <div class="info-item">
+                            <i class="fas fa-theater-masks"></i>
+                            <span>حفلات موسم الرياض 2025</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-music"></i>
+                            <span>منصة للحفلات الغنائية</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-star"></i>
+                            <span>تصميم المهندس البواردي</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="navigation-section">
+        <div class="container">
+            <div class="cta-buttons">
+                <a href="{% url 'marat' %}" class="cta-button secondary">
+                    <i class="fas fa-arrow-right"></i> مرات
+                </a>
+                <a href="{% url 'index' %}" class="cta-button secondary">
+                    <i class="fas fa-home"></i> الرئيسية
+                </a>
+                <a href="{% url 'neom' %}" class="cta-button">
+                    نيوم <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

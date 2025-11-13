@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}NEOM - From Riyadh to Neom{% endblock %}
+
+{% block content %}
+<section class="city-hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">NEOM</h1>
+        </div>
+    </div>
+</section>
+<main class="city-main">
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-content" data-aos="fade-right">
+                    <h2>نيوم: مستقبل الاستدامة والابتكار</h2>
+                    <p>تمثل نيوم الرؤية الطموحة للمملكة نحو المستقبل، حيث تجمع بين الابتكار التكنولوجي والاستدامة البيئية. هذا المشروع العملاق يضع المملكة في طليعة الدول الرائدة في مجالات الطاقة النظيفة والذكاء الاصطناعي والاقتصاد الرقمي.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>2030</h3>
+                            <p>رؤية</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>مستقبل</h3>
+                            <p>الطاقة</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>ابتكار</h3>
+                            <p>تكنولوجي</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content" data-aos="fade-left" data-aos-delay="200">
+                    <img src="{% static 'img/neom.jpg' %}" alt="نيوم المستقبلية" class="content-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section alt-section">
+        <div class="container">
+            <div class="content-grid reverse">
+                <div class="image-content" data-aos="fade-right" data-aos-delay="200">
+                    <img src="{% static 'img/the-line.webp' %}" alt="ذا لاين" class="content-image">
+                </div>
+                <div class="text-content" data-aos="fade-left">
+                    <h2>ذا لاين: ثورة في التخطيط الحضري</h2>
+                    <p>يعد "ذا لاين" المشروع الأكثر طموحاً في نيوم، وهو مدينة خطية بطول 170 كيلومتراً تعيد تعريف مفهوم الحياة الحضرية. تعتمد على الذكاء الاصطناعي والطاقة النظيفة بنسبة 100%، وتلغي الحاجة إلى السيارات والطرق التقليدية.</p>
+                    <ul class="feature-list">
+                        <li>مدينة خطية بطول 170 كم</li>
+                        <li>طاقة نظيفة بنسبة 100%</li>
+                        <li>لا سيارات ولا طرق تقليدية</li>
+                        <li>اعتماد كامل على الذكاء الاصطناعي</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-content" data-aos="fade-right">
+                    <h2>تروجينا: وجهة الرياضات الجبلية</h2>
+                    <p>تمثل تروجينا الوجهة المثالية لعشاق الرياضات الشتوية والطبيعة الجبلية. تقع في منطقة جبلية خلابة وتوفر فرصاً فريدة للتزلج والرياضات الخارجية على مدار العام، مما يجعلها مركزاً للسياحة البيئية والرياضية.</p>
+                    <div class="heritage-info">
+                        <div class="info-item">
+                            <i class="fas fa-snowflake"></i>
+                            <span>وجهة للرياضات الشتوية</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-mountain"></i>
+                            <span>موقع جبلي خلاب</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-skiing"></i>
+                            <span>تزلج على مدار العام</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content" data-aos="fade-left" data-aos-delay="200">
+                    <img src="{% static 'img/trojena.jpg' %}" alt="تروجينا" class="content-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section alt-section">
+        <div class="container">
+            <div class="journey-end" data-aos="zoom-in">
+                <h2>نهاية الرحلة: من الجذور إلى الأفق</h2>
+                <p>ها قد وصلنا إلى نهاية رحلتنا من الرياض إلى نيوم، رحلة عبر الزمن من عمق التاريخ في الدرعية إلى آفاق المستقبل في نيوم. هذه الرحلة ترمز لمسيرة المملكة من تراثها العريق إلى طموحاتها المستقبلية غير المحدودة.</p>
+                
+                <div class="journey-stats">
+                    <div class="journey-stat">
+                        <h3>6</h3>
+                        <p>محطات</p>
+                    </div>
+                    <div class="journey-stat">
+                        <h3>قرون</h3>
+                        <p>من التاريخ</p>
+                    </div>
+                    <div class="journey-stat">
+                        <h3>2030</h3>
+                        <p>رؤية المستقبل</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="navigation-section">
+        <div class="container">
+            <div class="cta-buttons">
+                <a href="{% url 'shaqra' %}" class="cta-button secondary">
+                    <i class="fas fa-arrow-right"></i> شقراء
+                </a>
+                <a href="{% url 'index' %}" class="cta-button secondary">
+                    <i class="fas fa-home"></i> الرئيسية
+                </a>
+                <a href="{% url 'contact' %}" class="cta-button">
+                    اتصل بنا <i class="fas fa-arrow-left"></i>
+                </a>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}MARAT - From Riyadh to Neom{% endblock %}
+
+{% block content %}
+<section class="city-hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">MARAT</h1>
+        </div>
+    </div>
+</section>
+<main class="city-main">
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-content" data-aos="fade-right">
+                    <h2>مرات: عروس الوشم</h2>
+                    <p>تشتهر محافظة مرات بلقب "عروس الوشم" نظراً لجمالها وموقعها المتميز في منطقة الوشم. كانت مرات محطة رئيسية على طريق الحجاز التاريخي، واليوم تستعد لتصبح جزءاً من طريق نيوم المستقبلي، مما يجعلها جسراً بين الماضي العريق والمستقبل الواعد.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>عروس</h3>
+                            <p>الوشم</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>طريق</h3>
+                            <p>الحجاز</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>جسر</h3>
+                            <p>الزمن</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content" data-aos="fade-left" data-aos-delay="200">
+                    <img src="{% static 'img/marat.jpg' %}" alt="مرات عروس الوشم" class="content-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section alt-section">
+        <div class="container">
+            <div class="content-grid reverse">
+                <div class="image-content" data-aos="fade-right" data-aos-delay="200">
+                    <img src="{% static 'img/plateau.png' %}" alt="جبل كميت" class="content-image">
+                </div>
+                <div class="text-content" data-aos="fade-left">
+                    <h2>جبل كميت: شاهد على العراقة</h2>
+                    <p>يُعد جبل كميت المعلم الأبرز في مرات، وقد اشتهرت المنطقة بالمقولة التاريخية <strong>"أضمن لي كميت أضمن لك مرات"</strong>. هذا الجبل الشامخ كان ولا يزال النقطة المرجعية التي تدل على الوصول إلى مرات، حيث يرتبط اسم الجبل ارتباطاً وثيقاً باسم البلدة.</p>
+                    <ul class="feature-list">
+                        <li>أعلى قمة في منطقة الوشم</li>
+                        <li>النقطة المرجعية التاريخية للمسافرين</li>
+                        <li>مصدر إلهام للمقولة الشهيرة "أضمن لي كميت أضمن لك مرات"</li>
+                        <li>شاهد على تاريخ المنطقة العريق</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-content" data-aos="fade-right">
+                    <h2>بئر الوليدي: شاهد على عصر الصحابة</h2>
+                    <p>بئر الوليدي في بلدة مرات القديمة، يسميها الأهالي نسبة إلى الصحابي الجليل خالد بن الوليد رضي الله عنه. ذكر المؤرخون أن خالد بن الوليد نزل في مرات أيام حروب الردة وكان متجهاً بجيشه إلى اليمامة لمحاربة المرتدين ومسيلمة الكذاب.</p>
+                    <p>عسكر خالد بن الوليد في مرات وقتاً من الزمن كي تتجمع جيوشه، حيث وجد في ماء "غدير كميت" ما يجعله يستقر ويسقون خيولهم ويشربون منها. ولكن ماء الغدير شح عليهم وأوشك على الانتهاء بسبب الكثرة العددية للجيوش، فأمر رجاله بحفر هذه البئر التي أصبحت شاهداً على هذه الحقبة التاريخية الهامة.</p>
+
+                    <div class="heritage-info">
+                        <div class="info-item">
+                            <i class="fas fa-history"></i>
+                            <span>تعود إلى عصر الصحابة</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-water"></i>
+                            <span>أمر بحفرها خالد بن الوليد</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-book"></i>
+                            <span>مذكورة في معجم البلدان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content" data-aos="fade-left" data-aos-delay="200">
+                    <img src="{% static 'img/gate.jpg' %}" alt="بئر الوليدي" class="content-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section alt-section">
+        <div class="container">
+            <div class="content-grid reverse">
+                <div class="image-content" data-aos="fade-right" data-aos-delay="200">
+                    <img src="{% static 'img/marat2.jpg' %}" alt="بوابة مرات" class="content-image">
+                </div>
+                <div class="text-content" data-aos="fade-left">
+                    <h2>بوابة مرات: استمرارية العطاء</h2>
+                    <p>تمثل بوابة مرات المدخل الحديث للمحافظة التي تحافظ على تراثها مع انطلاقها نحو المستقبل. من خلال موقعها الاستراتيجي على طريق الحجاز التاريخي، تتهيأ مرات لتصبح محطة مهمة على طريق نيوم المستقبلي، محافظة على هويتها مع مشاركتها في رؤية 2030.</p>
+                    
+                    <div class="historical-facts">
+                        <div class="fact-item">
+                            <strong>الماضي:</strong> محطة على طريق الحجاز
+                        </div>
+                        <div class="fact-item">
+                            <strong>الحاضر:</strong> عروس الوشم بتراثها الحي
+                        </div>
+                        <div class="fact-item">
+                            <strong>المستقبل:</strong> محطة على طريق نيوم
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="navigation-section">
+        <div class="container">
+            <div class="cta-buttons">
+                <a href="{% url 'dhurma' %}" class="cta-button secondary">
+                    <i class="fas fa-arrow-right"></i> ضرما
+                </a>
+                <a href="{% url 'index' %}" class="cta-button secondary">
+                    <i class="fas fa-home"></i> الرئيسية
+                </a>
+                <a href="{% url 'shaqra' %}" class="cta-button">
+                    شقراء <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

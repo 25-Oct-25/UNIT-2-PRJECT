@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}DHURMA - From Riyadh to Neom{% endblock %}
+
+{% block content %}
+<section class="city-hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">DHURMA</h1>
+        </div>
+    </div>
+</section>
+<main class="city-main">
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-content" data-aos="fade-right">
+                    <h2>ضرما: محافظة الطبيعة والتراث</h2>
+                    <p>تقع محافظة ضرما في منطقة الرياض وتتميز بموقعها الاستراتيجي بين العاصمة ومشاريع التطوير الكبرى. تشتهر بتراثها العمراني الفريد وطبيعتها الخلابة، مما يجعلها حلقة وصل بين الماضي والحاضر.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>60K</h3>
+                            <p>ساكن</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>تاريخ</h3>
+                            <p>عريق</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>بوابة</h3>
+                            <p>القدية</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content" data-aos="fade-left" data-aos-delay="200">
+                    <img src="{% static 'img/dhurma.png' %}" alt="محافظة ضرما" class="content-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section alt-section">
+        <div class="container">
+            <div class="content-grid reverse">
+                <div class="image-content" data-aos="fade-right" data-aos-delay="200">
+                    <img src="{% static 'img/castle.png' %}" alt="قصر الإمام تركي بن عبدالله (الفرغ)" class="content-image">
+                </div>
+                <div class="text-content" data-aos="fade-left">
+                    <h2>قصر الإمام تركي بن عبدالله (الفرغ)</h2>
+                    <p>قصر الإمام تركي بن عبدالله، المعروف باسم "قصر الفرغ"، يمثل تحفة معمارية تاريخية تعود لفترة تأسيس الدولة السعودية الثانية. بني القصر في القرن التاسع عشر ويتميز بتصميمه النجدي التقليدي وموقعه الاستراتيجي.</p>
+                    <ul class="feature-list">
+                        <li>شاهد على تاريخ الدولة السعودية الثانية</li>
+                        <li>تصميم معماري نجدى أصيل</li>
+                        <li>تم ترميمه للحفاظ على التراث</li>
+                        <li>رمز للقوة والسيادة في ذلك العصر</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-content" data-aos="fade-right">
+                    <h2>مشروع القدية: مستقبل الترفيه</h2>
+                    <p>تعتبر ضرما البوابة الرئيسية لمشروع القدية، أحد أكبر مشاريع الترفيه في العالم. هذا المشروع العملاق يحول المنطقة إلى وجهة عالمية للترفيه والسياحة والرياضة، مما يضع ضرما على خارطة الوجهات العالمية.</p>
+                    <div class="project-info">
+                        <div class="info-item">
+                            <i class="fas fa-theater-masks"></i>
+                            <span>أكبر مشروع ترفيهي في العالم</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>موقع استراتيجي بجوار ضرما</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>مرحلة التطوير المتقدمة</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content" data-aos="fade-left" data-aos-delay="200">
+                    <img src="{% static 'img/qiddiya.jpg' %}" alt="مشروع القدية" class="content-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section alt-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-mountain"></i>
+                    <h3>الطبيعة</h3>
+                    <p>تتمتع ضرما بمناظر طبيعية خلابة وجبال شاهقة، مما يجعلها وجهة لمحبي الطبيعة والهدوء.</p>
+                </div>
+                <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-history"></i>
+                    <h3>التراث</h3>
+                    <p>تحافظ ضرما على تراثها العمراني والثقافي، مع العديد من القصور والمواقع التاريخية.</p>
+                </div>
+                <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-gem"></i>
+                    <h3>المستقبل</h3>
+                    <p>مع مشروع القدية، تتحول ضرما إلى مركز جذب سياحي واقتصادي على مستوى العالم.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="navigation-section">
+        <div class="container">
+            <div class="cta-buttons">
+                <a href="{% url 'diriyah' %}" class="cta-button secondary">
+                    <i class="fas fa-arrow-right"></i> الدرعية
+                </a>
+                <a href="{% url 'index' %}" class="cta-button secondary">
+                    <i class="fas fa-home"></i> الرئيسية
+                </a>
+                <a href="{% url 'marat' %}" class="cta-button">
+                    مرات <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}RIYADH - From Riyadh to Neom{% endblock %}
+
+{% block content %}
+<section class="city-hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">RIYADH</h1>
+        </div>
+    </div>
+</section>
+<main class="city-main">
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-content" data-aos="fade-right">
+                    <h2>الرياض: البداية الحديثة</h2>
+                    <p>الرياض ليست فقط عاصمة المملكة العربية السعودية، ولكنها رمز للتطور والتحول الذي تشهده البلاد. من مركز مالي وتجاري إلى وجهة ثقافية وسياحية، تمثل الرياض نقطة الانطلاق في رحلتنا من التراث إلى المستقبل.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>8M+</h3>
+                            <p>ساكن</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>2030</h3>
+                            <p>مركز الرؤية</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>100+</h3>
+                            <p>مشروع تطويري</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-content" data-aos="fade-left" data-aos-delay="200">
+                    <img src="{% static 'img/boulevard.png' %}" alt="Boulevard Riyadh" class="content-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section alt-section">
+        <div class="container">
+            <div class="content-grid reverse">
+                <div class="image-content" data-aos="fade-right" data-aos-delay="200">
+                    <img src="{% static 'img/murabba.png' %}" alt="Murabba Palace" class="content-image">
+                </div>
+                <div class="text-content" data-aos="fade-left">
+                    <h2>التطور العمراني</h2>
+                    <p>تشهد الرياض طفرة عمرانية غير مسبوقة، مع مشاريع كبرى مثل مشروع الرياض الخضراء وبرج المملكة. هذه المشاريع لا تعكس فقط التطور التقني ولكن أيضاً التزام المملكة بالاستدامة والجودة الحضرية.</p>
+                    <ul class="feature-list">
+                        <li>مشروع الرياض الخضراء</li>
+                        <li>برج المملكة</li>
+                        <li>مشروع القدية</li>
+                        <li>الدرعية التاريخية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-content" data-aos="fade-right">
+                    <h2>المركز الثقافي</h2>
+                    <p>تضم الرياض متاحف عالمية ومراكز ثقافية تعكس تراث المملكة الغني وتطلعاتها المستقبلية. من المتاحف الوطنية إلى المراكز الفنية الحديثة، الرياض تجسد الانسجام بين الأصالة والمعاصرة.</p>
+                    <div class="cta-buttons">
+                        <a href="{% url 'index' %}" class="cta-button">العودة للرئيسية</a>
+                        <a href="{% url 'diriyah' %}" class="cta-button secondary">التالي: الدرعية</a>
+                    </div>
+                </div>
+                <div class="image-content" data-aos="fade-left" data-aos-delay="200">
+                    <img src="{% static 'img/hero-2.jpg' %}" alt="Riyadh Culture" class="content-image">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
