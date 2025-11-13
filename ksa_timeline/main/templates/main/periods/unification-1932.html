@@ -1,0 +1,105 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}توحيد المملكة 1932 — KSA Timeline{% endblock %}
+
+{% block content %}
+
+<section class="page-header-wrapper reveal">
+  <div class="container-narrow">
+    <h1>توحيد المملكة العربية السعودية (1932م)</h1>
+    <p>إعلان الدولة الموحّدة تحت اسم <strong>المملكة العربية السعودية</strong>، تتويجًا لمسار التأسيس والوحدة وبداية بناء مؤسسات الدولة الحديثة.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="history-layout">
+    <aside class="history-sidebar reveal">
+      <div class="history-sidebar-title">مراحل تاريخ المملكة</div>
+      <a href="{% url 'main:period_detail' slug='first-saudi-state' %}">الدولة السعودية الأولى</a>
+      <a href="{% url 'main:period_detail' slug='second-saudi-state' %}">الدولة السعودية الثانية</a>
+      <a href="{% url 'main:period_detail' slug='third-saudi-state' %}">بدايات الدولة الحديثة</a>
+      <a href="{% url 'main:period_detail' slug='unification' %}" class="active">توحيد المملكة 1932</a>
+      <a href="{% url 'main:period_detail' slug='development-era' %}">مرحلة التنمية والبناء</a>
+      <a href="{% url 'main:period_detail' slug='vision-2030' %}">السعودية اليوم ورؤية 2030</a>
+    </aside>
+
+    <div class="history-content">
+      <h2 class="reveal">مختصر</h2>
+      <p class="reveal">
+        في <strong>23 سبتمبر 1932م</strong> أعلن الملك عبدالعزيز بن عبدالرحمن آل سعود توحيد البلاد تحت مسمّى
+        <strong>المملكة العربية السعودية</strong>. جاء الإعلان بعد سنوات من استعادة الأقاليم وربطها إداريًا وأمنيًا،
+        ومعه بدأت مرحلة الدولة الحديثة التي تعمل على ترسيخ الاستقرار وبناء الأنظمة والمؤسسات.
+      </p>
+
+      <h2 class="reveal">السياق وما قبل الإعلان</h2>
+      <ul class="reveal">
+        <li><strong>استكمال الضم:</strong> تدرّج ضم الأحساء وحائل والحجاز وتثبيت الإدارة في الأقاليم.</li>
+        <li><strong>توحيد المرجعية:</strong> ضبط القضاء والجباية والأمن، وربط القيادات المحلية بالمركز.</li>
+        <li><strong>الاعتراف الخارجي:</strong> صعود مكانة الكيان سياسيًا عبر اتفاقيات وعلاقات إقليمية ودولية.</li>
+      </ul>
+
+      <h2 class="reveal">أهمية التوحيد</h2>
+      <ul class="reveal">
+        <li>إنهاء التشتّت السياسي والأمني وبناء <strong>هوية وطنية</strong> جامعة.</li>
+        <li>إطلاق مشروع <strong>الدولة الحديثة</strong>: تنظيم الدواوين، القضاء، الأمن، والمالية.</li>
+        <li>تهيئة البلاد لمرحلة التخطيط والتنمية والبناء في العقود التالية.</li>
+      </ul>
+
+      <h2 class="reveal">الإجراءات والملامح النظامية المبكرة</h2>
+      <ul class="reveal">
+        <li><strong>تنظيم الإدارة المركزية:</strong> ترتيب الدواوين وربط شؤون الأقاليم بالمركز في الرياض.</li>
+        <li><strong>القضاء:</strong> تعيين قضاة في المناطق وتوحيد مرجعية الأحكام على الكتاب والسنّة.</li>
+        <li><strong>الأمن والحدود:</strong> تدعيم الأمن الداخلي وتأمين خطوط السير بين الأقاليم.</li>
+        <li><strong>المراسلات الرسمية:</strong> توثيق القرارات وتبادل الرسائل بين المركز والأقاليم لإحكام الاتصال.</li>
+      </ul>
+
+      <h2 class="reveal">المجتمع والحج والتعليم</h2>
+      <ul class="reveal">
+        <li><strong>تماسك اجتماعي:</strong> ترسيخ قيم مشتركة تدعم الوحدة والانتماء.</li>
+        <li><strong>خدمة الحرمين والحج:</strong> العناية بالطرق والخدمات المرتبطة بالحجاج والزوار.</li>
+        <li><strong>التعليم الديني:</strong> استمرار حلقات العلم وتعليم العلوم الشرعية واللغة في الحواضر.</li>
+      </ul>
+
+      <h2 class="reveal">الاقتصاد والبدايات المؤسسية</h2>
+      <ul class="reveal">
+        <li><strong>تنظيم الموارد:</strong> ترتيب الجباية والإنفاق وفق أولويات الأمن والقضاء والإدارة.</li>
+        <li><strong>الأسواق والطرق:</strong> تنشيط الحركة التجارية الداخلية وتحسين أمن مسارات القوافل.</li>
+        <li><strong>التموين والزراعة:</strong> الاعتماد على الإنتاج المحلي والواحات مع تطوير الإمداد تدريجيًا.</li>
+      </ul>
+
+      <h2 class="reveal">العلاقات الإقليمية والدولية</h2>
+      <ul class="reveal">
+        <li><strong>اعتراف دولي متنامٍ:</strong> دعم الاستقرار السياسي للكيان الموحّد عبر الاتفاقيات.</li>
+        <li><strong>تعاون إقليمي:</strong> تنسيق في شؤون الحج والتجارة والحدود بما يخدم الأمن المشترك.</li>
+      </ul>
+
+      <h2 class="reveal">الجغرافيا والعمران</h2>
+      <ul class="reveal">
+        <li><strong>الرياض مركزًا إداريًا:</strong> توسيع المرافق وربط الأقاليم إداريًا بالمركز.</li>
+        <li><strong>تنوع الأقاليم:</strong> الحجاز والأحساء وحائل… تنوّع جغرافي وبشري يعزّز الاقتصاد والتواصل.</li>
+        <li><strong>الربط الداخلي:</strong> تحسين الطرق تدريجيًا بين الأقاليم تمهيدًا لنهضة عمرانية أوسع لاحقًا.</li>
+      </ul>
+
+      <h2 class="reveal">تحديات ما بعد الإعلان</h2>
+      <ul class="reveal">
+        <li><strong>اتساع المساحة:</strong> صعوبة الإمداد والاتصال عبر أقاليم واسعة ومتباعدة.</li>
+        <li><strong>الموارد المبكرة:</strong> محدودية الموارد تتطلب ترتيب الأولويات والإنفاق الرشيد.</li>
+        <li><strong>التثبيت الإداري:</strong> استكمال ربط الأجهزة المحلية بالمركز وتطوير الكفاءات.</li>
+      </ul>
+
+      <h2 class="reveal">فيديو تعريفي</h2>
+      <div class="ratio reveal">
+        <video
+          controls
+          playsinline
+          poster="{% static 'images/video_poster.jpg' %}">
+          <source src="{% static 'videos/unification.mp4' %}" type="video/mp4">
+          متصفحك لا يدعم وسم الفيديو.
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

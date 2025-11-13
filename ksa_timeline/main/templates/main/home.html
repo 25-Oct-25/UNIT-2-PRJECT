@@ -1,0 +1,168 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}الخط الزمني لتاريخ المملكة العربية السعودية{% endblock %}
+
+{% block content %}
+
+<section class="hero hero-video">
+  <div class="hero-video-wrapper">
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="{% static 'images/video_poster.jpg' %}"
+      class="hero-background-video">
+      <source src="{% static 'videos/ksa_home.mp4' %}" type="video/mp4">
+      متصفحك لا يدعم وسم الفيديو.
+    </video>
+    </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <h1>الخط الزمني لتاريخ المملكة العربية السعودية</h1>
+    <p>
+      رحلة تعليمية تتابع مسار الدولة السعودية من الدرعية وحتى رؤية 2030.
+    </p>
+  </div>
+</section>
+
+<section class="intro-section reveal">
+  <div class="container-narrow">
+    <h2>عن KSA Timeline</h2>
+    <p>
+يعرض الموقع خطًا زمنيًا لتاريخ المملكة عبر ست صفحات رئيسية: النشأة، العودة، بدايات الدولة الحديثة، التوحيد 1932، مرحلة التنمية، ورؤية 2030. تحتوي كل صفحة على نبذة موجزة، محطات زمنية بارزة، معلومات مرتبة عن المجتمع والإدارة والاقتصاد والعمران.
+    </p>
+  </div>
+</section>
+
+<section class="timeline-vertical-wrapper reveal">
+  <div class="container-narrow">
+    <div class="section-header">
+      <h2>الخط الزمني لتاريخ المملكة</h2>
+      <p class="timeline-subtitle">
+        تسلسل تاريخي يوضح المراحل الرئيسة لتطور الدولة السعودية من النشأة إلى رؤية 2030.
+      </p>
+    </div>
+
+    <div class="timeline-list">
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>الدولة السعودية الأولى (1157هـ - 1233هـ)</h3>
+          <p>
+            انطلاقة مشروع الوحدة من الدرعية، وترسيخ الأمن والعقيدة وبداية ظهور كيان سياسي
+            منظم في قلب الجزيرة العربية.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>الدولة السعودية الثانية (1240هـ - 1309هـ)</h3>
+          <p>
+            استمرار محاولة بناء الدولة من الرياض، مع تحديات داخلية وخارجية، مع المحافظة
+            على الأسس التي قامت عليها الدولة الأولى.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>بدايات الدولة الحديثة (1902م - 1932م)</h3>
+          <p>
+            استعادة الرياض بقيادة الملك عبدالعزيز، والانطلاق في توحيد الأقاليم خطوة بعد
+            أخرى حتى اكتمال مشروع الدولة الحديثة.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>توحيد المملكة العربية السعودية (1932م)</h3>
+          <p>
+            إعلان المملكة العربية السعودية كدولة موحّدة، تتويجًا لمسار طويل من الجهود
+            السياسية والعسكرية وبناء التحالفات.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>مرحلة التنمية والبناء</h3>
+          <p>
+            توسع في التعليم والصحة والبنية التحتية، وتطوير مؤسسات الدولة وتعزيز
+            مكانة المملكة إقليميًا وعالميًا.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>السعودية اليوم ورؤية 2030</h3>
+          <p>
+            انتقال نحو اقتصاد متنوع، وتمكين الإنسان، ومشاريع وطنية كبرى تعكس امتداد
+            مسيرة التأسيس والوحدة والتنمية إلى مستقبل طموح.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info-grid-wrapper reveal">
+  <div class="container">
+    <div class="info-grid">
+      <div class="info-item reveal">
+        <h3>تبسيط التاريخ</h3>
+        <p>عرض موجز ومنظم يسهّل ربط الأحداث بدل تشتيتها بين مصادر مختلفة.</p>
+      </div>
+      <div class="info-item reveal">
+        <h3>مسار الوحدة</h3>
+        <p>إبراز كيف قادت محاولات التأسيس المتكررة إلى دولة مستقرة موحدة.</p>
+      </div>
+      <div class="info-item reveal">
+        <h3>من التاريخ إلى رؤية 2030</h3>
+        <p>توضيح أن رؤية 2030 امتداد لمسيرة طويلة من البناء وليست نقطة منفصلة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pill-links-section reveal">
+  <div class="container-narrow">
+    <div class="section-header">
+      <h2>استكشف مراحل تاريخ المملكة</h2>
+      <p class="pill-subtitle">اختر المرحلة لعرض تفاصيلها.</p>
+    </div>
+    <div class="pill-links-wrap">
+      <a href="{% url 'main:period_detail' slug='first-saudi-state' %}" class="pill-link">
+        الدولة السعودية الأولى
+      </a>
+      <a href="{% url 'main:period_detail' slug='second-saudi-state' %}" class="pill-link">
+        الدولة السعودية الثانية
+      </a>
+
+      <a href="{% url 'main:period_detail' slug='third-saudi-state' %}" class="pill-link">
+        بدايات الدولة الحديثة
+      </a>
+      <a href="{% url 'main:period_detail' slug='unification' %}" class="pill-link">
+        توحيد المملكة 1932
+
+      </a>
+      <a href="{% url 'main:period_detail' slug='development-era' %}" class="pill-link">
+        مرحلة التنمية والبناء
+      </a>
+      <a href="{% url 'main:period_detail' slug='vision-2030' %}" class="pill-link">
+        السعودية اليوم ورؤية 2030
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

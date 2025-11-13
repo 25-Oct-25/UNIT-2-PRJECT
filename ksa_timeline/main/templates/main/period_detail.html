@@ -1,0 +1,41 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}{{ period.title }} — KSA Timeline{% endblock %}
+
+{% block content %}
+  <div class="period-card mb-4">
+    <h1 class="mb-1">{{ period.title }}</h1>
+    <p class="text-muted">{{ period.tagline }}</p>
+  </div>
+
+  {% if period.images %}
+    <div class="row g-3 mb-4">
+      {% for img in period.images %}
+        <div class="col-md-4">
+          <img src="{% static img %}" alt="period image" class="w-100 rounded">
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="row g-4">
+    <div class="col-md-6">
+      <h2 class="h6">نبذة عن الفترة</h2>
+      <p>{{ period.brief }}</p>
+
+      <h3 class="h6 mt-3">أبرز المحطات</h3>
+      <ul class="mb-0">
+        {% for h in period.highlights %}
+        <li>{{ h }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="col-md-6">
+      <h2 class="h6">فيديو تعريفي</h2>
+      <div class="ratio ratio-16x9 rounded overflow-hidden">
+        <iframe src="{{ period.youtube }}" title="{{ period.title }}" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+{% endblock %}

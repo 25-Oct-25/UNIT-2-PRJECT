@@ -1,0 +1,108 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}بدايات الدولة الحديثة — KSA Timeline{% endblock %}
+
+{% block content %}
+
+<section class="page-header-wrapper reveal">
+  <div class="container-narrow">
+    <h1>بدايات الدولة السعودية الحديثة (1902م - 1932م)</h1>
+    <p>من استعادة الرياض إلى توحيد الأقاليم وتهيئة مؤسسات دولة معاصرة تحت راية واحدة.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="history-layout">
+    <aside class="history-sidebar reveal">
+      <div class="history-sidebar-title">مراحل تاريخ المملكة</div>
+      <a href="{% url 'main:period_detail' slug='first-saudi-state' %}">الدولة السعودية الأولى</a>
+      <a href="{% url 'main:period_detail' slug='second-saudi-state' %}">الدولة السعودية الثانية</a>
+      <a href="{% url 'main:period_detail' slug='third-saudi-state' %}" class="active">بدايات الدولة الحديثة</a>
+      <a href="{% url 'main:period_detail' slug='unification' %}">توحيد المملكة 1932</a>
+      <a href="{% url 'main:period_detail' slug='development-era' %}">مرحلة التنمية والبناء</a>
+      <a href="{% url 'main:period_detail' slug='vision-2030' %}">السعودية اليوم ورؤية 2030</a>
+    </aside>
+
+    <div class="history-content">
+      <h2 class="reveal">مختصر</h2>
+      <p class="reveal">
+        تُجسّد هذه المرحلة انطلاقة الدولة السعودية الحديثة على يد <strong>الملك عبدالعزيز بن عبدالرحمن آل سعود</strong>؛
+        بدأت باستعادة الرياض سنة 1902م، وتتابعت بعدها خطوات ضمّ الأقاليم — من الأحساء وحائل وعسير إلى الحجاز —
+        حتى إعلان <strong>توحيد المملكة العربية السعودية عام 1932م</strong>. بالتوازي، بدأت ملامح الإدارة الحديثة،
+        وتنظيم شؤون الأمن والقضاء والمالية، وتهيئة طرق الحج والتجارة.
+      </p>
+
+      <h2 class="reveal">عوامل التحوّل</h2>
+      <ul class="reveal">
+        <li><strong>قيادة موحِّدة:</strong> رؤية واضحة لإعادة بناء الدولة على أسس الأمن والوحدة والمرجعية الشرعية.</li>
+        <li><strong>موقع الرياض المركزي:</strong> قاعدة انطلاق تربط بلدات نجد وتُمكّن من إدارة الحملات والتواصل.</li>
+        <li><strong>الاستفادة من الإرث المؤسسي:</strong> البناء على تقاليد القضاء والشورى والإدارة التي ترسّخت سابقًا.</li>
+      </ul>
+
+      <h2 class="reveal">مسار التوحيد (محطات زمنية)</h2>
+      <ul class="reveal">
+        <li><strong>1902م:</strong> استعادة الرياض والانطلاق من عاصمتها لإعادة بناء الكيان.</li>
+        <li><strong>1913م:</strong> ضم <strong>الأحساء</strong>، ما عزّز الاتصال بالساحل الشرقي والتجارة الخارجية.</li>
+        <li><strong>1921م:</strong> ضم <strong>حائل</strong>، وتأكيد السيطرة على شمال نجد.</li>
+        <li><strong>1924–1925م:</strong> ضم <strong>الحجاز</strong> بما في ذلك مكة المكرمة والمدينة المنورة.</li>
+        <li><strong>1927م:</strong> اعتراف دولي متزايد بسلطة الملك عبدالعزيز (اتفاقيات وعلاقات خارجية).</li>
+        <li><strong>1932م:</strong> إعلان <strong>المملكة العربية السعودية</strong> دولة موحّدة.</li>
+      </ul>
+
+      <h2 class="reveal">ملامح الحكم والإدارة المبكرة</h2>
+      <ul class="reveal">
+        <li><strong>تنظيم الأقاليم:</strong> تعيين قيادات محلية مرتبطة بالمركز مع متابعة شؤون الأمن والجباية.</li>
+        <li><strong>القضاء والمرجعية:</strong> قضاة في المناطق يحتكمون للكتاب والسنّة، وتوحيد الأحكام.</li>
+        <li><strong>الأمن:</strong> حملات لتأمين الطرق وإنهاء التعدّي، وتسهيل حركة الحجاج والقوافل.</li>
+        <li><strong>النواة المؤسسية:</strong> بدايات تنظيم الدواوين (الشؤون الداخلية، المالية، المراسلات).</li>
+      </ul>
+
+      <h2 class="reveal">المجتمع والتعليم</h2>
+      <ul class="reveal">
+        <li><strong>التعليم الديني:</strong> حلقات علم في الحرمين والبلدات، وتحفيظ القرآن وتدريس الفقه واللغة.</li>
+        <li><strong>نُظم اجتماعية:</strong> تماسك اجتماعي وتكافل عبر الأوقاف، ورعاية طلاب العلم والقضاة.</li>
+        <li><strong>تعزيز الهوية:</strong> توحيد الانتماء والمرجعية، وتهيئة المجتمع لمرحلة بناء مؤسسات حديثة.</li>
+      </ul>
+
+      <h2 class="reveal">الاقتصاد والبنية الأساسية المبكرة</h2>
+      <ul class="reveal">
+        <li><strong>الأسواق الداخلية:</strong> نشاط تجاري في الرياض والحجاز والأحساء وحائل، وانتعاش الحِرَف.</li>
+        <li><strong>طرق الحج والقوافل:</strong> تحسين الأمن على الطرق، ما زاد الحركة التجارية وتدفّق الحجاج.</li>
+        <li><strong>الزراعة والمياه:</strong> استمرار الاعتماد على الواحات والعيون والآبار في تموين السكان.</li>
+      </ul>
+
+      <h2 class="reveal">العلاقات الإقليمية والدولية</h2>
+      <ul class="reveal">
+        <li><strong>تفاهمات وتحالفات:</strong> تفاهمات مع قبائل وإدارات محلية وفق متطلبات الأمن والوحدة.</li>
+        <li><strong>اعتراف دولي متنامٍ:</strong> اتفاقيات وعلاقات دبلوماسية دعمت مسار التوحيد وترسيخ الكيان.</li>
+      </ul>
+
+      <h2 class="reveal">الجغرافيا والعمران</h2>
+      <ul class="reveal">
+        <li><strong>الرياض مركزًا:</strong> توسّع عمراني تدريجي، وسوق محوري يربط نجد بالشرق والغرب.</li>
+        <li><strong>الحجاز:</strong> موانئ البحر الأحمر ومكانة دينية عالميّة دعمت التواصل والتجارة.</li>
+        <li><strong>الطريق بين الأقاليم:</strong> ربط تدريجي للمناطق بالطرق والقوافل، مقدمةً لمرحلة بنى تحتية أوسع لاحقًا.</li>
+      </ul>
+
+      <h2 class="reveal">الجيش والتنظيم العسكري</h2>
+      <ul class="reveal">
+        <li><strong>قوات محلية من الأقاليم:</strong> تنظيم حملات وفق الحاجة بقيادات ميدانية معروفة.</li>
+        <li><strong>تأمين الطرق:</strong> ضبط الداخل لتمكين التجارة والحج وتسهيل الإمداد.</li>
+      </ul>
+
+      <h2 class="reveal">فيديو تعريفي</h2>
+      <div class="ratio reveal">
+        <video
+          controls
+          playsinline
+          poster="{% static 'images/video_poster.jpg' %}">
+          <source src="{% static 'videos/third.mp4' %}" type="video/mp4">
+          متصفحك لا يدعم وسم الفيديو.
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

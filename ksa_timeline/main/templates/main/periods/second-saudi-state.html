@@ -1,0 +1,132 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}الدولة السعودية الثانية — الخط الزمني لتاريخ المملكة{% endblock %}
+
+{% block content %}
+
+<section class="page-header-wrapper reveal">
+  <div class="container-narrow">
+    <h1>الدولة السعودية الثانية (1240هـ - 1309هـ)</h1>
+    <p>عودة مشروع الدولة من الرياض بعد سقوط الدرعية، مع السعي لتوحيد نجد وتعزيز الأمن والهوية رغم التحديات الداخلية والخارجية.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="history-layout">
+    <aside class="history-sidebar reveal">
+      <div class="history-sidebar-title">مراحل تاريخ المملكة</div>
+      <a href="{% url 'main:period_detail' slug='first-saudi-state' %}">الدولة السعودية الأولى</a>
+      <a href="{% url 'main:period_detail' slug='second-saudi-state' %}" class="active">الدولة السعودية الثانية</a>
+      <a href="{% url 'main:period_detail' slug='third-saudi-state' %}">بدايات الدولة الحديثة</a>
+      <a href="{% url 'main:period_detail' slug='unification' %}">توحيد المملكة 1932</a>
+      <a href="{% url 'main:period_detail' slug='development-era' %}">مرحلة التنمية والبناء</a>
+      <a href="{% url 'main:period_detail' slug='vision-2030' %}">السعودية اليوم ورؤية 2030</a>
+    </aside>
+
+    <div class="history-content">
+      <h2 class="reveal">مختصر</h2>
+      <p class="reveal">
+        نشأت <strong>الدولة السعودية الثانية</strong> بعد سقوط الدرعية، واتخذت <strong>الرياض</strong> عاصمةً لها.
+        سعت إلى استعادة الاستقرار وتوحيد مناطق نجد والأطراف المجاورة، مع الحفاظ على الأسس الدينية والإدارية
+        التي قامت عليها الدولة الأولى. واجهت تحديات داخلية (خلافات على الحكم) وضغوطًا خارجية أثّرت في دوامها.
+      </p>
+
+      <h2 class="reveal">عوامل التأسيس</h2>
+      <ul class="reveal">
+        <li><strong>اختيار الرياض عاصمة:</strong> موقع مركزي يسهّل التواصل مع بلدات نجد وإدارة الحملات.</li>
+        <li><strong>الحاجة إلى الأمن:</strong> إعادة ضبط الطرق، وإنهاء التعدّي، واستعادة الثقة بين البلدات.</li>
+        <li><strong>الامتداد المؤسسي:</strong> البناء على مرجعية القضاء والتعليم والشورى التي ترسّخت سابقًا.</li>
+      </ul>
+
+      <h2 class="reveal">سمات الحكم والإدارة</h2>
+      <ul class="reveal">
+        <li><strong>القيادة والشورى:</strong> إمام يقود الدولة مع شورى من أهل العلم والوجهاء في القضايا العامة.</li>
+        <li><strong>القضاء:</strong> قضاة في الأقاليم يحتكمون للكتاب والسنّة؛ توحيد المرجعية يقلّل التنازع.</li>
+        <li><strong>إدارة الأقاليم:</strong> تعيين قيادات محلية وربطها بالمركز، وتسيير الحملات عند الحاجة.</li>
+        <li><strong>الأمن والجباية:</strong> ضبط الأمن وجمع الزكاة والموارد بما يدعم الجيوش والقضاء والتعليم.</li>
+      </ul>
+
+      <h2 class="reveal">المجتمع والعلم</h2>
+      <ul class="reveal">
+        <li><strong>استمرار حلقات العلم:</strong> تعليم العقيدة والفقه واللغة في مساجد الرياض والبلدات الرئيسية.</li>
+        <li><strong>تثبيت الهوية:</strong> قيم دينية واجتماعية موحّدة تُقوّي الانتماء وتخفّض النزاعات.</li>
+        <li><strong>التكافل:</strong> رعاية الفقراء وطلاب العلم ودعم القضاة عبر الأوقاف والموارد المحلية.</li>
+      </ul>
+
+      <h2 class="reveal">الاقتصاد والتجارة</h2>
+      <ul class="reveal">
+        <li><strong>الزراعة:</strong> واحات النخيل والحبوب حول الرياض ونجد دعمت التموين الداخلي.</li>
+        <li><strong>الأسواق:</strong> نشاط تبادل السلع والحِرَف (النجارة، الحدادة، السروج، البناء الطيني).</li>
+        <li><strong>القوافل:</strong> ربط بلدات نجد ببعضها ومع الأحساء وأطرافها مع تحسّن الأمن النسبي.</li>
+      </ul>
+
+      <h2 class="reveal">العلاقات الخارجية</h2>
+      <ul class="reveal">
+        <li><strong>التحالفات المحلية:</strong> مبايعات مع قبائل وإمارات مجاورة، مع حملات محدودة لفرض الأمن.</li>
+        <li><strong>التواصل الإقليمي:</strong> تفاعل ديني وتجاري مع الأقاليم المجاورة بحسب ظرف المرحلة.</li>
+        <li><strong>الضغوط:</strong> حساسية بعض القوى الإقليمية من تمدّد النفوذ في نجد.</li>
+      </ul>
+
+      <h2 class="reveal">محطات زمنية بارزة</h2>
+      <ul class="reveal">
+        <li><strong>1240هـ تقريبًا:</strong> تبلور الدولة الثانية واتخاذ <strong>الرياض</strong> عاصمة.</li>
+        <li><strong>عهود الأئمة:</strong> فترات قوة واستقرار نسبي تقابلها فترات اضطراب بسبب الخلافات الداخلية.</li>
+        <li><strong>1309هـ:</strong> نهاية الدولة السعودية الثانية مع بقاء فكرة الدولة حيّة وممهّدة للمرحلة اللاحقة.</li>
+      </ul>
+
+      <h2 class="reveal">الجغرافيا والعمران</h2>
+      <ul class="reveal">
+        <li><strong>الرياض:</strong> مركز حضري داخلي يتّصل ببلدات نجد عبر طرق قوافل، وسوق محوري للحِرَف والسلع.</li>
+        <li><strong>العمران الطيني:</strong> بناء طيني مُحصّن، أزقّة منظمة، وأحياء تسهّل الإدارة والدفاع.</li>
+        <li><strong>الواحات:</strong> دور مهم في تموين الجيوش والسكان بالماء والزراعة.</li>
+      </ul>
+
+      <h2 class="reveal">مشاهد من المرحلة</h2>
+      <div class="image-grid reveal">
+        <img src="{% static 'images/second1.jpg' %}" alt="ملامح عمران طيني في الرياض القديمة" loading="lazy">
+        <img src="{% static 'images/second2.jpg' %}" alt="بيئة نجد ومسارات القوافل" loading="lazy">
+        <img src="{% static 'images/second3.jpg' %}" alt="معالم تراثية من وسط الجزيرة" loading="lazy">
+      </div>
+
+      <h2 class="reveal">القيادة والأئمة البارزون</h2>
+      <ul class="reveal">
+        <li><strong>أئمة من آل سعود:</strong> أسهموا في إعادة بناء السلطة وضبط الأقاليم بدرجات متفاوتة من القوة.</li>
+        <li><strong>الدور العلمي:</strong> استمرار المرجعية الدينية والتدريس يعزّزان وحدة التصوّر والهوية.</li>
+      </ul>
+
+      <h2 class="reveal">الجيش والتنظيم العسكري</h2>
+      <ul class="reveal">
+        <li><strong>قوات محلية/قبلية:</strong> تُنظّم بحسب الحاجة، بقيادات ميدانية معروفة.</li>
+        <li><strong>الإمداد:</strong> الاستفادة من طرق القوافل والواحات، وتأمين خطوط السير.</li>
+        <li><strong>الداخل:</strong> ضبط الأمن وتقليل التعدّي لتمكين النشاط الاقتصادي.</li>
+      </ul>
+
+      <h2 class="reveal">النظام المالي والموارد</h2>
+      <ul class="reveal">
+        <li><strong>الزكاة والجبايات:</strong> مصدر أساس يوجّه للجيوش والقضاء والتعليم.</li>
+        <li><strong>التجارة والزراعة:</strong> إيرادات الأسواق والمنتجات الزراعية والحِرَفية.</li>
+        <li><strong>الأولويات:</strong> إدارة الموارد وفق مقتضيات الأمن والإدارة والتعليم.</li>
+      </ul>
+
+      <h2 class="reveal">المراسلات والمصادر</h2>
+      <ul class="reveal">
+        <li><strong>مكاتبات داخلية:</strong> تُظهر أسلوب الإدارة وتثبيت الأمن والخطاب الديني.</li>
+        <li><strong>روايات الرحّالة:</strong> تصف الأسواق والطرق والحياة الاجتماعية في الرياض ونجد.</li>
+      </ul>
+
+      <h2 class="reveal">فيديو تعريفي</h2>
+      <div class="ratio reveal">
+        <video
+          controls
+          playsinline
+          poster="{% static 'images/video_poster.jpg' %}">
+          <source src="{% static 'videos/second1.mp4' %}" type="video/mp4">
+          متصفحك لا يدعم وسم الفيديو.
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}رؤية 2030 — KSA Timeline{% endblock %}
+
+{% block content %}
+
+<section class="page-header-wrapper reveal">
+  <div class="container-narrow">
+    <h1>السعودية اليوم ورؤية 2030</h1>
+    <p>رؤية طموحة لبناء اقتصاد متنوع، ومجتمع حيوي، ووطن طموح بإدارة حديثة وخدمات ميسّرة.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="history-layout">
+    <aside class="history-sidebar reveal">
+      <div class="history-sidebar-title">مراحل تاريخ المملكة</div>
+      <a href="{% url 'main:period_detail' slug='first-saudi-state' %}">الدولة السعودية الأولى</a>
+      <a href="{% url 'main:period_detail' slug='second-saudi-state' %}">الدولة السعودية الثانية</a>
+      <a href="{% url 'main:period_detail' slug='third-saudi-state' %}">بدايات الدولة الحديثة</a>
+      <a href="{% url 'main:period_detail' slug='unification' %}">توحيد المملكة 1932</a>
+      <a href="{% url 'main:period_detail' slug='development-era' %}">مرحلة التنمية والبناء</a>
+      <a href="{% url 'main:period_detail' slug='vision-2030' %}" class="active">السعودية اليوم ورؤية 2030</a>
+    </aside>
+
+    <div class="history-content">
+      <h2 class="reveal">مختصر</h2>
+      <p class="reveal">
+        تُجسّد <strong>رؤية السعودية 2030</strong> انتقال المملكة إلى اقتصاد متنوع قائم على الابتكار والمعرفة،
+        مع تمكين الإنسان، وتحسين جودة الحياة، والتحول الحكومي الرقمي، وبناء شراكات استثمارية عالمية،
+        مع الحفاظ على الهوية الوطنية وخدمة الحرمين.
+      </p>
+
+      <h2 class="reveal">ركائز الرؤية</h2>
+      <ul class="reveal">
+        <li><strong>مجتمع حيوي:</strong> ثقافة، رياضة، ترفيه، وجودة حياة في مدن صديقة للإنسان.</li>
+        <li><strong>اقتصاد مزدهر:</strong> تنويع مصادر الدخل، تمكين القطاع الخاص، ريادة أعمال واستثمار.</li>
+        <li><strong>وطن طموح:</strong> حوكمة فعّالة، شفافية وكفاءة، وخدمات حكومية رقمية ميسّرة.</li>
+      </ul>
+
+      <h2 class="reveal">برامج ومُمكّنات التحول</h2>
+      <ul class="reveal">
+        <li><strong>برنامج التحول الوطني:</strong> رفع كفاءة الخدمات، تنظيم القطاعات، وتمكين الحكومة الإلكترونية.</li>
+        <li><strong>برنامج جودة الحياة:</strong> تطوير المرافق العامة، الفعاليات، والأنشطة الرياضية والثقافية.</li>
+        <li><strong>برامج قطاعية:</strong> السياحة، الثقافة، الإسكان، الصحة، النقل والخدمات اللوجستية… إلخ.</li>
+      </ul>
+
+      <h2 class="reveal">الاقتصاد والتنويع</h2>
+      <ul class="reveal">
+        <li><strong>الاستثمار والخصخصة:</strong> جذب الاستثمارات وتمكين الشراكة بين القطاعين العام والخاص.</li>
+        <li><strong>الصناعة والطاقة:</strong> توطين سلاسل الإمداد، تنمية الصناعات التحويلية والخدمات المساندة.</li>
+        <li><strong>ريادة الأعمال:</strong> حاضنات ابتكار، شركات ناشئة، وتمويل للمشاريع الصغيرة والمتوسطة.</li>
+      </ul>
+
+      <h2 class="reveal">المجتمع وجودة الحياة</h2>
+      <ul class="reveal">
+        <li><strong>المدن والمساحات العامة:</strong> حدائق، مضامير مشي، مسارات دراجات، وواجهات حضرية حديثة.</li>
+        <li><strong>الثقافة والترفيه والرياضة:</strong> فعاليات ومتاحف ومسارح، وبطولات واستحقاقات رياضية كبرى.</li>
+        <li><strong>التمكين:</strong> فرص للشباب والمرأة، وتنمية المواهب في العلوم والتقنية والفنون.</li>
+      </ul>
+
+      <h2 class="reveal">التحول الحكومي والرقمي</h2>
+      <ul class="reveal">
+        <li><strong>خدمات رقمية:</strong> بوابات موحّدة، هوية رقمية، ومنصات تسهّل المعاملات اليومية.</li>
+        <li><strong>كفاءة وشفافية:</strong> قياس أداء، نشر بيانات، وتحسين تجربة المستفيد.</li>
+        <li><strong>البنية الرقمية:</strong> سحابة وطنية، أمن سيبراني، وربط ذكي بين الجهات.</li>
+      </ul>
+
+      <h2 class="reveal">الاستثمار والسياحة والثقافة</h2>
+      <ul class="reveal">
+        <li><strong>مشاريع مميّزة:</strong> وجهات سياحية وثقافية كبرى تسهم في جذب الزوار والاستثمارات.</li>
+        <li><strong>تنويع التجربة:</strong> فعاليات على مدار العام، ومتاحف ومناطق تاريخية مطوّرة.</li>
+        <li><strong>القطاع الخاص:</strong> فرص تأسيس وتشغيل وإدارة في مرافق وخدمات متعددة.</li>
+      </ul>
+
+      <h2 class="reveal">الاستدامة والبيئة</h2>
+      <ul class="reveal">
+        <li><strong>مبادرات خضراء:</strong> تشجير، طاقة متجددة، وكفاءة استخدام الموارد.</li>
+        <li><strong>مدن مستدامة:</strong> تخطيط حضري يدعم النقل العام والمشي ويقلل الانبعاثات.</li>
+      </ul>
+
+      <h2 class="reveal">مؤشرات وأثر</h2>
+      <ul class="reveal">
+        <li><strong>تحسّن الخدمات:</strong> ارتفاع رضا المستفيدين وسهولة إنجاز المعاملات.</li>
+        <li><strong>تنشيط الاقتصاد:</strong> نمو قطاعات جديدة وتوسّع فرص العمل والريادة.</li>
+        <li><strong>حضور دولي:</strong> استضافات ومشاركات تُبرز دور المملكة إقليميًا وعالميًا.</li>
+      </ul>
+
+      <h2 class="reveal">أهم المشاريع</h2>
+      <ul class="reveal">
+        <li><strong>نيوم (NEOM):</strong> ذا لاين، أوكساغون، تروجينا.</li>
+        <li><strong>مشروع البحر الأحمر:</strong> سياحة فاخرة مستدامة على الساحل.</li>
+        <li><strong>أمالا (AMAALA):</strong> وجهة رفاهية وثقافة وفنون.</li>
+        <li><strong>القدية (Qiddiya):</strong> ترفيه ورياضة وثقافة بمستوى عالمي.</li>
+        <li><strong>الدرعية:</strong> بوابة الدرعية كوجهة تراثية وثقافية حديثة.</li>
+        <li><strong>العُلا:</strong> حفظ التراث وتطوير السياحة المستدامة.</li>
+        <li><strong>مشاريع الرياض الكبرى:</strong> حديقة الملك سلمان، الرياض الخضراء، المسار الرياضي، الرياض آرت، ومترو الرياض.</li>
+        <li><strong>مدينة الملك سلمان للطاقة (SPARK):</strong> تمكين سلاسل القيمة في الطاقة والتصنيع.</li>
+        <li><strong>الإسكان وجودة الحياة:</strong> مجتمعات سكنية حديثة وخيارات تمويلية.</li>
+        <li><strong>النقل واللوجستيات:</strong> توسعة المطارات والموانئ والطرق الذكية.</li>
+      </ul>
+
+      <h2 class="reveal">فيديو عن رؤية 2030</h2>
+      <div class="ratio reveal">
+        <video
+          controls
+          playsinline
+          poster="{% static 'images/video_poster.jpg' %}">
+          <source src="{% static 'videos/vision-2030.mp4' %}" type="video/mp4">
+          متصفحك لا يدعم وسم الفيديو.
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
