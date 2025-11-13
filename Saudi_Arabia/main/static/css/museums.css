@@ -13,7 +13,7 @@
   height: 100%;                /* يملأ الارتفاع بالكامل */
   object-fit: cover;           /* يقص الفيديو ليتناسب مع الشاشة */
   z-index: 0;
-  filter: brightness(60%);     /* تغميق بسيط عشان النص يبرز */
+  filter: brightness(90%);     /* تغميق بسيط عشان النص يبرز */
 }
 .video-overlay {
   position: absolute;
@@ -21,7 +21,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.247); /* طبقة شفافة غامقة فوق الفيديو */
+  background: rgba(45, 45, 45, 0.247); /* طبقة شفافة غامقة فوق الفيديو */
   z-index: 1;
 }
 

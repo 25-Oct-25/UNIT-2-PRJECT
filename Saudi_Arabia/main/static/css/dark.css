@@ -212,7 +212,6 @@ body.dark-mode .event:hover {
 
 
 /*  دارك مود لصفحة التعليم ----------*/
-
 /* الحاوية الرئيسية */
 body.dark-mode .education-section {
   background-color: #1e1e1e !important;
@@ -338,15 +337,11 @@ body.dark-mode .king p {
 
 
 /*  Dark Mode Museums ------ */
-
-
-/* 🎥 Hero Section in Dark Mode */
 body.dark-mode .hero-video {
-  filter: brightness(40%);
+  filter: brightness(60%);
 }
-
 body.dark-mode .video-overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(58, 58, 58, 0.1);
 }
 
 body.dark-mode .hero-content {

@@ -1,6 +1,6 @@
 
 body {
-  background-color: #e3dad0;/* خلفية الصفحة */
+  background-color: #9c8e7c;/* خلفية الصفحة */
   margin: 0;
   padding: 0;
   font-family: 'Crimson Text', serif;
@@ -23,8 +23,8 @@ body {
   left: 25%; 
   gap: 90px;
   padding: 0px;
-  background-color: rgba(164, 137, 51, 0.2);
-  border: 2px solid rgba(212, 175, 55, 0.4);
+  background-color: rgba(164, 138, 51, 0.301);
+  border: 2px solid rgba(212, 175, 55, 0.491);
   border-radius: 50px;
   width: 600px;
   margin: 10px auto;
@@ -249,7 +249,7 @@ body {
   font-family: 'Cinzel', serif;
   font-size: 5rem;
   font-weight: 700;
-  color: #76816d;
+  color: #d4d0bd;
   text-align: center;
   margin-bottom: 60px;
   margin-top: -200px;
