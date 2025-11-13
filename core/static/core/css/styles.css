@@ -1,0 +1,1337 @@
+/* ==================================
+   1. تعريف متغيرات الألوان (Color Palette)
+   ================================== */
+:root {
+    /* Color stander*/
+    --color-accent: #8c40f5; /* بنفسجي */
+    --color-accent-hover: #7a36d4;
+
+    /* Dark mood color*/
+    --dark-bg: #1A1D24;       /* كحلي داكن جداً */
+    --dark-surface: #252A34;  /* خلفية الكروت */
+    --dark-navbar: #111317;   /* خلفية الناف بار */
+    --dark-text-primary: #F0F2F5; /* أوف وايت */
+    --dark-text-secondary: #A9B1BD;/* رمادي فاتح */
+    --dark-border: #3A414F;   /* لون الخطوط */
+
+    /* Light mood  color */
+    --light-bg: #F8F7F4;       /* بيج فاتح جداً */
+    --light-surface: #FFFFFF;  /* خلفية الكروت (أبيض) */
+    --light-navbar: #FFFFFF;   /* خلفية الناف بار (أبيض) */
+    --light-text-primary: #1A1D24; /* كحلي داكن (للنص) */
+    --light-text-secondary: #5A6472;/* رمادي (للنص) */
+    --light-border: #EAECEE;   /* لون الخطوط */
+}
+
+/* ==================================
+   2. Dark mood style
+   ================================== */
+
+/* --- إعدادات أساسية --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--dark-text-primary);
+    scroll-behavior: smooth;
+}
+
+/* --- (Hero Section) --- */
+.page-container {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.6;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.8) 100%);
+    z-index: 2;
+}
+.content-wrapper {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.hero-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    height: calc(100vh - 80px); 
+    box-sizing: border-box;
+    position: relative;
+}
+.hero-section h1, .hero-section p {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.hero-section p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+.hero-section .cta-button {
+    background-color: var(--color-accent);
+    color: #fff;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.hero-section .cta-button:hover {
+    background-color: var(--color-accent-hover);
+}
+
+/* === Main Navbar === */
+header.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--dark-navbar);
+    direction: ltr;
+    border-bottom: 1px solid var(--dark-border);
+}
+.nav-left .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--dark-text-primary);
+    text-decoration: none;
+    line-height: 1;
+}
+.nav-left .logo span {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: normal;
+    color: var(--dark-text-secondary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.nav-center {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.nav-center a {
+    color: var(--dark-text-primary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.nav-center a:hover {
+    color: var(--color-accent);
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.btn-icon, .btn-lang {
+    color: var(--dark-text-primary);
+    border: 1px solid var(--dark-border);
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border-color 0.3s ease;
+}
+.btn-icon:hover, .btn-lang:hover {
+    border-color: var(--dark-text-primary);
+}
+.btn-lang {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.btn-nav {
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.btn-visa {
+    background-color: transparent;
+    color: var(--dark-text-primary);
+    border: 2px solid var(--dark-text-primary);
+}
+.btn-visa:hover {
+    background-color: var(--dark-text-primary);
+    color: var(--dark-navbar);
+}
+.btn-login {
+    background-color: var(--color-accent);
+    color: #fff;
+    border: 2px solid var(--color-accent);
+}
+.btn-login:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+}
+
+/* --- القائمة المنسدلة --- */
+.simple-dropdown {
+    position: relative;
+    display: inline-block;
+}
+.simple-dropdown .nav-dropdown-trigger {
+    color: var(--dark-text-primary);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    padding: 20px 0;
+    display: block;
+}
+.simple-dropdown:hover .nav-dropdown-trigger {
+    color: var(--color-accent);
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--dark-surface);
+    color: var(--dark-text-primary);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    z-index: 100;
+    border-radius: 5px;
+    padding: 5px 0;
+    direction: ltr;
+}
+.simple-dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a {
+    color: var(--dark-text-primary);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.dropdown-content a:hover {
+    background-color: var(--dark-bg);
+}
+.dropdown-content .view-all-link {
+    color: var(--color-accent);
+    font-weight: bold;
+    border-top: 1px solid var(--dark-border);
+}
+
+/* --- تبويبات الهيرو السفلية --- */
+.bottom-tabs-container {
+    position: absolute; bottom: 0; left: 0; width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px); padding: 0 40px; box-sizing: border-box;
+}
+.bottom-tabs {
+    display: flex; justify-content: space-between; list-style: none;
+    padding: 0; margin: 0; max-width: 1200px; margin: 0 auto; direction: ltr;
+}
+.tab-item { padding: 20px 10px; direction: rtl; position: relative; }
+.tab-item a { color: #ccc; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: color 0.3s ease; }
+.tab-item a:hover { color: #fff; }
+.tab-item.active a { color: #fff; }
+.tab-item.active::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 100%; height: 4px; background-color: var(--color-accent); border-radius: 2px;
+}
+
+/* ===== Main cards content ===== */
+.main-content {
+    background-color: var(--dark-bg);
+    color: var(--dark-text-primary);
+    padding: 50px 0;
+    direction: ltr;
+}
+.carousel-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+.content-carousel {
+    margin-bottom: 50px;
+}
+.carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.carousel-header h2 {
+    font-size: 1.8rem;
+    color: var(--dark-text-primary);
+}
+.view-all-btn {
+    color: var(--dark-text-primary);
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* ===== Grid ==== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.carousel-wrapper {
+    position: relative;
+}
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+}
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--dark-surface);
+    color: var(--dark-text-primary);
+    border: 1px solid var(--dark-border);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 300;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+.arrow:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+.prev-arrow { left: -25px; }
+.next-arrow { right: -25px; }
+.adventure-card,
+.event-card {
+    flex-shrink: 0;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: var(--dark-surface);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+.adventure-card:hover,
+.event-card:hover {
+    transform: translateY(-5px);
+}
+.adventure-card img,
+.event-card img {
+    width: 100%;
+    object-fit: cover;
+}
+.adventure-card img { height: 200px; }
+.event-card img { height: 250px; }
+.card-content {
+    padding: 15px;
+}
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--dark-text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.card-content h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--dark-text-primary);
+    margin: 0 0 5px 0;
+}
+.card-content p {
+    font-size: 0.9rem;
+    color: var(--dark-text-secondary);
+    margin: 0 0 15px 0;
+}
+.btn-card {
+    background-color: var(--color-accent);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    float: right;
+}
+.adventure-card .card-content,
+.event-card .card-content {
+    overflow: hidden;
+}
+.event-image-container {
+    position: relative;
+}
+.event-date {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(37, 42, 52, 0.9); /* var(--dark-surface) with opacity */
+    color: var(--dark-text-primary);
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+.event-date span { display: block; line-height: 1.1; }
+.event-date span:nth-child(1) { font-size: 1.5rem; }
+.event-date span:nth-child(2) { font-size: 0.8rem; text-transform: uppercase; }
+.event-date span:nth-child(3) { font-size: 0.8rem; color: var(--dark-text-secondary); }
+
+/* ======== Cityes page design ========= */
+.city-hero-v2 {
+    height: 60vh; background-size: cover; background-position: center;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    align-items: flex-start; text-align: left; color: #fff;
+    padding: 0 60px 80px 60px; box-sizing: border-box;
+}
+.city-hero-v2 h1 {
+    font-size: 4.5rem; font-weight: bold; margin: 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+.city-hero-v2 p {
+    font-size: 1.3rem; margin: 10px 0 0 0;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+}
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    background-color: var(--dark-surface);
+    border-radius: 10px;
+    border: 1px dashed var(--dark-border);
+}
+.empty-state p {
+    color: var(--dark-text-secondary);
+    font-size: 1rem;
+    margin: 0;
+}
+.breadcrumbs {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--dark-border);
+    margin-bottom: 30px;
+    font-size: 0.8rem;
+    color: var(--dark-text-secondary);
+    direction: ltr;
+}
+.breadcrumbs a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+.breadcrumbs span { margin: 0 5px; }
+.breadcrumbs .current {
+    color: var(--dark-text-primary);
+    font-weight: bold;
+}
+.about-city-section {
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+.about-city-section h2 {
+    font-size: 2rem;
+    color: var(--dark-text-primary);
+    margin-bottom: 15px;
+}
+.about-city-section p {
+    font-size: 1.1rem;
+    color: var(--dark-text-secondary);
+    line-height: 1.7;
+}
+
+/* ===== Map design ===== */
+.map-page-container {
+    position: relative;
+    width: 100%;
+    background-color: var(--dark-bg);
+}
+.map-image-container {
+    width: 100%;
+    height: 80vh;
+}
+.map-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+.map-cards-container {
+    position: absolute; bottom: 20px; left: 0; width: 100%;
+    display: flex; gap: 15px; padding: 0 40px;
+    box-sizing: border-box; overflow-x: auto;
+    flex-direction: row-reverse;
+}
+.map-cards-container::-webkit-scrollbar { display: none; }
+.map-cards-container { -ms-overflow-style: none; scrollbar-width: none; }
+.map-card {
+    flex-shrink: 0; width: 300px; height: 150px;
+    border-radius: 15px; background-size: cover; background-position: center;
+    padding: 15px; box-sizing: border-box; text-decoration: none;
+    color: #fff; display: flex; flex-direction: column;
+    justify-content: flex-end; transition: transform 0.3s ease;
+}
+.map-card:hover { transform: translateY(-5px); }
+.map-card-tags { font-size: 0.8rem; }
+.map-card-tags span {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+.map-card-title {
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 1.3rem; font-weight: bold; margin-top: 10px;
+}
+.map-card-title span { font-size: 2rem; }
+
+/* Contact with us page */
+.contact-page-container {
+    padding: 60px 20px;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: ltr;
+}
+.contact-form-wrapper {
+    max-width: 600px;
+    width: 100%;
+    background-color: var(--dark-surface);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    color: var(--dark-text-primary);
+}
+.contact-form-wrapper h1 {
+    font-size: 2.5rem;
+    color: var(--dark-text-primary);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.contact-form-wrapper p {
+    font-size: 1.1rem;
+    color: var(--dark-text-secondary);
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--dark-text-secondary);
+    text-align: left;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--dark-border);
+    background-color: var(--dark-bg);
+    color: var(--dark-text-primary);
+    border-radius: 5px;
+    box-sizing: border-box; 
+    font-size: 1rem;
+}
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 5px rgba(140, 64, 245, 0.5);
+}
+.contact-form textarea {
+    resize: vertical;
+}
+.contact-form .cta-button,
+.contact-success .cta-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--color-accent);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+.contact-form .cta-button:hover,
+.contact-success .cta-button:hover {
+    background-color: var(--color-accent-hover);
+}
+.contact-success {
+    text-align: center;
+}
+
+/* Main footer design */
+footer.bar {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--dark-navbar);
+    color: var(--dark-text-secondary);
+    border-top: 1px solid var(--dark-border);
+}
+
+
+/* ####################################################################
+   ################### تنسيقات الوضع المضيء (LIGHT MODE) ###################
+   #################################################################### */
+
+/* --- 1. تبديل الأيقونات --- */
+.dark-mode #theme-switcher .icon-sun { display: inline; }
+.dark-mode #theme-switcher .icon-moon { display: none; }
+.light-mode #theme-switcher .icon-sun { display: none; }
+.light-mode #theme-switcher .icon-moon { display: inline; }
+
+/* --- 2. تنسيقات عامة (الخلفية والنص) --- */
+.light-mode body, 
+.light-mode html {
+    background-color: var(--light-bg);
+    color: var(--light-text-primary);
+}
+
+/* --- 3. شريط التنقل --- */
+.light-mode header.main-nav {
+    background: var(--light-navbar);
+    border-bottom: 1px solid var(--light-border);
+}
+.light-mode .nav-left .logo,
+.light-mode .nav-left .logo span,
+.light-mode .nav-center a,
+.light-mode .nav-right .btn-icon,
+.light-mode .nav-right .btn-lang {
+    color: var(--light-text-primary);
+}
+.light-mode .btn-icon, 
+.light-mode .btn-lang {
+    border: 1px solid var(--light-border);
+}
+.light-mode .btn-icon:hover, 
+.light-mode .btn-lang:hover {
+    border-color: var(--light-text-primary);
+}
+.light-mode .btn-visa {
+    background-color: var(--light-surface);
+    color: var(--light-text-primary);
+    border: 2px solid var(--light-text-primary);
+}
+.light-mode .btn-visa:hover {
+    background-color: var(--light-text-primary);
+    color: var(--light-surface);
+}
+
+/* --- 4. القائمة المنسدلة البسيطة --- */
+.light-mode .dropdown-content {
+    background-color: var(--light-surface);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.light-mode .dropdown-content a {
+    color: var(--light-text-primary);
+}
+.light-mode .dropdown-content a:hover {
+    background-color: var(--light-bg);
+}
+.light-mode .dropdown-content .view-all-link {
+    border-top: 1px solid var(--light-border);
+}
+
+/* --- 5. قسم الهيرو والتبويبات (تبقى داكنة) --- */
+.light-mode .hero-section h1,
+.light-mode .hero-section p,
+.light-mode .tab-item a,
+.light-mode .tab-item.active a,
+.light-mode .city-hero-v2 h1,
+.light-mode .city-hero-v2 p {
+    color: #fff; /* النص يبقى أبيض فوق الصورة */
+}
+
+/* --- 6. المحتوى الرئيسي (الكروت) --- */
+.light-mode .main-content {
+    background-color: var(--light-surface);
+    color: var(--light-text-primary);
+}
+.light-mode .carousel-header h2 {
+    color: var(--light-text-primary);
+}
+.light-mode .view-all-btn {
+    color: var(--light-text-primary);
+}
+.light-mode .adventure-card,
+.light-mode .event-card {
+    background: var(--light-surface);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--light-border);
+}
+.light-mode .card-content h3 {
+    color: var(--light-text-primary);
+}
+.light-mode .card-content p {
+    color: var(--light-text-secondary);
+}
+.light-mode .card-info {
+    color: var(--light-text-secondary);
+}
+.light-mode .event-date {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--light-text-primary);
+}
+.light-mode .event-date span:nth-child(3) {
+    color: var(--light-text-secondary);
+}
+.light-mode .arrow {
+    background-color: var(--light-surface);
+    color: var(--light-text-primary);
+    border: 1px solid var(--light-border);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* --- 7. صفحة تفاصيل المدينة --- */
+.light-mode .breadcrumbs {
+    border-bottom: 1px solid var(--light-border);
+    color: var(--light-text-secondary);
+}
+.light-mode .breadcrumbs .current {
+    color: var(--light-text-primary);
+}
+.light-mode .about-city-section h2 {
+    color: var(--light-text-primary);
+}
+.light-mode .about-city-section p {
+    color: var(--light-text-secondary);
+}
+.light-mode .empty-state {
+    background-color: var(--light-bg);
+    border: 1px dashed #ddd;
+}
+.light-mode .empty-state p {
+    color: var(--light-text-secondary);
+}
+
+/* --- 8. صفحة الخريطة --- */
+.light-mode .map-page-container {
+    background-color: var(--light-bg);
+}
+.light-mode .map-image-container img {
+    opacity: 1; /* جعل الخريطة أفتح */
+}
+
+/* --- 9. صفحة اتصل بنا --- */
+.light-mode .contact-page-container {
+    background-color: var(--light-bg);
+}
+.light-mode .contact-form-wrapper {
+    background-color: var(--light-surface);
+    color: var(--light-text-primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.light-mode .contact-form-wrapper h1 {
+    color: var(--light-text-primary);
+}
+.light-mode .contact-form-wrapper p {
+    color: var(--light-text-secondary);
+}
+.light-mode .contact-form label {
+    color: var(--light-text-primary);
+}
+.light-mode .contact-form input[type="text"],
+.light-mode .contact-form input[type="email"],
+.light-mode .contact-form textarea {
+    background-color: var(--light-bg);
+    color: var(--light-text-primary);
+    border: 1px solid var(--light-border);
+}
+.light-mode .contact-form input[type="text"]:focus,
+.light-mode .contact-form input[type="email"]:focus,
+.light-mode .contact-form textarea:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 5px rgba(140, 64, 245, 0.3);
+}
+
+/* --- 10. الفوتر السفلي --- */
+.light-mode footer.bar {
+    background-color: #e9e9e9;
+    color: #555;
+    border-top: 1px solid #ddd;
+}
+
+/* ===== FOOTER STYLING ===== */
+footer.footer {
+    background-color: var(--dark-navbar);
+    border-top: 1px solid var(--dark-border);
+    color: var(--dark-text-primary);
+    margin-top: 80px;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    direction: ltr;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--dark-text-primary);
+    margin: 0 0 10px 0;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 0.95rem;
+    color: var(--dark-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--dark-text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--dark-surface);
+    color: var(--dark-text-primary);
+    border: 1px solid var(--dark-border);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    background-color: var(--dark-bg);
+    padding: 30px 40px;
+    text-align: center;
+    border-top: 1px solid var(--dark-border);
+    direction: ltr;
+}
+
+.footer-bottom p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    color: var(--dark-text-secondary);
+}
+
+.footer-bottom p:first-child {
+    font-weight: bold;
+    color: var(--dark-text-primary);
+}
+
+/* --- Light Mode Footer --- */
+.light-mode footer.footer {
+    background-color: var(--light-navbar);
+    border-top: 1px solid var(--light-border);
+    color: var(--light-text-primary);
+}
+
+.light-mode .footer-section h3 {
+    color: var(--light-text-primary);
+    border-bottom-color: var(--color-accent);
+}
+
+.light-mode .footer-section p {
+    color: var(--light-text-secondary);
+}
+
+.light-mode .footer-section ul li a {
+    color: var(--light-text-secondary);
+}
+
+.light-mode .footer-section ul li a:hover {
+    color: var(--color-accent);
+}
+
+.light-mode .social-links a {
+    background-color: var(--light-surface);
+    color: var(--light-text-primary);
+    border: 1px solid var(--light-border);
+}
+
+.light-mode .social-links a:hover {
+    background-color: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+}
+
+.light-mode .footer-bottom {
+    background-color: var(--light-bg);
+    border-top: 1px solid var(--light-border);
+}
+
+.light-mode .footer-bottom p {
+    color: var(--light-text-secondary);
+}
+
+.light-mode .footer-bottom p:first-child {
+    color: var(--light-text-primary);
+}
+
+/* --- Responsive Footer --- */
+@media (max-width: 1024px) {
+    .footer-container {
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .footer-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .footer-bottom {
+        padding: 20px;
+    }
+
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
+}
+
+
+/* ==================================
+   3. Responsive Design
+   ================================== */
+
+/* --- 1. إخفاء عناصر الجوال على الكمبيوتر --- */
+#hamburger-btn {
+    display: none; /* مخفي افتراضياً */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001; /* فوق كل شيء */
+}
+#hamburger-btn .hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-text-primary); /* يأخذ لون النص الأساسي */
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+.light-mode #hamburger-btn .hamburger-line {
+    background-color: var(--light-text-primary);
+}
+#mobile-menu {
+    display: none; /* مخفي افتراضياً */
+}
+
+/* --- 2. الاستعلام الإعلامي (Media Query) --- */
+/* هذا الكود سيطبق فقط على الشاشات بعرض 1024px أو أقل */
+@media (max-width: 1024px) {
+
+    /* --- إخفاء قوائم الكمبيوتر وإظهار زر الجوال --- */
+    .nav-center,
+    .nav-right {
+        display: none !important; /* إخفاء بالقوة */
+    }
+    #hamburger-btn {
+        display: block; /* إظهار زر الهامبرغر */
+    }
+
+    /* --- تنسيق قائمة الجوال (عند الفتح) --- */
+    #mobile-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed; /* يغطي الشاشة كاملة */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--dark-bg);
+        z-index: 1000;
+        
+        /* إخفاء القائمة (ستظهر عند إضافة كلاس .open) */
+        transform: translateY(-100%);
+        transition: transform 0.4s ease;
+    }
+    #mobile-menu.open {
+        transform: translateY(0); /* إظهار القائمة */
+    }
+    .light-mode #mobile-menu {
+        background-color: var(--light-bg);
+    }
+    
+    /* عند فتح القائمة، نمنع المحتوى خلفها من التمرير */
+    .content-wrapper.menu-open {
+        overflow: hidden;
+    }
+
+    /* --- تنسيق زر الإغلاق (X) --- */
+    #hamburger-btn.open .hamburger-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #hamburger-btn.open .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    #hamburger-btn.open .hamburger-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* --- تنسيق الروابط داخل قائمة الجوال --- */
+    .mobile-nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .mobile-nav-links a,
+    .mobile-nav-links .nav-dropdown-trigger {
+        font-size: 1.8rem; /* خط كبير وواضح */
+        font-weight: bold;
+        padding: 10px;
+        color: var(--dark-text-primary);
+    }
+    .light-mode .mobile-nav-links a,
+    .light-mode .mobile-nav-links .nav-dropdown-trigger {
+        color: var(--light-text-primary);
+    }
+    
+    /* إخفاء القائمة المنسدلة داخل القائمة المنسدلة (لتبسيطها) */
+    .mobile-nav-links .dropdown-content {
+        display: none;
+    }
+
+    /* --- تنسيق الأزرار داخل قائمة الجوال --- */
+    .mobile-nav-buttons {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px solid var(--dark-border);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 80%;
+    }
+    .light-mode .mobile-nav-buttons {
+        border-top: 1px solid var(--light-border);
+    }
+    .mobile-nav-buttons .btn-nav {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .mobile-nav-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 15px;
+    }
+
+    /* --- 3. إصلاحات عامة للتجاوب --- */
+    
+    /* تصغير الهوامش */
+    .carousel-container,
+    .city-hero-v2 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .map-cards-container {
+        padding: 0 20px;
+    }
+
+    /* تصغير الخطوط في الهيرو */
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .city-hero-v2 h1 {
+        font-size: 2.8rem;
+    }
+    .city-hero-v2 p {
+        font-size: 1.1rem;
+    }
+    
+    /* إخفاء أسهم الكاروسيل على الجوال (لأن التمرير باللمس أسهل) */
+    .arrow {
+        display: none;
+    }
+}
+
+/* ==================================
+   4.additional styles for map page
+   ================================== */
+   .city-pin{
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  border: 3px solid #2b6cb0;           /* إطار أزرق بسيط */
+  box-shadow: 0 2px 10px rgba(0,0,0,.25);
+  background-size: cover;
+  background-position: center;
+}
+.leaflet-popup-content{
+  margin: 8px 10px;
+}
+.leaflet-popup-content img{
+  width: 100%; height: 100px; object-fit: cover; border-radius: 8px; margin-bottom: 6px;
+}
+.map-cta{
+  display:inline-block; padding:8px 12px; border-radius:8px;
+  background:#2f6cf6; color:#fff; text-decoration:none; font-weight:600;
+}
+.map-cta:hover{ filter:brightness(.95); }
+
+
+/* الحاوية الأم */
+.map-page-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;   /* الكروت تجي بعد الخريطة */
+  gap: 16px;
+}
+
+/* الخريطة */
+#ksa-map{
+  height: 520px;            /* غيّرها حسب رغبتك */
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* الكروت */
+.map-cards-container{
+  position: relative !important;   /* لو كان عندك position:absolute قديم */
+  z-index: 2;                      /* فوق الخريطة */
+  margin-top: 0;                   /* تأكد ما فيه قيم سلبية */
+  padding: 0 24px;
+}
+
+/* لو كانت الكروت عندك مُصمّمة سابقًا كأوفرلاي داخل صورة، عطّل الخصائص القديمة */
+.map-cards-container{
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+  width: auto !important;
+}
+.leaflet-control-attribution{ display:none !important; } /* إخفاء العلامة التجارية لل Leaflet */
+
+
+/* ==================================
+   "About Us HERO more design"
+   ================================== */
+.about-hero {
+    height: 40vh; /* ارتفاع 40% من الشاشة */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* توسيط النص */
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    margin: 10px 0 0 0;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+}
+
+/* --- تعديل بسيط على تنسيق النص --- */
+
+/* إخفاء العنوان القديم (لأننا نستخدم الهيرو) */
+.text-content-container h1 {
+    display: none; 
+}
+
+/* إضافة عنوان h2 جديد داخل المحتوى */
+.text-content-container h2 {
+    font-size: 2rem;
+    color: var(--dark-text-primary);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--dark-border);
+    padding-bottom: 10px;
+}
+
+/* تعديلات الوضع المضيء للعنوان h2 */
+.light-mode .text-content-container h2 {
+    color: var(--light-text-primary);
+    border-bottom-color: var(--light-border);
+}
+
+
+
+/* ==================================
+   تنسيق زر إيقاف الفيديو
+   ================================== */
+#video-pause-btn {
+    position: absolute;
+    bottom: 20px; /* نفس ارتفاع شريط التبويبات السفلي */
+    right: 40px; /* نفس الهامش الجانبي */
+    z-index: 100; /* ليكون فوق كل شيء */
+    
+    /* استخدام متغيرات الألوان ليدعم الوضعين */
+    background-color: rgba(37, 42, 52, 0.5); /* --dark-surface شفاف */
+    border: 1px solid var(--dark-text-primary);
+    color: var(--dark-text-primary);
+    
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+#video-pause-btn:hover {
+    background-color: rgba(37, 42, 52, 0.8);
+    transform: scale(1.1);
+}
+
+/* إخفاء أيقونة "التشغيل" افتراضياً (لأن الفيديو يعمل) */
+#video-pause-btn .icon-play {
+    display: none;
+}
+#video-pause-btn .icon-pause {
+    display: inline;
+}
+
+/* عندما يتم إيقاف الفيديو (سنضيف كلاس .paused) */
+#video-pause-btn.paused .icon-play {
+    display: inline;
+}
+#video-pause-btn.paused .icon-pause {
+    display: none;
+}
+
+/* --- تعديلات الوضع المضيء --- */
+.light-mode #video-pause-btn {
+    background-color: rgba(255, 255, 255, 0.5); /* --light-surface شفاف */
+    border-color: var(--light-text-primary);
+    color: var(--light-text-primary);
+}
+.light-mode #video-pause-btn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+body.dark-mode .carousel-container h1 {
+    color: white;
+}

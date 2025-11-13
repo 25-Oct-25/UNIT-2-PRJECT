@@ -1,0 +1,49 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Saudi Calendar - All Events{% endblock %}
+
+{% block content %}
+
+<div class="main-content">
+    <div class="carousel-container">
+
+        <h1 style="font-size: 2.5rem; color: #000; margin-bottom: 30px;">
+            Saudi Calendar
+        </h1>
+        <p style="color: #555; margin-top: -20px; margin-bottom: 40px; font-size: 1.1rem;">
+            Explore all upcoming events across the Kingdom.
+        </p>
+
+
+        <section class="content-carousel">
+            <div class="grid" style="direction: ltr;">
+
+                {% for event in events %}
+                <div class="event-card">
+                    <div class="event-image-container">
+                        <img src="{% static event.image %}" alt="{{ event.name }}">
+                        <div class="event-date">
+                            <span>{{ event.event_date|slice:"8:10" }}</span> <span>{{ event.event_date|slice:"5:7" }}</span> <span>{{ event.event_date|slice:"0:4" }}</span> </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-info">
+                            <span>{{ event.location_text }}</span>
+                            <span>{{ event.price_text }}</span>
+                        </div>
+                        <h3>{{ event.name }}</h3>
+                        <a href="#" class="btn-card">Buy tickets</a>
+                    </div>
+                </div>
+                {% empty %}
+                    <div class="empty-state">
+                        <p>No events found at this time. Check back soon!</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock %}

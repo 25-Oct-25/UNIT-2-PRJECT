@@ -1,0 +1,47 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+
+<div class="contact-page-container">
+    <div class="contact-form-wrapper">
+
+        {% if sent %}
+            <div class="contact-success">
+                <h1>شكراً لك!</h1>
+                <p>تم إرسال رسالتك بنجاح. سنتواصل معك قريباً.</p>
+                <a href="{% url 'core:home' %}" class="cta-button">العودة للرئيسية</a>
+            </div>
+
+        {% else %}
+            <h1>اتصل بنا (Contact Us)</h1>
+            <p>لديك سؤال أو ملاحظة؟ املأ النموذج بالأسفل.</p>
+            
+            <form class="contact-form" method="POST" action="{% url 'core:contact' %}">
+                {% csrf_token %}
+                
+                <div class="form-group">
+                    <label for="name">الاسم (Name)</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني (Email)</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">الرسالة (Message)</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                
+                <button type="submit" class="cta-button">إرسال (Send)</button>
+            </form>
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

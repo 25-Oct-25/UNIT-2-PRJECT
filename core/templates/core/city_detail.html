@@ -1,0 +1,103 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}{{ city.name }} - Destinations{% endblock %}
+
+{% block content %}
+
+<div class="city-hero-v2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('{% static city.cover_image %}');">
+    <h1>{{ city.name }}</h1>
+    <p>{{ city.tag }}</p>
+</div>
+
+<div class="main-content">
+    <div class="carousel-container">
+
+        <nav class="breadcrumbs">
+            <a href="{% url 'core:home' %}">Homepage</a>
+            <span>&gt;</span>
+            <a href="#">Destinations</a>
+            <span>&gt;</span>
+            <span class="current">{{ city.name }}</span>
+        </nav>
+
+        <section class="about-city-section">
+            <h2>About {{ city.name }}</h2>
+            <p>{{ city.summary }}</p>
+        </section>
+
+        
+        <section class="content-carousel">
+            <div class="carousel-header">
+                <h2>Adventures in {{ city.name }}</h2>
+            </div>
+            
+            <div class="carousel-wrapper">
+                <div class="arrow prev-arrow">‹</div>
+                
+                <div class="carousel-track">
+                    {% for adventure in adventures %}
+                    <div class="adventure-card">
+                        <img src="{% static adventure.image %}" alt="{{ adventure.name }}">
+                        <div class="card-content">
+                            <div class="card-info">
+                                <span>{{ adventure.city_slug|upper }}</span> 
+                                <span>$ {{ adventure.price }}</span>
+                            </div>
+                            <h3>{{ adventure.name }}</h3>
+                            <p>{{ adventure.description }}</p>
+                            <a href="#" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                    {% empty %}
+                        <div class="empty-state">
+                            <p>No adventures found for this city yet. Check back soon!</p>
+                        </div>
+                    {% endfor %}
+                </div>
+                
+                <div class="arrow next-arrow">›</div>
+            </div>
+        </section>
+
+
+        <section class="content-carousel">
+            <div class="carousel-header">
+                <h2>Events in {{ city.name }}</h2>
+            </div>
+            
+            <div class="carousel-wrapper">
+                <div class="arrow prev-arrow">‹</div>
+
+                <div class="carousel-track">
+                    {% for event in events %}
+                    <div class="event-card">
+                        <div class="event-image-container">
+                            <img src="{% static event.image %}" alt="{{ event.name }}">
+                            <div class="event-date">
+                                <span>{{ event.event_date|slice:"8:10" }}</span> <span>{{ event.event_date|slice:"5:7" }}</span> <span>{{ event.event_date|slice:"0:4" }}</span> </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-info">
+                                <span>{{ event.location_text }}</span>
+                                <span>{{ event.price_text }}</span>
+                            </div>
+                            <h3>{{ event.name }}</h3>
+                            <a href="#" class="btn-card">Buy tickets</a>
+                        </div>
+                    </div>
+                    {% empty %}
+                        <div class="empty-state">
+                            <p>No events found for this city yet. Check back soon!</p>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="arrow next-arrow">›</div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+{% endblock %}

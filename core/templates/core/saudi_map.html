@@ -1,0 +1,99 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Saudi Map{% endblock %}
+
+{% block content %}
+
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""
+/>
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+></script>
+
+<style>
+
+  #ksa-map{
+    width:100%;
+    height:520px;
+    border-radius:12px;
+    overflow:hidden;
+    margin:20px 0 30px;
+  }
+</style>
+
+<div class="map-page-container">
+
+ 
+  <div id="ksa-map"></div>
+
+ 
+  <div class="map-cards-container">
+    {% for city in cities.values %}
+      <a href="{% url 'core:city_detail' slug=city.slug %}" class="map-card"
+         style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('{% static city.cover_image %}');">
+        <div class="map-card-tags"><span>{{ city.tag }}</span></div>
+        <div class="map-card-title"><h3>{{ city.name }}</h3><span>›</span></div>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  
+  const map = L.map('ksa-map', { scrollWheelZoom: false }).setView([23.8859, 45.0792], 5);
+
+ 
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap'
+  }).addTo(map);
+
+ 
+  const COORDS = {
+    riyadh: {lat: 24.7136, lng: 46.6753},
+    jeddah: {lat: 21.4858, lng: 39.1925},
+    abha:   {lat: 18.2465, lng: 42.5117},
+    mekkah: {lat: 21.3891, lng: 39.8579},
+    alula:  {lat: 26.6085, lng: 37.9232}
+  };
+
+  
+  const cities = [
+    {% for city in cities.values %}
+    {
+      name: "{{ city.name|escapejs }}",
+      slug: "{{ city.slug|escapejs }}",
+      url: "{% url 'core:city_detail' slug=city.slug %}",
+      img: "{% static city.cover_image %}"
+    }{% if not forloop.last %},{% endif %}
+    {% endfor %}
+  ];
+
+
+  const bounds = [];
+  cities.forEach(c => {
+    const coord = COORDS[c.slug];
+    if (!coord) return;
+    const marker = L.marker([coord.lat, coord.lng]).addTo(map);
+    marker.bindPopup(
+      `<div style="min-width:200px">
+         <img src="${c.img}" style="width:100%;height:100px;object-fit:cover;border-radius:6px;margin-bottom:6px">
+         <strong>${c.name}</strong><br>
+         <a href="${c.url}">Open details →</a>
+       </div>`
+    );
+    bounds.push([coord.lat, coord.lng]);
+  });
+
+  if (bounds.length){ map.fitBounds(bounds, { padding: [20,20] }); }
+  L.control.scale().addTo(map);
+</script>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "core/base.html" %}
+{% block title %}الوجهات{% endblock %}
+{% block content %}
+<h1>الوجهات</h1>
+<ul>
+  <li><a href="{% url 'core:city_detail' 'riyadh' %}">Riyadh</a></li>
+  <li><a href="{% url 'core:city_detail' 'abha' %}">Abha</a></li>
+  <li><a href="{% url 'core:city_detail' 'mekkah' %}">Mekkah</a></li>
+  <li><a href="{% url 'core:city_detail' 'alula' %}">AlUla</a></li>
+</ul>
+{% endblock %}

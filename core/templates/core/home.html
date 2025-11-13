@@ -1,0 +1,203 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}الرئيسية{% endblock %}
+
+{% block hero_background %}
+    <video class="hero-background" id="hero-video" autoplay muted loop>
+        <source src="{% static 'core/videos/videoplayback.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <div class="overlay"></div>
+{% endblock %}
+
+{% block content %}
+
+ <!--===================Main Content===================-->
+
+
+<!-- buton section links-->
+<main class="hero-section">
+    <h1>Explore The Unreal Calendar!</h1>
+    <p>Football glory, unforgettable events, and moments beyond the game. Cristiano Ronaldo's story in Saudi lives inside the Unreal Calendar.</p>
+    <a href="#" class="cta-button">Learn More</a>
+
+    <div class="bottom-tabs-container">
+            <button id="video-pause-btn" type="button" aria-label="Pause video">
+        <span class="icon-pause">⏸️</span>
+        <span class="icon-play">▶️</span>
+    </button>
+   <div class="bottom-tabs-container">
+        <ul class="bottom-tabs">
+            
+            <li class="tab-item active">
+                <a href="{% url 'core:all_events' %}">Explore The Unreal Calendar!</a>
+            </li>
+            
+            <li class="tab-item">
+                <a href="{% url 'core:city_detail' slug='riyadh' %}">Riyadh Events</a>
+            </li>
+            
+            <li class="tab-item">
+                <a href="{% url 'core:city_detail' slug='jeddah' %}">The Red Sea</a>
+            </li>
+            
+            <li class="tab-item">
+                <a href="{% url 'core:city_detail' slug='alula' %}">Historic AlUla</a>
+            </li>
+            
+            <li class="tab-item">
+                <a href="{% url 'core:city_detail' slug='abha' %}">Cool Abha</a>
+            </li>
+
+        </ul>
+    </div>
+</main> 
+
+<!-- End of Main Content Section -->
+
+<div class="main-content">
+    <div class="carousel-container">
+
+        <section class="content-carousel">
+            <div class="carousel-header">
+                <h2>Book Your Next Adventure</h2>
+                <a href="#" class="view-all-btn">View All</a>
+            </div>
+            
+            <div class="carousel-wrapper">
+                <div class="arrow prev-arrow">‹</div>
+                
+                <div class="carousel-track">
+                    
+                    <div class="adventure-card">
+                        <img src="{% static 'core/img/Ad.jpeg' %}" alt="Adventure in AlUla">
+                        <div class="card-content">
+                            <div class="card-info"><span>ALULA</span> <span>$ 5000</span></div>
+                            <h3>Half Day in AlUla Cultural</h3>
+                            <p>Discovery & Success Wondes...</p>
+                            <a href="#" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="adventure-card">
+                        <img src="{% static 'core/img/Hike.jpg' %}" alt="Hike in AlUla">
+                        <div class="card-content">
+                            <div class="card-info"><span>MADAIN SALEH</span> <span>$ 270</span></div>
+                            <h3>Hike in AlUla</h3>
+                            <p>Rock formations and visit to th...</p>
+                            <a href="#" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="adventure-card">
+                        <img src="{% static 'core/img/arabian_nights.jpeg' %}" alt="Explore Arabian Nights">
+                        <div class="card-content">
+                            <div class="card-info"><span>ALULA</span> <span>$ 5000</span></div>
+                            <h3>2 Days in AlUla</h3>
+                            <p>Explore Arabian Nights with Mod...</p>
+                            <a href="#" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="adventure-card">
+                        <img src="{% static 'core/img/Diving.jpg' %}" alt="Adventure in AlUla">
+                        <div class="card-content">
+                            <div class="card-info"><span>JEDDAH</span> <span>$ 350</span></div>
+                            <h3>Red Sea Diving</h3>
+                            <p>Explore the vibrant coral reefs...</p>
+                            <a href="#" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="adventure-card">
+                        <img src="{% static 'core/img/World.jpg' %}" alt="Hike in AlUla">
+                        <div class="card-content">
+                            <div class="card-info"><span>RIYADH</span> <span>$ 150</span></div>
+                            <h3>Edge of the World Tour</h3>
+                            <p>A day trip to the stunning cliffs...</p>
+                            <a href="#" class="btn-card">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="arrow next-arrow">›</div>
+            </div>
+        </section>
+
+<!-- End of Adventure Carousel Section -->
+
+        <section class="content-carousel">
+            <div class="carousel-header">
+                <h2>What's Happening This Month</h2>
+                <a href="#" class="view-all-btn">View All</a>
+            </div>
+            
+            <div class="carousel-wrapper">
+                <div class="arrow prev-arrow">‹</div>
+
+                <div class="carousel-track">
+                    
+                    <div class="event-card">
+                        <div class="event-image-container">
+                            <img src="{% static 'core/img/Shooping.jpg' %}" alt="Young Al Moomin">
+                            <div class="event-date"><span>09</span><span>NOV</span><span>2025</span></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-info"><span>DIRIYAH | SHOPPING</span></div>
+                            <h3>Young Al Moomin</h3>
+                            <a href="#" class="btn-card">Visit website</a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-image-container">
+                            <img src="{% static 'core/img/Show.jpg' %}" alt="Concert Show">
+                            <div class="event-date"><span>29</span><span>OCT</span><span>2025</span></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-info"><span>JEDDAH | CONCERT SHOW</span> <span>From $ 107</span></div>
+                            <h3>Concert Show</h3>
+                            <a href="#" class="btn-card">Buy tickets</a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-image-container">
+                            <img src="{% static 'core/img/yoga.jpg' %}" alt="Yoga">
+                            <div class="event-date"><span>21</span><span>NOV</span><span>2025</span></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-info"><span>JEDDAH | YOGA</span> <span>From $ 100</span></div>
+                            <h3>Ashtanga Vinyasa Yoga</h3>
+                            <a href="#" class="btn-card">Buy tickets</a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-image-container">
+                            <img src="{% static 'core/img/festiva.jpg' %}" alt="Music Festival">
+                            <div class="event-date"><span>30</span><span>NOV</span><span>2025</span></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-info"><span>RIYADH | ENTERTAINMENT</span></div>
+                            <h3>Music Festival</h3>
+                            <a href="#" class="btn-card">Buy tickets</a>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-image-container">
+                            <img src="{% static 'core/img/ART.jpg' %}" alt="Art Expo">
+                            <div class="event-date"><span>05</span><span>DEC</span><span>2025</span></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-info"><span>JEDDAH | CULTURE</span></div>
+                            <h3>Modern Art Expo</h3>
+                            <a href="#" class="btn-card">Visit website</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arrow next-arrow">›</div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<!-- End of Event Carousel Section -->
+{% endblock %}
