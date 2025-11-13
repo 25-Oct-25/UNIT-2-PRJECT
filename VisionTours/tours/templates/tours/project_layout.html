@@ -1,0 +1,78 @@
+{% extends 'tours/base.html' %}
+{% load static %}
+
+{% block title %}{% block page_head_title %}Project — Vision Tours 2030{% endblock %}{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'tours/css/project-styles.css' %}">
+{% block extra_css %}{% endblock %}
+
+<section class="page-cover">
+    <video class="cover-video" autoplay muted loop playsinline {% block cover_poster_attr %}{% endblock %}>
+        <source src="{% block cover_video_src %}{% endblock %}" type="video/mp4">
+    </video>
+    <div class="cover-overlay"></div>
+
+    <div class="wrap cover-inner">
+        <h1 class="page-title">{% block page_title %}Project{% endblock %}</h1>
+        <p class="page-sub">{% block page_sub %}{% endblock %}</p>
+        <div class="page-cta">
+            <a class="btn btn-primary" href="#about">About</a>
+            <a class="btn btn-ghost" href="#objectives">Objectives</a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section {% block about_section_tone %}alt{% endblock %}">
+    <div class="wrap about-grid">
+        <div class="about-text">
+            <h2 class="about-title">{% block about_title %}{% endblock %}</h2>
+            {% block about_body %}{% endblock %}
+            {% block about_cta %}{% endblock %}
+        </div>
+        <div class="about-thumb" style="--thumb-image: url('{% block about_thumb_url %}{% endblock %}')"></div>
+    </div>
+</section>
+
+<section id="objectives" class="objectives">
+    <div class="wrap">
+        <div class="row-nav">
+            <h2 class="block-title">Objectives</h2>
+            <div class="row-actions">
+                <button class="nav-btn obj-prev" type="button" aria-label="Previous">‹</button>
+                <button class="nav-btn obj-next" type="button" aria-label="Next">›</button>
+            </div>
+        </div>
+        <div class="row" id="objRow">
+            {% block objectives_cards %}{% endblock %}
+        </div>
+    </div>
+</section>
+
+<section id="subprojects" class="section alt">
+    <div class="wrap">
+        <div class="row-nav">
+            <h2 class="block-title">Sub projects</h2>
+            <div class="row-actions">
+                <button class="nav-btn sub-prev" type="button" aria-label="Previous">‹</button>
+                <button class="nav-btn sub-next" type="button" aria-label="Next">›</button>
+            </div>
+        </div>
+        <div class="subgrid" id="subRow">
+            {% block subprojects_cards %}{% endblock %}
+        </div>
+    </div>
+</section>
+
+{% block extra_js_top %}{% endblock %}
+<script>
+    const objRow = document.getElementById('objRow');
+    const subRow = document.getElementById('subRow');
+    const move = el => el ? Math.max(280, el.clientWidth * 0.8) : 400;
+    document.querySelector('.obj-prev')?.addEventListener('click', () => objRow?.scrollBy({ left: -move(objRow), behavior: 'smooth' }));
+    document.querySelector('.obj-next')?.addEventListener('click', () => objRow?.scrollBy({ left: move(objRow), behavior: 'smooth' }));
+    document.querySelector('.sub-prev')?.addEventListener('click', () => subRow?.scrollBy({ left: -move(subRow), behavior: 'smooth' }));
+    document.querySelector('.sub-next')?.addEventListener('click', () => subRow?.scrollBy({ left: move(subRow), behavior: 'smooth' }));
+</script>
+{% block extra_js %}{% endblock %}
+{% endblock %}

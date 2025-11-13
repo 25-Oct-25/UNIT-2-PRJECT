@@ -1,0 +1,183 @@
+{% extends 'tours/base.html' %}
+{% load static %}
+{% block title %}Home — Vision Tours 2030{% endblock %}
+
+{% block content %}
+
+<section class="home-cover">
+    <video class="home-cover-video" autoplay muted loop playsinline>
+        <source src="{% static 'tours/videos/vision-cover-video.mp4' %}" type="video/mp4">
+    </video>
+    <div class="home-cover-ovr"></div>
+
+    <div class="wrap home-cover-grid">
+        <div class="home-cover-left">
+            <h1>Vision Tours 2030</h1>
+            <p class="home-cover-sub">
+                Guided journeys through Saudi mega-projects — discover future cities, culture, and experiences across
+                NEOM, Red Sea, Qiddiya, Diriyah, and more.
+            </p>
+            <div class="home-actions">
+                <a class="btn btn-primary" href="{% url 'tours:progress_map' %}"><i data-lucide="map"></i> View Progress
+                    Map</a>
+                <a class="btn btn-ghost" href="{% url 'tours:neom' %}"><i data-lucide="compass"></i> Explore
+                    Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="home-overview">
+    <div class="wrap home-overview-grid">
+        <div class="home-overview-left">
+            <h2>Overview</h2>
+        </div>
+        <div class="home-overview-right">
+            <p>Vision Tours 2030 is your gateway to Saudi Arabia's transformational journey. We provide curated
+                expeditions into the Kingdom’s most ambitious developments.</p>
+            <p>From the cognitive metropolis of NEOM and the regenerative luxury of the Red Sea to Qiddiya’s
+                entertainment hub and Diriyah’s cultural revival, discover innovation at scale.</p>
+            <p>Join us to witness progress firsthand and experience the future taking shape across Saudi Arabia.</p>
+            <a class="btn btn-primary" href="{% url 'tours:progress_map' %}"><i data-lucide="flag"></i> Explore Our
+                Progress</a>
+        </div>
+    </div>
+</section>
+
+<section class="home-projects">
+    <div class="wrap home-projects-header">
+        <h3>Vision Projects Showcase</h3>
+    </div>
+
+    <div class="home-projects-slider">
+        <div class="home-projects-scroll">
+            {% for project in vision_projects %}
+            <div class="home-project-slide wrap"
+                style="--slide-image: url('{% static 'tours/images/cards/'|add:project.image %}');">
+                <div class="home-slide-grid">
+                    <div class="home-slide-left">
+                        <span class="home-slide-tag">{{ project.tag }}</span>
+                        <h4>{{ project.title }}</h4>
+                        <p>{{ project.description }}</p>
+                        <a class="btn btn-card" href="{% url project.url_name %}"><i data-lucide="arrow-right"></i>
+                            Explore {{ project.title }}</a>
+                    </div>
+                    <div class="home-slide-right"></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="wrap home-arrows">
+        <div class="home-arrows-row">
+            <button class="arrow-btn prev-btn" aria-label="Previous"><i data-lucide="chevron-left"></i></button>
+            <button class="arrow-btn next-btn" aria-label="Next"><i data-lucide="chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+
+<section class="home-metrics">
+    <div class="wrap home-metrics-grid">
+        <div class="home-metric">
+            <h3 class="home-metric-number">70K+</h3>
+            <p class="home-metric-caption">Direct & Indirect Job Opportunities</p>
+        </div>
+        <div class="home-metric">
+            <h3 class="home-metric-number">50+</h3>
+            <p class="home-metric-caption">Coastal Development Projects</p>
+        </div>
+        <div class="home-metric">
+            <h3 class="home-metric-number">5</h3>
+            <p class="home-metric-caption">New Economic Centers</p>
+        </div>
+        <div class="home-metric">
+            <h3 class="home-metric-number">2030</h3>
+            <p class="home-metric-caption">Vision Goal Completion</p>
+        </div>
+    </div>
+</section>
+
+<section id="home-cards" class="home-cards">
+    <input type="radio" name="hc" id="hc-1" checked>
+    <input type="radio" name="hc" id="hc-2">
+    <input type="radio" name="hc" id="hc-3">
+    <input type="radio" name="hc" id="hc-4">
+    <input type="radio" name="hc" id="hc-5">
+
+    <div class="home-cards-bg"></div>
+    <div class="home-cards-ovr"></div>
+
+    <div class="wrap home-cards-grid">
+        <div class="home-cards-left">
+            <div class="home-cards-small">Saudi Vision 2030</div>
+            <ul class="home-cards-list">
+                <li>Vision Realization Programs</li>
+                <li>Strategies</li>
+            </ul>
+            <h1 class="home-cards-title">Ready Destinations</h1>
+        </div>
+
+        <div class="home-cards-right">
+            <div class="home-card" data-i="1">
+                <div class="home-card-media" style="--img:url('{% static 'tours/images/dest/diriyah-now.jpg' %}')">
+                </div>
+                <div class="home-card-body">
+                    <span class="home-pill">Cultural District</span>
+                    <h3>Diriyah</h3>
+                    <p class="home-card-desc">Heritage lanes, dining, and Najdi architecture—now welcoming visitors.</p>
+                </div>
+            </div>
+
+            <div class="home-card" data-i="2">
+                <div class="home-card-media" style="--img:url('{% static 'tours/images/dest/alula.jpg' %}')"></div>
+                <div class="home-card-body">
+                    <span class="home-pill">Ancient Heritage</span>
+                    <h3>AlUla</h3>
+                    <p class="home-card-desc">Hegra tombs, sandstone canyons, stargazing & cultural festivals.</p>
+                </div>
+            </div>
+
+            <div class="home-card" data-i="3">
+                <div class="home-card-media" style="--img:url('{% static 'tours/images/dest/jeddah-historic.jpg' %}')">
+                </div>
+                <div class="home-card-body">
+                    <span class="home-pill">UNESCO Old Town</span>
+                    <h3>Jeddah Historic</h3>
+                    <p class="home-card-desc">Coral-stone houses, restored lanes, galleries & cultural events.</p>
+                </div>
+            </div>
+
+            <div class="home-card" data-i="4">
+                <div class="home-card-media" style="--img:url('{% static 'tours/images/dest/redsea-cover.jpg' %}')">
+                </div>
+                <div class="home-card-body">
+                    <span class="home-pill">Regenerative Tourism</span>
+                    <h3>Red Sea Resorts</h3>
+                    <p class="home-card-desc">Eco-luxury island retreats—selected resorts now open.</p>
+                </div>
+            </div>
+
+            <div class="home-card" data-i="5">
+                <div class="home-card-media" style="--img:url('{% static 'tours/images/dest/kafd.jpg' %}')"></div>
+                <div class="home-card-body">
+                    <span class="home-pill">Business & Lifestyle</span>
+                    <h3>KAFD Riyadh</h3>
+                    <p class="home-card-desc">Modern skyline, dining & premium urban experiences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap home-cards-controls">
+        <div class="home-cards-dots">
+            <label for="hc-1"></label>
+            <label for="hc-2"></label>
+            <label for="hc-3"></label>
+            <label for="hc-4"></label>
+            <label for="hc-5"></label>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

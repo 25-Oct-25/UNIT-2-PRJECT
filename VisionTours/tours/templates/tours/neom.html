@@ -1,0 +1,58 @@
+{% extends 'tours/project_layout.html' %}
+{% load static %}
+
+{% block page_head_title %}NEOM — Vision Tours 2030{% endblock %}
+
+{% block cover_video_src %}{% static 'tours/videos/project/neom-hero.mp4' %}{% endblock %}
+{% block page_title %}NEOM{% endblock %}
+{% block page_sub %}A futuristic region redefining urban living, innovation, and sustainability.{% endblock %}
+
+{% block about_title %}Explore NEOM{% endblock %}
+{% block about_body %}
+<p>NEOM is a bold vision for a new future—where innovation, clean energy, and technology shape a better way of living.
+</p>
+<p>It includes groundbreaking subprojects like THE LINE, Oxagon, Trojena, and Sindalah—each redefining the limits of
+    modern civilization.</p>
+{% endblock %}
+{% block about_cta %}
+<a class="btn btn-primary" href="https://www.neom.com/" target="_blank" rel="noopener">Learn more</a>
+{% endblock %}
+{% block about_thumb_url %}{% static 'tours/images/project/neom-about.jpg' %}{% endblock %}
+
+{% block objectives_cards %}
+<article class="card">
+    <h3>Sustainability</h3>
+    <p>100% renewable energy powering cities and nature in harmony.</p>
+</article>
+<article class="card">
+    <h3>Innovation</h3>
+    <p>Global hub for AI, biotech, and futuristic industries.</p>
+</article>
+<article class="card">
+    <h3>Mobility</h3>
+    <p>Seamless movement with smart, autonomous transport systems.</p>
+</article>
+<article class="card">
+    <h3>Quality of Life</h3>
+    <p>Reimagined cities promoting balance, creativity, and well-being.</p>
+</article>
+<article class="card">
+    <h3>Economic Growth</h3>
+    <p>New opportunities supporting Saudi Arabia's diversified future.</p>
+</article>
+{% endblock %}
+
+{% block subprojects_cards %}
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/neom-line.jpg' %}')">
+    <h3>THE LINE</h3>
+</a>
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/neom-oxagon.jpg' %}')">
+    <h3>Oxagon</h3>
+</a>
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/neom-trojena.jpg' %}')">
+    <h3>Trojena</h3>
+</a>
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/neom-sindalah.jpg' %}')">
+    <h3>Sindalah</h3>
+</a>
+{% endblock %}

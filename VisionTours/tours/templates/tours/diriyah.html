@@ -1,0 +1,58 @@
+{% extends 'tours/project_layout.html' %}
+
+{% load static %}
+
+{% block page_head_title %}Diriyah — Vision Tours 2030{% endblock %}
+
+{% block cover_video_src %}{% static 'tours/videos/project/diriyah-hero.mp4' %}{% endblock %}
+{% block page_title %}Diriyah{% endblock %}
+{% block page_sub %}The birthplace of the Kingdom, reimagined with culture, hospitality and heritage.{% endblock %}
+
+{% block about_title %}Explore Diriyah{% endblock %}
+
+{% block about_body %}
+<p>Diriyah is the heart of Saudi Arabia's heritage, transformed into a global cultural destination.</p>
+<p>It features Najdi-style architecture, luxury hotels, museums, and restaurants rooted in Saudi tradition.</p>
+{% endblock %}
+{% block about_cta %}
+<a class="btn btn-primary" href="https://www.diriyah.sa/" target="_blank" rel="noopener">Learn more</a>
+{% endblock %}
+{% block about_thumb_url %}{% static 'tours/images/project/diriyah-about.jpg' %}{% endblock %}
+
+{% block objectives_cards %}
+<article class="card">
+    <h3>Cultural Revival</h3>
+    <p>Celebrate Saudi heritage through architecture and storytelling.</p>
+</article>
+<article class="card">
+    <h3>Tourism Growth</h3>
+    <p>Attract millions of visitors to the Kingdom’s birthplace.</p>
+</article>
+<article class="card">
+    <h3>Community Empowerment</h3>
+    <p>Support local artisans and hospitality sectors.</p>
+</article>
+<article class="card">
+    <h3>Preservation</h3>
+    <p>Protect historical sites while embracing modern design.</p>
+</article>
+<article class="card">
+    <h3>Global Recognition</h3>
+    <p>Position Diriyah as a UNESCO World Heritage attraction.</p>
+</article>
+{% endblock %}
+
+{% block subprojects_cards %}
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/diriyah-bujairi.jpg' %}')">
+    <h3>Bujairi Terrace</h3>
+</a>
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/diriyah-turaif.jpg' %}')">
+    <h3>At-Turaif District</h3>
+</a>
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/diriyah-boutique.jpg' %}')">
+    <h3>Boutique Hotels</h3>
+</a>
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/diriyah-museum.jpg' %}')">
+    <h3>Heritage Museums</h3>
+</a>
+{% endblock %}

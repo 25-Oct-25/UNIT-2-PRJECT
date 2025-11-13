@@ -1,0 +1,78 @@
+{% extends 'tours/base.html' %}
+{% load static %}
+{% block title %}Progress Map — Vision Tours 2030{% endblock %}
+
+{% block content %}
+
+<section class="pm-intro">
+    <div class="wrap pm-intro-row">
+        <div class="pm-intro-left">
+            <h1 class="pm-title">Project Progress Overview</h1>
+            <p class="pm-sub">A concise snapshot of Vision 2030 destinations — status, phases, and recent updates.</p>
+        </div>
+        <div class="pm-kpis">
+            <div class="pm-kpi"><strong>{{ pm_kpi_total }}</strong><span>Total</span></div>
+            <div class="pm-kpi"><strong>{{ pm_kpi_completed }}</strong><span>Completed</span></div>
+            <div class="pm-kpi"><strong>{{ pm_kpi_ongoing }}</strong><span>Ongoing</span></div>
+            <div class="pm-kpi"><strong>{{ pm_kpi_last_update }}</strong><span>Last Update</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="pm-grid">
+    <div class="wrap pm-cards">
+
+        {% for p in pm_projects %}
+        <article class="pm-card" id="{{ p.slug }}">
+            <div class="pm-thumb" style="--thumb-image: url('{% static 'tours/images/'|add:p.image %}');"></div>
+
+            <div class="pm-body">
+                <span class="pm-badge 
+          {% if p.status == 'Completed' %}pm-done
+          {% elif p.status == 'Under Construction' %}pm-ongoing
+          {% else %}pm-plan{% endif %}">
+                    {{ p.status }}
+                </span>
+
+                <h3 class="pm-name">{{ p.title }}</h3>
+                <p class="pm-meta">{{ p.phase }} · Updated {{ p.updated }}</p>
+
+                <div class="pm-bar">
+                    <span class="pm-fill" style="--w: {{ p.progress|default:0 }}%;"></span>
+                </div>
+
+                <p class="pm-desc">{{ p.desc }}</p>
+                <a class="btn btn-card" href="{% url p.url_name %}">Details</a>
+            </div>
+        </article>
+        {% endfor %}
+
+    </div>
+</section>
+<section class="pm-chart-simple">
+    <div class="wrap">
+        <h2 class="pm-chart-title">Completion Overview</h2>
+        <ul class="pm-chart-list">
+            {% for p in pm_projects %}
+            <li class="pm-chart-item">
+                <span class="pm-chart-name">{{ p.title }}</span>
+                <svg class="pm-chart-bar" viewBox="0 0 100 10" preserveAspectRatio="none"
+                    aria-label="{{ p.title }} progress">
+                    <rect class="pm-bg" x="0" y="0" width="100" height="10" rx="3" ry="3"></rect>
+                    {% with prog=p.progress|default:'0'|stringformat:"s" %}
+                    <rect class="pm-fg" x="0" y="0" width="{{ prog|cut:'%' }}" height="10" rx="3" ry="3"></rect>
+                    {% endwith %}
+                </svg>
+                <span class="pm-chart-pct">
+                    {% with prog=p.progress|default:'0'|stringformat:"s" %}
+                    {{ prog }}{% if prog|slice:"-1:" != "%" %}%{% endif %}
+                    {% endwith %}
+                </span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+
+
+{% endblock %}

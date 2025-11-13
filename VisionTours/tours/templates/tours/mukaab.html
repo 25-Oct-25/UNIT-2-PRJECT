@@ -1,0 +1,57 @@
+{% extends 'tours/project_layout.html' %}
+{% load static %}
+
+{% block page_head_title %}The Mukaab — Vision Tours 2030{% endblock %}
+
+{% block cover_video_src %}{% static 'tours/videos/project/mukaab-hero.mp4' %}{% endblock %}
+{% block page_title %}The Mukaab{% endblock %}
+{% block page_sub %}A next-generation immersive landmark redefining Riyadh's skyline and experiences.{% endblock %}
+
+{% block about_title %}Explore The Mukaab{% endblock %}
+{% block about_body %}
+<p>The Mukaab is the centerpiece of Riyadh's New Murabba development—a massive cube-shaped skyscraper filled with
+    entertainment, retail, and cultural experiences.</p>
+<p>It will be among the largest structures in the world, offering immersive environments powered by cutting-edge
+    technology.</p>
+{% endblock %}
+{% block about_cta %}
+<a class="btn btn-primary" href="https://www.newmurabba.com/" target="_blank" rel="noopener">Learn more</a>
+{% endblock %}
+{% block about_thumb_url %}{% static 'tours/images/project/mukaab-about.jpg' %}{% endblock %}
+
+{% block objectives_cards %}
+<article class="card">
+    <h3>Innovation</h3>
+    <p>Redefine architecture and visitor experiences.</p>
+</article>
+<article class="card">
+    <h3>Culture</h3>
+    <p>Celebrate Saudi identity through design and art.</p>
+</article>
+<article class="card">
+    <h3>Technology</h3>
+    <p>Use immersive digital environments for exploration.</p>
+</article>
+<article class="card">
+    <h3>Tourism</h3>
+    <p>Draw millions to Riyadh's new city center.</p>
+</article>
+<article class="card">
+    <h3>Growth</h3>
+    <p>Boost economy and urban development in the capital.</p>
+</article>
+{% endblock %}
+
+{% block subprojects_cards %}
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/mukaab-interior.jpg' %}')">
+    <h3>Immersive Interior</h3>
+</a>
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/mukaab-skydeck.jpg' %}')">
+    <h3>Sky Deck</h3>
+</a>
+
+</a>
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/mukaab-shopping.jpg' %}')">
+    <h3>Shopping & Culture</h3>
+</a>
+{% endblock %}

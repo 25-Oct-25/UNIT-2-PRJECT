@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-theme="{{ request.COOKIES.theme|default:theme|default:'light' }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Vision Tours 2030{% endblock %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'tours/css/style.css' %}">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <header class="hdr">
+        <nav class="wrap nav">
+            <a class="brand" href="{% url 'tours:home' %}">
+                <img class="logo" src="{% static 'tours/images/logo.png' %}" alt="" onerror="this.style.display='none'">
+                <span><span class="acc">Vision</span> Tours 2030</span>
+            </a>
+
+            <ul class="links">
+                <li><a href="{% url 'tours:home' %}"><i data-lucide="layout-dashboard"></i> Overview</a></li>
+                <li><a href="{% url 'tours:progress_map' %}"><i data-lucide="map"></i> Progress Map</a></li>
+
+                {% url 'tours:neom' as u_neom %}
+                {% url 'tours:redsea' as u_redsea %}
+                {% url 'tours:qiddiya' as u_qiddiya %}
+                {% url 'tours:diriyah' as u_diriyah %}
+                {% url 'tours:mukaab' as u_mukaab %}
+
+                <li class="dd">
+                    <button class="dd-btn" type="button">
+                        Projects <i data-lucide="chevron-down" class="ico"></i>
+                    </button>
+                    <div class="dd-menu">
+                        <a href="{{ u_neom }}"><i data-lucide="compass"></i> NEOM</a>
+                        <a href="{{ u_redsea }}"><i data-lucide="waves"></i> Red Sea</a>
+                        <a href="{{ u_qiddiya }}"><i data-lucide="flag"></i> Qiddiya</a>
+                        <a href="{{ u_diriyah }}"><i data-lucide="landmark"></i> Diriyah</a>
+                        <a href="{{ u_mukaab }}"><i data-lucide="building-2"></i> Mukaab</a>
+                    </div>
+                </li>
+            </ul>
+
+            <a class="icon" title="Toggle theme"
+                href="{% url 'tours:toggle_theme' %}?next={{ request.get_full_path|urlencode }}">
+                <i
+                    data-lucide="{% if request.COOKIES.theme == 'dark' or theme == 'dark' %}sun{% else %}moon{% endif %}"></i>
+            </a>
+        </nav>
+    </header>
+
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="ftr">
+        <div class="wrap ftr-row">
+            <span>© Vision Tours 2030</span>
+          
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide && lucide.createIcons) lucide.createIcons();
+
+            const container = document.querySelector('.home-projects-scroll');
+            const nextBtn = document.querySelector('.next-btn');
+            const prevBtn = document.querySelector('.prev-btn');
+            if (!container) return;
+            const step = () => container.clientWidth;
+            nextBtn?.addEventListener('click', () => container.scrollBy({ left: step(), behavior: 'smooth' }));
+            prevBtn?.addEventListener('click', () => container.scrollBy({ left: -step(), behavior: 'smooth' }));
+        });
+    </script>
+
+    {% block extra_scripts %}{% endblock %}
+</body>
+
+</html>

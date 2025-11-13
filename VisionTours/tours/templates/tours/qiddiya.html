@@ -1,0 +1,60 @@
+{% extends 'tours/project_layout.html' %}
+{% load static %}
+
+{% block page_head_title %}Qiddiya — Vision Tours 2030{% endblock %}
+
+{% block cover_video_src %}{% static 'tours/videos/project/qiddiya-hero.mp4' %}{% endblock %}
+{% block page_title %}Qiddiya{% endblock %}
+{% block page_sub %}Saudi Arabia's emerging capital for entertainment, sports and culture.{% endblock %}
+
+{% block about_title %}Explore Qiddiya{% endblock %}
+{% block about_body %}
+<p>Global hub for entertainment, sports and culture with year-round venues and experiences.</p>
+<p>Concert arenas, racetracks, outdoor adventures and family attractions that boost jobs and quality of life.</p>
+{% endblock %}
+{% block about_cta %}
+<a class="btn btn-primary" href="https://www.qiddiya.com/" target="_blank" rel="noopener">Learn more</a>
+{% endblock %}
+{% block about_thumb_url %}{% static 'tours/images/project/qiddiya-about.jpg' %}{% endblock %}
+
+{% block objectives_cards %}
+
+<article class="card">
+    <h3>Global destination</h3>
+    <p>World-class capital for play and culture.</p>
+</article>
+<article class="card">
+    <h3>Tourism growth</h3>
+    <p>Attract visitors and diversify the economy.</p>
+</article>
+<article class="card">
+    <h3>Experiences for all</h3>
+    <p>Theme parks, arenas and festivals.</p>
+</article>
+<article class="card">
+    <h3>Prosperity</h3>
+    <p>Jobs and creative industries.</p>
+</article>
+<article class="card">
+    <h3>Youth empowerment</h3>
+    <p>Sports and arts pathways.</p>
+</article>
+{% endblock %}
+
+{% block subprojects_cards %}
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/sub-sixflags.jpg' %}')">
+    <h3>Six Flags Qiddiya City</h3>
+</a>
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/sub-golf.jpg' %}')">
+    <h3>Jack Nicklaus Championship Golf Course</h3>
+</a>
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/sub-aquarabia.jpg' %}')">
+    <h3>Aquarabia</h3>
+</a>
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/sub-speed-park.jpg' %}')">
+    <h3>Speed Park & Track</h3>
+</a>
+<a class="subcard" href="#" style="--thumb-image: url('{% static 'tours/images/project/sub-mbs-stadium.jpg' %}')">
+    <h3>Prince Mohammed bin Salman Stadium</h3>
+</a>
+{% endblock %}
