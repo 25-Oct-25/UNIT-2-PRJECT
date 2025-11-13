@@ -101,18 +101,19 @@
     max-width: 90%;
   }
 
-  .detail-section {
-    padding: 30px 20px;
-  }
+.detail-section {
+  padding: 30px 20px;
+  margin-top: 500px; /* إضافة مسافة من الأعلى */
+}
 
-  .detail-section h3 {
-    font-size: 1.6rem;
-  }
+.detail-section h3 {
+  font-size: 1.6rem;
+}
 
-  .detail-section p {
-    font-size: 1rem;
-    line-height: 1.7;
-  }
+.detail-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
 
   footer {
     font-size: 0.9rem;
@@ -606,6 +607,7 @@
     height: 180px;
   }
 }
+
 
 
 

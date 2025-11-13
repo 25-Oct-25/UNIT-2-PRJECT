@@ -528,3 +528,101 @@ footer p {
 @media (max-width: 768px) {
   .navbar-nav { display: none !important; }
 }
+
+
+
+
+
+
+
+/* ===== تعديل الكروت للجوال ===== */
+
+@media (max-width: 768px) {
+  /* إلغاء الـ absolute positioning */
+  .cards-over-hero {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 320px auto 40px !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* توسيط الحاوية */
+  .cards-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    padding: 0 20px !important;
+    width: 100% !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* تصغير الكروت */
+  .card-item {
+    max-width: 320px !important;
+    width: 100% !important;
+    min-height: auto !important;
+    max-height: 180px !important;
+    padding: 12px 15px !important;
+    margin: 0 !important;
+    flex: none !important;
+  }
+
+  /* تصغير العنوان */
+  .card-item h4 {
+    font-size: 1rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* تصغير النص */
+  .card-item p {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 8px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  /* تصغير الزر */
+  .card-item .read-more-btn {
+    font-size: 0.8rem !important;
+    padding: 6px 14px !important;
+  }
+
+  /* إلغاء الزخرفة الدوارة للجوال */
+  .card-item::after {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-container {
+    padding: 0 15px !important;
+  }
+
+  .card-item {
+    max-width: 300px !important;
+    max-height: 170px !important;
+    padding: 10px 12px !important;
+  }
+
+  .card-item h4 {
+    font-size: 0.95rem !important;
+  }
+
+  .card-item p {
+    font-size: 0.8rem !important;
+  }
+
+  .card-item .read-more-btn {
+    font-size: 0.75rem !important;
+    padding: 5px 12px !important;
+  }
+}
