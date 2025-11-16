@@ -40,7 +40,7 @@ def city_detail_view(request: HttpRequest, city_name):
 
 
 
-genai.configure(api_key="AIzaSyBLJ9I3n77NpHmAPdMQMFAegWCwCFZbaR8")
+
 @csrf_exempt
 def travel_ai(request):
     if request.method == "POST":
@@ -49,7 +49,6 @@ def travel_ai(request):
         category = data.get("category", "")
         city = data.get("city", "")
         subtype = data.get("subtype", "")
-        family = data.get("family", "")
 
         prompt = f"""
 You are a tourism AI assistant.
