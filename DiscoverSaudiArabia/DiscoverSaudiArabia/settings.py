@@ -1,20 +1,14 @@
-"""
-Django settings for DiscoverSaudiArabia project.
-"""
 
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
 SECRET_KEY = "django-insecure-_)bu7!u(v^xg!pt+znnsk^ac!_sb37!0up1#6)mxk@1z%iajz)"
 DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -55,7 +49,6 @@ TEMPLATES = [
 WSGI_APPLICATION = "DiscoverSaudiArabia.wsgi.application"
 
 
-# Database
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -64,7 +57,6 @@ DATABASES = {
 }
 
 
-# Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
@@ -81,33 +73,23 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-LANGUAGE_CODE = "en-us" # يمكنك تغييرها إلى "ar" عند الانتهاء
+LANGUAGE_CODE = "en-us" 
 TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-
-# 🏆🏆 التعديل النهائي لـ STATICFILES_DIRS 🏆🏆
 STATICFILES_DIRS = [
-    BASE_DIR / 'static', # إضافة المسار العام (لتغطية أي ملفات خارج مجلد التطبيق)
-    BASE_DIR / 'main' / 'static', # المسار الحالي لتطبيق 'main'
+    BASE_DIR / 'static',
+    BASE_DIR / 'main' / 'static', 
 ]
 
-# لا يزال هذا مطلوبًا لتشغيل collectstatic
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# 💥 الإضافة النهائية لكسر الـ Cache بعد كل جمع للملفات 💥
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 
-# Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# 🌟🌟🌟 إعدادات البريد الإلكتروني (لصفحة Contact) 🌟🌟🌟
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
-RECIPIENT_ADDRESS = 'info@discoversaudi.sa' # هذا يستخدمه views.py
+RECIPIENT_ADDRESS = 'info@discoversaudi.sa'
 DEFAULT_FROM_EMAIL = 'noreply@discoversaudi.sa'

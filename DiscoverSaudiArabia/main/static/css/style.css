@@ -46,7 +46,7 @@ h1, h2, h3 {
 }
 
 .navbar {
-    background-color: #333;
+    background-color: #f2eeee;
     color: white;
     padding: 15px 5%;
     display: flex;
@@ -60,7 +60,7 @@ h1, h2, h3 {
 }
 
 .navbar a {
-    color: white;
+    color: rgb(18, 17, 17);
     text-decoration: none;
     transition: color 0.3s;
 }
