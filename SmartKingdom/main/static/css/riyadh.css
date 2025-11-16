@@ -1,0 +1,452 @@
+
+body { 
+    overflow-x: hidden;
+}
+/* HERO SECTION - القسم الرئيسي */
+*{
+    padding: 0;
+    margin: 0;
+}
+.riyadh-hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:35%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(169, 210, 247, 0.7), #9bb9f74d); 
+    z-index: 2;
+}
+
+.riyadh-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+.riyadh-bg-video {
+    width: 65%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0 0 0 20px;
+}
+
+.riyadh-content {
+    position: relative;
+    z-index: 10;
+    text-align: left;
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+    margin-left: 8px; 
+    margin-top: 200px;
+}
+
+.riyadh-content h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 25px; 
+    background: linear-gradient(45deg, #2c5aa0, #ffffff, #1e3a8a, #2a7af1);
+    background-size: 300% 300%; 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(44, 90, 160, 0.5); 
+    animation: gradientShift 3s ease-in-out infinite;
+    opacity: 1;
+}
+
+.riyadh-content p {
+    font-size: 1.4rem;
+    margin-bottom: 40px; 
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.8;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 5px 10px rgb(0, 0, 0);
+    opacity: 1; 
+}
+
+/* تأثير تحرك التدرج للعنوان */
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* ABOUT SECTION - قسم التعريف  */
+.riyadh-about-box {
+    background: rgba(255, 255, 255, 0.772);
+    border-radius: 10px;
+    box-shadow: 0 16px 48px rgba(44,90,160,0.18);
+    padding: 10px 12px 2px 12px; 
+    max-width: 800px;
+    margin: -140px auto 32px auto; 
+    position: relative;
+    z-index: 20;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.riyadh-about {
+    padding: 60px 40px;
+    text-align: center;
+}
+.riyadh-about-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(44, 90, 160, 0.2);
+    transition: all 0.3s ease;
+}
+.riyadh-about-box h2 {
+    font-size: 2.2rem;
+    color: #0a0c0f;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 0;
+    margin-top: 70px;
+    text-align: center;
+    text-shadow: 0 2px 12px #fff;
+}
+.riyadh-about-box p {
+    font-size: 1.15rem;
+    color: #161a21;
+    line-height: 1.9;
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 45px;
+    background: none;
+    text-align: center;
+    justify-items: center; 
+    font-family:'Times New Roman', Times, serif;
+}
+.riyadh-about-box .riyadh-video {
+    width: 220px;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    margin-bottom: 1.2em;
+}
+.riyadh-about-box strong {
+    color: #1e40af;
+    font-weight: 700;
+}
+@media (max-width: 900px) {
+    .riyadh-about-box {
+        max-width: 98vw;
+        padding: 18px 6vw;
+    }
+    .riyadh-about-box h2 {
+        font-size: 1.3rem;
+    }
+    .riyadh-about-box p {
+        font-size: 1rem;
+        padding: 0.7em 0.5em 0.3em 0.5em;
+    }
+    .riyadh-about-box .riyadh-video {
+        width: 98vw;
+        max-width: 350px;
+    }
+}
+
+
+.AD-project {
+    text-align: center;
+    margin: 0 0 0 0;
+    background: none !important;
+    bottom: none !important;
+}
+.riyadh-ad {
+    width: 100%;
+    height: 90vh;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.riyadh-ad:hover {
+  transform: scale(1.05);
+}
+ 
+/* GREEN RIYADH SECTION */
+.riyadh-green-section {
+    background: linear-gradient(135deg, #e0f7ef 0%, #d1fae5 100%);
+    padding: 10px 0 60px 0;
+    position: relative;
+}
+.riyadh-green-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.green-text {
+    flex: 1 1 350px;
+    min-width: 300px;
+    max-width: 600px;
+}
+.green-text h2 {
+    font-size: 2.7rem;
+    color: #059669;
+    margin-bottom: 24px;
+    font-weight: 800;
+    background: linear-gradient(45deg, #059669, #10b981, #34d399);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.green-text p {
+    font-size: 1.2rem;
+    color: #166534;
+    margin-bottom: 18px;
+    line-height: 1.8;
+}
+.green-image {
+    flex: 1 1 320px;
+    min-width: 260px;
+    max-width: 500px;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(16,185,129,0.13);
+    border: 2px solid #10b98133;
+    animation: greenFloat 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes greenFloat {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 8px 32px rgba(16,185,129,0.13);
+    }
+    100% {
+        transform: translateY(-24px) scale(1.04);
+        box-shadow: 0 24px 48px rgba(16,185,129,0.18);
+    }
+}
+.green-video video {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+/* SHARED VISION SECTION */
+.riyadh-vision { /* خلفيه */
+    background: none;
+    padding: 70px 0 50px 0;
+    text-align: center;
+}
+.riyadh-vision h2 {
+    font-size: 2.7rem;
+    color: #1a2236;
+    margin-bottom: 28px;
+    font-weight: 900;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 8px rgba(44,90,160,0.08);
+}
+.riyadh-vision p {
+    font-size: 1.18rem;
+    color: #2d3748;
+    margin-bottom: 32px;
+    line-height: 1.85;
+    font-family: 'Cairo', 'Segoe UI', 'Arial', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+.vision-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 18px;
+}
+.vision-card {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f1f5f9 100%);
+    color: #111177bd;; 
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 16px;
+    padding: 22px 32px;
+    min-width: 180px;
+    box-shadow: 0 2px 12px 0 rgba(30,64,175,0.07);
+    transition: transform 0.2s;
+    color: #111177bd;; 
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 16px;
+    padding: 22px 22px;
+    min-width: 180px;
+    box-shadow: 0 2px 12px 0 rgba(30,64,175,0.07);
+    transition: transform 0.2s;
+}
+
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 900px) {
+    .riyadh-murabba, .riyadh-green-content {
+        grid-template-columns: 1fr !important;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .murabba-cards {
+        gap: 20px;
+    }
+    .green-video video {
+        height: 160px;
+    }
+    .vision-grid {
+        gap: 12px;
+    }
+}
+@media (max-width: 600px) {
+    .riyadh-about, .murabba-section, .riyadh-green-section, .riyadh-vision, .riyadh-footer-note {
+        padding: 30px 4vw !important;
+    }
+    .riyadh-content h1 {
+        font-size: 2.1rem;
+    }
+    .riyadh-content p {
+        font-size: 1.1rem;
+    }
+    .murabba-content h2, .riyadh-about h2 {
+        font-size: 1.3rem;
+    }
+    .murabba-content p, .riyadh-about p, .green-text p, .riyadh-vision p, .riyadh-footer-note p {
+        font-size: 0.98rem;
+    }
+    .green-text h2, .riyadh-vision h2, .riyadh-footer-note h3 {
+        font-size: 1.1rem;
+    }
+    .vision-card {
+        font-size: 0.95rem;
+        padding: 12px 8px;
+        min-width: 120px;
+    }
+    .green-video video {
+        height: 90px;
+    }
+}
+/* MURABBA SECTION - مشروع المربع */
+
+.murabba-section { 
+    padding: 60px 0 60px 0;
+    background: linear-gradient(135deg, #f7f3f0 0%, #fdf2e9 50%, #f5f1eb 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.riyadh-murabba {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.murabba-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #d97706, #f59e0b, #92400e);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.murabba-content p {
+    font-size: 1.3rem;
+    line-height: 1.9;
+    color: #4a5568;
+    text-shadow: none;
+}
+
+.murabba-content strong {
+    color: #d97706;
+    font-weight: 700;
+}
+
+.murabba-video { 
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(217,119,6,0.3);
+    border: 3px solid rgba(217,119,6,0.3);
+}
+
+.murabba-video video { 
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    text-align: left;
+    margin: 0 0 20px 0;
+}
+
+.murabba-video:hover video {
+    transform: scale(1.05);
+}
+
+
+/* الوضع المظلم  */
+.dark-mode .riyadh-hero .overlay {
+    background: linear-gradient(45deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%);
+}
+
+.dark-mode .riyadh-about {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+.dark-mode .riyadh-about p {
+    color: rgba(255,255,255,0.85);
+}
+
+.dark-mode .murabba-section {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+}
+
+.dark-mode .murabba-features::before {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .murabba-cards .card {
+    background: rgba(45, 55, 72, 0.9);
+    border-color: rgba(217,119,6,0.3);
+}
+
+.dark-mode .murabba-cards .card:hover {
+    box-shadow: 0 20px 40px rgba(217,119,6,0.4);
+    border-color: #d97706;
+}
+
+.dark-mode .murabba-cards .card h3 {
+    color: #f59e0b;
+}
+
+.dark-mode .murabba-cards .card p {
+    color: rgba(255,255,255,0.85);
+}
+

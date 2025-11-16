@@ -1,0 +1,78 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- 🔹 القسم الرئيسي -->
+
+<section class="qiddiya-section">
+  <div class="qiddiya-left">
+    <div class="qiddiya-hero">
+      <img src="{% static 'image/logo-gidiya.jpg' %}" alt="Qiddiya Logo">
+      <h1>QIDDIYA CITY:<br>WHERE PLAY<br>COMES TO LIFE</h1>
+      <p>Qiddiya City brings entertainment, sports, and culture together in a<br> destination unlike any other. Located on Riyadh’s doorstep within<br> the Tuwaiq mountains, it will offer residents and visitors a high<br> quality of life.</p>
+    </div>
+  </div>
+  <div class="qiddiya-right">
+    <div class="qiddiya-bg">
+      <video autoplay muted loop>
+        <source src="{% static 'videos/gidiya.mp4' %}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+
+<!-- 🔹 التعريف بالمشروع -->
+<section class="qiddiya-about">
+    <div class="image-about">
+    <img src="{% static 'image/qiddiyaa.jpg' %}" alt="Qiddiya">
+    </div>
+    <div class="about-header">
+    <h2>The world’s first city<br> built for Play</h2>
+  <p>
+    This is where thrilling entertainment & sports meet cultural experiences. Qiddiya City a cornerstone of Saudi Vision
+    2030, embodies joy, creativity, and connection. In doing so, it supports the Kingdom's economic growth, creates jobs, 
+    raises the quality of life, and puts Saudi Arabia on the world tourism map
+  </p>
+  </div>
+</section>
+
+
+<!-- 🔹 المرافق والمعالم -->
+<section class="cards-section">
+  <div class="canter-pg">
+    <video autoplay muted loop class="bg-video">
+      <source src="{% static 'videos/vidQiddiya.mp4' %}" type="video/mp4">
+    </video>
+  </div>
+  <h2 class="title">Destinations that far exceed expectations</h2>
+    <div class="cards-container">
+      <div class="card">
+        <img src="{% static 'image/flags.jpg' %}" alt="Six Flags Qiddiya City">
+        <h3>Six Flags Qiddiya City</h3>
+        <p>Offers 28 rides and attractions, 5 of which are record-breaking, including Falcons Flight.</p>
+        <a href="https://qiddiya.com/qiddiya-city/sixflags/" target="_blank" class="btn">Explore More</a>
+    </div>
+
+    <div class="card">
+      <img src="{% static 'image/spead.jpg' %}" alt="Speed Park Track Qiddiya City">
+      <h3>Speed Park Track Qiddiya City</h3>
+      <p>Speed has a new home, featuring the Blade, a 20-storey high track section that sets the park apart from any other.</p>
+      <a href="https://qiddiya.com/qiddiya-city/speed-park-track/" target="_blank" class="btn">Explore More</a>
+    </div>
+
+    <div class="card">
+      <img src="{% static 'image/stadium.jpg' %}" alt="Prince Mohammed bin Salman Stadium Qiddiya City">
+      <h3>Prince Mohammed bin Salman Stadium Qiddiya City</h3>
+      <p>A one-of-a-kind venue and an architectural marvel, poised to host all sorts of sports and cultural events, including the 2034 World Cup.</p>
+      <a href="https://qiddiya.com/qiddiya-city/prince-mohammed-bin-salman-stadium/" target="_blank" class="btn">Explore More</a>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+{%endblock %}

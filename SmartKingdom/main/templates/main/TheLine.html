@@ -1,0 +1,82 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- القسم الرئيسي -->
+<header class="line-hero">
+  <div class="line-hero-overlay"></div>
+  <img src="{% static 'image/cloud.png' %}" class="cloud-bg" alt="Clouds">
+  
+  <div class="line-hero-content">
+    <h1 class="line-title">
+      <span>T</span><span>H</span><span>E</span> <span>L</span><span>I</span><span>N</span><span>E</span>
+    </h1>
+    <p>The city of the future — where humanity and technology harmonize in musical accord</p>
+    <button class="line-btn" onclick="window.open('https://www.neom.com/ar-sa/regions/theline', '_blank')">
+      Official Project Site
+      <i class="fas fa-arrow-right"></i>
+    </button>
+  
+  </div>
+</header>
+<!--  التعريف بالمشروع -->
+<section class="line-about">
+  <div class="line-about-content">
+    <div class="line-about-text">
+      <h2>THE LINE</h2>
+      <p>
+        THE LINE is a revolutionary linear city in NEOM — a smart, sustainable urban community designed<br>
+        to run entirely on renewable energy with zero cars, zero streets, and zero carbon emissions.<br>
+        It redefines urban living through vertical architecture and advanced AI-driven systems.
+      </p>
+    </div>
+  </div>
+  <div class="videos-grid">
+    <!-- المقطع ١ -->
+    <div class="video-item">
+        <video autoplay muted loop>
+            <source src="{% static 'videos/theline1.mp4' %}" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- المقطع ٢ -->
+    <div class="video-item">
+        <video autoplay muted loop>
+            <source src="{% static 'videos/theline2.mp4' %}" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- المقطع ٣ -->
+    <div class="video-item">
+        <video autoplay muted loop>
+            <source src="{% static 'videos/theline3.mp4' %}" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- المقطع ٤ -->
+    <div class="video-item">
+        <video autoplay muted loop>
+            <source src="{% static 'videos/theline4.mp4' %}" type="video/mp4">
+        </video>
+    </div>
+</div>
+</section>
+
+
+
+<!-- 🔹 الخصائص المميزة -->
+<section class="line-features">
+  <h2>Key Features</h2>
+  <div class="features-grid">
+  <div class="feature-card"><i class="fas fa-city"></i> 170 km Long Linear City</div>
+  <div class="feature-card"><i class="fas fa-bolt"></i> 100% Renewable Energy</div>
+  <div class="feature-card"><i class="fas fa-walking"></i> No Cars — 5-Minute Walk Access</div>
+  <div class="feature-card"><i class="fas fa-robot"></i> AI-Powered Urban Management</div>
+  <div class="feature-card"><i class="fas fa-leaf"></i> 95% of Nature Preserved</div>
+  <div class="feature-card"><i class="fas fa-layer-group"></i> Vertical Layered Architecture</div>
+</section>
+
+
+
+
+{%endblock %}

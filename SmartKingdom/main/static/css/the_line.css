@@ -1,0 +1,352 @@
+
+
+/* THE LINE PAGE DESIGN */
+
+.line-hero {
+  position: relative;
+  background-image: url('../image/the-line-progress.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 70vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+.cloud-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+  pointer-events: none; /* حتى لا تؤثر على التفاعل */
+  z-index: 2; /* فوق الخلفية وتحت المحتوى إذا أردت */
+  animation: cloudMove 40s linear infinite;
+}
+
+@keyframes cloudMove {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 20%;
+  }
+}
+
+/* طبقة شفافة فوق صورة الخلفية */
+.line-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 26, 0.408); 
+  z-index: 1;
+}
+
+.line-btn {
+  display: inline-block;
+  background: transparent;
+  color: #f6b00d;
+  border: 2px solid #f6b00d;
+  border-radius: 8px;
+  padding: 10px 28px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: none;
+  transition: background 0.3s, color 0.3s, border 0.3s, transform 0.2s;
+  cursor: pointer;
+  outline: none;
+  margin-top: 18px;
+  text-decoration: none;
+  z-index: 20;
+}
+
+.line-btn:hover {
+  background: #f6b00d22;
+  color: #fff;
+  border-color: #fff;
+  transform: scale(1.05);
+}
+ 
+.line-title {
+  font-size: 5rem;
+  font-weight:lighter;
+  text-align: center;
+  align-items: center;
+  color: #ffffff;
+  text-shadow: 0 2px 16px #ea9422, 0 1px 0 #f6b00d;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.15em;
+}
+.line-title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: letterUp 1.2s forwards;
+}
+.line-title span:nth-child(odd) {
+  animation-delay: 0.4s;
+}
+.line-title span:nth-child(even) {
+  animation-delay: 0.8s;
+}
+.line-title span:nth-child(n+5) {
+  animation-delay: 1.2s;
+}
+
+@keyframes letterUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.line-title p {
+  font-size: 1.8rem;
+  text-align: center;
+  align-items: center;
+  color: #ffffff;
+}
+/* قسم التعريف */
+.line-about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 2.5rem 0;
+}
+.line-about-text {
+  max-width: 500px;
+}
+.line-about-text h2 {
+  font-size: 2.7rem;
+  color: #1a2236;
+  margin-bottom: 0.7em;
+  text-align: center;
+  align-items: center;
+  text-shadow: 0 2px 12px #f6b00d;
+}
+.line-about-text p {
+  font-size: 1.35rem;
+  color: #fff;
+  line-height: 1.8;
+  background: rgba(10,10,26,0.18);
+  padding: 2em 1.5em;
+  border: 3px solid #f6b00d;
+  border-radius: 18px;
+  text-align: center;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+  
+/* ميديا كويري لقسم التعريف */
+@media (max-width: 900px) {
+  .line-about-content {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.2rem 0.5rem;
+  }
+  .line-about-text {
+    max-width: 100%;
+    text-align: center;
+  }
+  .line-about-text h2 {
+    font-size: 1.3rem;
+  }
+  .line-about-text p {
+    font-size: 1rem;
+    padding: 0.7em 0.5em;
+  }
+}
+
+/* ميديا كويري لقسم الخصائص */
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.5em;
+  }
+  .feature-card {
+    font-size: 1rem;
+    padding: 1em 0.7em;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-card i {
+    font-size: 1.5rem;
+    margin-right: 0;
+    margin-bottom: 0.5em;
+  }
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem 0 1.5rem 0;
+}
+.feature-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  padding: 1.3em 1em;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  transition: background 0.3s, transform 0.2s;
+}
+.feature-card i {
+  font-size: 2rem;
+  color: #f6b00d;
+  margin-right: 0.5em;
+  text-shadow: 0 2px 8px #fff2cc;
+}
+.feature-card:hover {
+  background: rgba(246,176,13,0.18);
+  transform: translateY(-4px) scale(1.04);
+}
+.line-features h2 {
+  color: #2f2101;
+  font-size: 2rem;
+  margin-bottom: 1.2em;
+  text-align: center;
+  text-shadow: 0 2px 12px #fff;
+}
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .feature-card {
+    font-size: 1rem;
+    padding: 1em 0.7em;
+  }
+  .feature-card i {
+    font-size: 1.5rem;
+  }
+}
+/* ---------------- Cards Section ---------------- */
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  perspective: 1000px;
+}
+
+.video-item {
+  width: 100%;
+  height: 500px;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  animation: none;
+  transition: none;
+  border: none;
+  background: none;
+  box-shadow: none;
+  filter: none;
+}
+
+.video-item:nth-child(1) { animation-delay: 0s; }
+.video-item:nth-child(2) { animation-delay: 0.5s; }
+.video-item:nth-child(3) { animation-delay: 1s; }
+.video-item:nth-child(4) { animation-delay: 1.5s; }
+
+.video-item:hover {
+    animation: none;
+    transform: 
+        scale(1.08) 
+        rotateY(5deg) 
+        rotateX(5deg);
+    box-shadow: 
+        0 20px 50px rgba(23, 23, 88, 0.408),
+        0 0 80px rgba(64, 176, 199, 0.4),
+        inset 0 0 30px rgba(255, 255, 255, 0.2);
+    filter: brightness(1.3) contrast(1.1);
+    border-color: #0059ff6b;
+    z-index: 10;
+}
+
+.video-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 17px;
+}
+
+.video-item:hover video {
+    transform: scale(1.1);
+}
+/* تأثير الطيران */
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0) rotate(0); 
+    }
+    33% { 
+        transform: translateY(-8px) rotate(0.5deg); 
+    }
+    66% { 
+        transform: translateY(-4px) rotate(-0.5deg); 
+    }
+}
+
+/* تأثير النبض */
+@keyframes pulse {
+    0%, 100% { 
+        box-shadow: 0 10px 30px rgba(72, 0, 255, 0.3);
+    }
+    50% { 
+        box-shadow: 0 15px 40px rgba(0, 8, 255, 0.466);
+    }
+}
+.video-item::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #823e26, #3a306c, #40b0c7, #0626b6) border-box;
+    border-radius: 22px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.video-item:hover::before {
+    opacity: 1;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* تأثير الاهتزاز */
+@keyframes vibrate {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-2px); }
+    40% { transform: translateX(2px); }
+    60% { transform: translateX(-1px); }
+    80% { transform: translateX(1px); }
+}
+
+.video-item:active {
+    animation: vibrate 0.3s ease;
+}

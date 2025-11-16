@@ -1,0 +1,703 @@
+/* ========================================
+   RESPONSIVE STYLES - تنسيق متجاوب
+   ======================================== */
+
+/* Large Tablets - 1200px */
+@media (max-width: 1200px) {
+    /* Navigation Adjustments */
+    .navbar {
+        padding: 15px 40px;
+    }
+    
+    .navbar ul li {
+        margin: 0 15px;
+    }
+    
+    .navbar ul li a {
+        font-size: 15px;
+    }
+
+    /* Home Page Adjustments */
+    .intro {
+        bottom: 100px;
+        left: 60px;
+    }
+    
+    .intro h1 {
+        font-size: 45px;
+    }
+    
+    .intro p {
+        font-size: 22px;
+    }
+    
+    .top-bar {
+        left: 60px;
+    }
+
+    /* Features Section */
+    .feature-overlay {
+        padding: 60px 40px;
+    }
+    
+    .feature-overlay h2 {
+        font-size: 3rem;
+    }
+    
+    .feature_container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+    }
+
+    /* Projects Section */
+    .project-container {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+    }
+
+    /* Riyadh Page */
+    .riyadh-hero-content h1 {
+        font-size: 4rem;
+    }
+    
+    .riyadh-about-container,
+    .jeddah-about-container {
+        gap: 60px;
+    }
+    
+    .murabba-content,
+    .green-riyadh-content {
+        padding: 60px 40px;
+    }
+    
+    .murabba-content h2,
+    .green-riyadh-content h2 {
+        font-size: 3rem;
+    }
+
+    /* Cards Adjustments */
+    .cards-container,
+    .jeddah-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+    }
+}
+
+/* Medium Tablets - 968px */
+@media (max-width: 968px) {
+    /* Navigation */
+    .navbar {
+        padding: 12px 30px;
+    }
+    
+    .navbar .logo img {
+        width: 35px;
+    }
+    
+    .navbar ul li {
+        margin: 0 12px;
+    }
+    
+    .navbar ul li a {
+        font-size: 14px;
+    }
+
+    /* Home Page */
+    .intro {
+        bottom: 80px;
+        left: 40px;
+    }
+    
+    .intro h1 {
+        font-size: 40px;
+    }
+    
+    .intro p {
+        font-size: 20px;
+    }
+    
+    .home-menu {
+        gap: 20px;
+        font-size: 16px;
+    }
+    
+    .top-bar {
+        left: 40px;
+    }
+    
+    .top-bar img {
+        width: 80px;
+    }
+
+    /* Features */
+    .feature-overlay {
+        padding: 50px 30px;
+    }
+    
+    .feature-overlay h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    
+    .feature_container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+    }
+
+    /* Projects */
+    .projects {
+        padding: 60px 30px;
+    }
+    
+    .projects h1 {
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
+    
+    .project-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    /* About Sections */
+    .riyadh-about,
+    .jeddah-about {
+        padding: 80px 30px;
+    }
+    
+    .riyadh-about-container,
+    .jeddah-about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .riyadh-about-text h2,
+    .jeddah-about-text h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Video Sections */
+    .murabba-section,
+    .green-riyadh-section {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .murabba-video,
+    .green-riyadh-video {
+        height: 60vh;
+        order: 1;
+    }
+    
+    .murabba-content,
+    .green-riyadh-content {
+        order: 2;
+        padding: 50px 30px;
+    }
+    
+    .murabba-content h2,
+    .green-riyadh-content h2 {
+        font-size: 2.5rem;
+    }
+
+    /* Stats */
+    .riyadh-stats,
+    .jeddah-stats {
+        padding: 80px 30px;
+    }
+    
+    .stats-container,
+    .jeddah-stats-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+    }
+
+    /* Cards */
+    .riyadh-cards,
+    .jeddah-cards {
+        padding: 80px 30px;
+    }
+    
+    .cards-container,
+    .jeddah-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    /* Murabba Cards */
+    .murabba-cards {
+        gap: 25px;
+    }
+
+    /* Footer */
+    .footer-container {
+        padding: 60px 30px 0;
+    }
+    
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 30px;
+    }
+
+    /* Mini Footers */
+    .mini-footer,
+    .jeddah-mini-footer {
+        padding: 50px 30px 30px;
+    }
+    
+    .mini-footer-links,
+    .jeddah-mini-footer-links {
+        gap: 20px;
+    }
+}
+
+/* Small Tablets - 768px */
+@media (max-width: 768px) {
+    /* Navigation */
+    .navbar ul li a {
+        font-size: 13px;
+    }
+    
+    .navbar ul li {
+        margin: 0 10px;
+    }
+
+    /* Hero Sections */
+    .riyadh-hero-content h1,
+    .redsea-content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .riyadh-hero-content,
+    .redsea-content {
+        padding: 40px 20px;
+    }
+
+    /* Features */
+    .feature-overlay h2 {
+        font-size: 2rem;
+    }
+    
+    .feature_container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    /* Projects */
+    .projects h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Cards */
+    .cards-container,
+    .jeddah-cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Murabba Cards - Tablet */
+    .murabba-cards {
+        gap: 20px;
+    }
+    
+    .murabba-cards .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Stats */
+    .stat-number,
+    .jeddah-stat-number {
+        font-size: 2.5rem;
+    }
+
+    /* Footer adjustments */
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-bottom-links {
+        justify-content: center;
+    }
+}
+
+/* Large Mobile - 600px */
+@media (max-width: 600px) {
+    /* Navigation */
+    .navbar {
+        padding: 10px 20px;
+        backdrop-filter: blur(8px);
+    }
+    
+    .navbar .logo img {
+        width: 32px;
+    }
+    
+    .navbar ul li {
+        margin: 0 8px;
+    }
+    
+    .navbar ul li a {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    /* Home Page */
+    .intro {
+        bottom: 60px;
+        left: 20px;
+        right: 20px;
+    }
+    
+    .intro h1 {
+        font-size: 32px;
+    }
+    
+    .intro p {
+        font-size: 18px;
+    }
+    
+    .home-menu {
+        flex-direction: column;
+        gap: 15px;
+        font-size: 14px;
+    }
+    
+    .home-menu .divider {
+        display: none;
+    }
+    
+    .top-bar {
+        left: 20px;
+        top: 20px;
+    }
+    
+    .top-bar img {
+        width: 70px;
+    }
+
+    /* Features */
+    .feature-overlay {
+        padding: 40px 20px;
+        margin: 20px;
+    }
+    
+    .feature-overlay h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .feature_container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Projects */
+    .projects {
+        padding: 50px 20px;
+    }
+    
+    .projects h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    /* Hero Content */
+    .riyadh-hero-content h1,
+    .redsea-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .riyadh-hero-content p,
+    .redsea-content p {
+        font-size: 1.1rem;
+    }
+
+    /* About Sections */
+    .riyadh-about,
+    .jeddah-about {
+        padding: 60px 20px;
+    }
+    
+    .riyadh-about-text h2,
+    .jeddah-about-text h2 {
+        font-size: 2rem;
+    }
+
+    /* Video Content */
+    .murabba-content,
+    .green-riyadh-content {
+        padding: 40px 20px;
+    }
+    
+    .murabba-content h2,
+    .green-riyadh-content h2 {
+        font-size: 2rem;
+    }
+    
+    .murabba-content p,
+    .green-riyadh-content p {
+        font-size: 1rem;
+    }
+
+    /* Stats */
+    .riyadh-stats,
+    .jeddah-stats {
+        padding: 60px 20px;
+    }
+    
+    .riyadh-stats h2,
+    .jeddah-stats h2 {
+        font-size: 2rem;
+    }
+    
+    .stats-container,
+    .jeddah-stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cards */
+    .riyadh-cards,
+    .jeddah-cards {
+        padding: 60px 20px;
+    }
+    
+    .riyadh-cards h2,
+    .jeddah-cards h2 {
+        font-size: 2rem;
+    }
+    
+    /* Murabba Cards - Mobile */
+    .murabba-features {
+        padding: 40px 20px;
+    }
+    
+    .murabba-cards {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .murabba-cards .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Features Section */
+    .jeddah-features {
+        padding: 60px 20px;
+    }
+    
+    .jeddah-features h2 {
+        font-size: 2rem;
+    }
+    
+    .jeddah-features-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-container {
+        padding: 50px 20px 0;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+
+    /* Mini Footers */
+    .mini-footer,
+    .jeddah-mini-footer {
+        padding: 40px 20px 25px;
+    }
+    
+    .mini-footer h3,
+    .jeddah-mini-footer h3 {
+        font-size: 1.5rem;
+    }
+    
+    .mini-footer-links,
+    .jeddah-mini-footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .mini-footer-social,
+    .jeddah-mini-footer-social {
+        gap: 12px;
+    }
+}
+
+/* Small Mobile - 480px */
+@media (max-width: 480px) {
+    /* Navigation */
+    .navbar ul li a {
+        font-size: 11px;
+        padding: 6px 8px;
+    }
+    
+    .navbar ul li {
+        margin: 0 5px;
+    }
+
+    /* Home Page */
+    .intro h1 {
+        font-size: 28px;
+    }
+    
+    .intro p {
+        font-size: 16px;
+    }
+
+    /* Hero Sections */
+    .riyadh-hero-content h1,
+    .redsea-content h1 {
+        font-size: 2rem;
+    }
+
+    /* Features */
+    .feature-overlay h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Projects */
+    .projects h1 {
+        font-size: 1.8rem;
+    }
+
+    /* All Section Titles */
+    .riyadh-about-text h2,
+    .jeddah-about-text h2,
+    .murabba-content h2,
+    .green-riyadh-content h2,
+    .riyadh-stats h2,
+    .jeddah-stats h2,
+    .riyadh-cards h2,
+    .jeddah-cards h2,
+    .jeddah-features h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Stats Numbers */
+    .stat-number,
+    .jeddah-stat-number {
+        font-size: 2rem;
+    }
+
+    /* Buttons */
+    .btn,
+    .riyadh-hero-btn,
+    .redsea-btn,
+    .murabba-btn,
+    .green-riyadh-btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    /* Card Buttons */
+    .card-btn,
+    .jeddah-card-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    /* Footer Social Icons */
+    .social-link,
+    .mini-footer-social a,
+    .jeddah-mini-footer-social a {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+/* Extra Small Mobile - 360px */
+@media (max-width: 360px) {
+    /* Navigation */
+    .navbar {
+        padding: 8px 15px;
+    }
+    
+    .navbar ul li a {
+        font-size: 10px;
+        padding: 5px 6px;
+    }
+
+    /* Home Page */
+    .intro {
+        left: 15px;
+        right: 15px;
+        bottom: 40px;
+    }
+    
+    .intro h1 {
+        font-size: 24px;
+    }
+    
+    .intro p {
+        font-size: 14px;
+    }
+    
+    .top-bar {
+        left: 15px;
+    }
+    
+    .top-bar img {
+        width: 60px;
+    }
+
+    /* All Sections */
+    .features,
+    .projects,
+    .riyadh-about,
+    .jeddah-about,
+    .riyadh-stats,
+    .jeddah-stats,
+    .riyadh-cards,
+    .jeddah-cards,
+    .jeddah-features {
+        padding: 40px 15px;
+    }
+
+    /* Video Content */
+    .murabba-content,
+    .green-riyadh-content {
+        padding: 30px 15px;
+    }
+
+    /* Feature Overlay */
+    .feature-overlay {
+        padding: 30px 15px;
+        margin: 15px;
+    }
+
+    /* Hero Content */
+    .riyadh-hero-content,
+    .redsea-content {
+        padding: 30px 15px;
+    }
+
+    /* Mini Footers */
+    .mini-footer,
+    .jeddah-mini-footer {
+        padding: 30px 15px 20px;
+    }
+
+    /* Footer */
+    .footer-container {
+        padding: 40px 15px 0;
+    }
+}

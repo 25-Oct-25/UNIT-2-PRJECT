@@ -1,0 +1,165 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- 🔹 القسم الرئيسي -->
+<section class="riyadh-hero">
+  <div class="riyadh-hero-bg">
+    <video autoplay muted loop class="riyadh-bg-video">
+      <source src="{% static 'videos/riyadhHome.mp4' %}" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+  </div>
+
+  <div class="riyadh-content">
+  <h1><b>Riyadh <br>Visionary</b></h1>
+  <p>Where Innovation Meets Nature — <br>The Future Heart of Saudi Arabia</p>
+  </div>
+</section>
+
+<!-- 🔹 التعريف العام -->
+<section class="riyadh-about">
+  <div class="riyadh-about-box">
+    <h2>Riyadh’s Transformation </h2>
+    <p>
+      As part of Saudi Vision 2030, Riyadh is undergoing a remarkable transformation through groundbreaking projects
+      that redefine urban living and sustainability. Two of the most ambitious initiatives — <strong>New Murabba</strong>
+      and <strong>Green Riyadh</strong> — reflect the Kingdom’s vision to build a modern, connected, and eco-friendly capital.<br>
+      <br>
+      This comprehensive transformation is not limited to urban aspects alone but extends to improving the quality of life for citizens, 
+      diversifying the economic base, and positioning Riyadh on the map of sustainable global cities. It is an ambitious journey that translates 
+      the aspirations of Vision 2030 toward a brighter future.
+    </p>
+  </div>
+</section>
+
+<div class="AD-project">
+  <img src="{% static 'image/logoRiyadh.jpg' %}" alt="AD Riyadh Project Image" class="riyadh-ad">
+</div>
+
+<section class="riyadh-green-section">
+  <div class="riyadh-green-content">
+    
+    <div class="green-text">
+      <h2>Green Riyadh</h2>
+      <p>
+        Green Riyadh is one of the world's largest urban greening initiatives, 
+        aiming to transform the capital into a healthier and more sustainable city.
+        The project aligns with Vision 2030's environmental goals by increasing green spaces, 
+        improving air quality, and enhancing urban life.
+      </p>
+
+      <p>
+        The project not only enhances the beauty of Riyadh but also contributes to a more livable, sustainable, and eco-friendly future.
+      </p>
+    </div>
+    
+    <div class="green-image">
+      <img src="{% static 'image/riyadh_green.jpg' %}" alt="Green Riyadh Image">
+    </div>
+      
+      
+    </div>
+  </div>
+</section>
+
+  
+
+<!-- 🔹 القسم الأول: مشروع المربع الجديد -->
+<section class="murabba-section">
+  <div class="riyadh-murabba">
+    <div class="murabba-content">
+      <h2>Murabba</h2>
+      <p>
+        The New Murabba project represents the future of urban development in Riyadh. 
+        Anchored by the iconic cube-shaped landmark <strong>"Mukaab"</strong>, 
+        this mega-project will redefine architecture and innovation, combining residential, commercial, and cultural spaces 
+        into one futuristic district powered by smart technologies.
+      </p>
+    </div>
+    
+    <div class="murabba-video">
+      <video autoplay muted loop>
+        <source src="{% static 'videos/murrabba.mp4' %}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- 🔹 الأهداف المشتركة -->
+<section class="riyadh-vision py-5">
+  <div class="container">
+    <!-- عنوان القسم -->
+    <h2 class="mb-4">Shared Vision under Vision 2030</h2>
+    <p>
+      Both New Murabba and Green Riyadh reflect the Kingdom’s vision 
+      to balance technological progress with environmental sustainability — 
+      transforming Riyadh into a global model of smart and green living.
+    </p>
+<!-- 🔹 بداية صف البطاقات -->
+    <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-4 mt-4">
+
+      <!-- بطاقة 1 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'image/Urban_Innovation.jpg' %}" class="card-img-top" alt="Urban Innovation">
+          <div class="card-body">
+            <h5 class="card-title">Urban Innovation</h5>
+            <p class="card-text">Innovative projects to improve infrastructure and urban life in Riyadh.</p>
+            <a href="" class="btn btn-primary">Learn More</a>
+          </div>
+          <div class="card-footer text-muted">Ongoing Project</div>
+        </div>
+      </div>
+
+      <!-- بطاقة 2 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'image/sustainability.jpg' %}" class="card-img-top" alt="Environmental Sustainability">
+          <div class="card-body">
+            <h5 class="card-title">Environmental Sustainability</h5>
+            <p class="card-text">Green spaces and improved air quality for a better urban experience .<br>
+            <br></p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+          <div class="card-footer text-muted">National priority</div>
+        </div>
+      </div>
+
+      <!-- بطاقة 3 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'image/smart-tech.jpg' %}" class="card-img-top" alt="Smart Technology">
+          <div class="card-body">
+            <h5 class="card-title">Smart Technology Integration</h5>
+            <p class="card-text">Integration of smart technologies to enhance services.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+          <div class="card-footer text-muted">Technology Future</div>
+        </div>
+      </div>
+
+      <!-- بطاقة 4 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'image/tourism.jpg' %}" class="card-img-top" alt="Global Tourism">
+          <div class="card-body">
+            <h5 class="card-title">Global Tourism Destination</h5>
+            <p class="card-text">Transforming Riyadh into a global tourist destination with world-class facilities.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+          <div class="card-footer text-muted">Tourism Investment</div>
+        </div>
+      </div>
+
+    </div>
+    <!-- 🔹 نهاية صف البطاقات -->
+
+  </div>
+</section>
+
+
+
+
+{% endblock %}

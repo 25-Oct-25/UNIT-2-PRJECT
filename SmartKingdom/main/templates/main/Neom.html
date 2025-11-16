@@ -1,0 +1,62 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- القسم الرئيسي لنيوم -->
+<section class="neom-hero">
+    <video autoplay muted loop class="neom-bg">
+        <source src="{% static 'videos/neomVideos.mp4' %}" type="video/mp4">
+    </video>
+    <div class="neom-hero-content">
+        <h1>A NEW FUTURE</h1>
+        <p>NEOM is a region in the making in northwest Saudi Arabia.</p>
+    </div>
+</section>
+     
+     <section class="neom-about">
+      <div class="logo-neom">
+        <img src="{% static 'image/neom-logo-.png' %}" alt="NEOM Logo" class="neom-logo">
+       </div>
+          <div class="header-neom">
+            <h2>About NEOM</h2>
+            <p>NEOM is a region in the making in northwest Saudi Arabia, conceived to support the diversification of the Kingdom’s economy and deliver urban solutions so that people and planet can thrive in harmony. Powered by renewable energy and driven by innovation - NEOM is redefining business, livability and conservation.</p>
+          </div>
+          <div class="neom-video-frame">
+            <video controls poster="{% static 'image/neom-map.jpg' %}" width="100%">
+              <source src="{% static 'videos/vidneom.mp4' %}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>  
+        <div class="name-neom">
+          <h2>OUR NAME</h2>
+          <p>Discover the journey behind NEOM’s name – a story that captures the essence of a bold new future.</p>
+          <a href="https://www.neom.com/en-us/about/about-us/journey" target="_blank" class="neom-link">Find Out More ⭢</a>
+        </div> 
+     </section>
+  
+<!-- قسم مناطق نيوم -->
+<section class="neom-regions-section">
+  <div class="neom-container">
+    <h2>NEOM Regions & Landmarks</h2>
+    <div class="regions-grid">
+      <div class="region-card">
+        <img src="{% static 'image/neom-map.jpg' %}" alt="SINDALAH">
+        <h3>SINDALAH</h3>
+        <p>NEOM's premier island destination in the Red Sea, offering a luxury yacht club, world-class beaches and vibrant marine life. It sets a new standard for exclusive tourism.</p>
+      </div>
+      <div class="region-card">
+        <img src="{% static 'image/neommm.jpg' %}" alt="TROJENA">
+        <h3>TROJENA</h3>
+        <p>The regional mountain hub of NEOM, redefining year-round outdoor adventure and alpine tourism. It will feature ski slopes, a freshwater lake and premier wellness resorts.</p>
+      </div>
+      <div class="region-card">
+        <img src="{% static 'image/OXAGON.jpg' %}" alt="OXAGON">
+        <h3>OXAGON</h3>
+        <p>The world's largest floating industrial complex, driving advanced and clean industries in NEOM. It aims to redefine the future of sustainable manufacturing and innovation in the region.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

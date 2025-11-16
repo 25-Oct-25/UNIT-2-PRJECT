@@ -1,0 +1,498 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<!-- Hero Section المحتوى الرئيسي -->
+<section class="hero-section">
+    <video class="bg-video" autoplay muted loop>
+        <source src="{% static 'videos/new.mp4' %}" type="video/mp4">
+    </video>
+    <video class="bg-video dark-video" autoplay muted loop>
+        <source src="{% static 'videos/home_dark.mp4' %}" type="video/mp4">
+    </video>
+
+    <!-- Logo في الأعلى -->
+    <div class="top-bar">
+        <img src="{% static 'image/logo.png' %}" alt="Logo">
+    </div>
+
+    <!-- المحتوى الرئيسي في الأسفل -->
+    <div class="intro">
+        <h1><b>Smart Kingdom</b></h1>
+        <p>Toward Smart Cities and a Digital Future</p>
+
+        <div class="home-menu">
+            <a href="#projects">Projects</a>
+            <span class="divider">|</span>
+            <a href="#features">Features</a>
+            <span class="divider">|</span>
+            <a href="#partners">Partners</a>
+            <span class="divider">|</span>
+        </div>
+
+        <a href="https://youtu.be/nNtz1KtK1TU?si=10SK07UWjMu3vH2R" target="_blank" class="btn">WATCH FULL VIDEO  ▶</a>
+    </div>
+</section>
+    
+
+      <!-- الخريطه -->
+<section class="map-section">
+    <video class="map-bg-video" autoplay muted loop>
+        <source src="{% static 'videos/mojj.mp4' %}" type="video/mp4">
+    </video>
+    <div class="dark-overlay"></div>
+  
+  <div class="map-container">
+    <!-- الخريطة في اليسار -->
+    <div class="map-left">
+      <img src="{% static 'image/saudi-arabia.png' %}" alt="Saudi Map" class="map-image">
+      
+      <!-- فيديو نيوم المخفي -->
+      <div class="neom-hover-video">
+        <video autoplay muted loop>
+          <source src="{% static 'videos/wooow.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+      
+      <!-- فيديو البحر الأحمر المخفي -->
+      <div class="redsea-hover-video">
+        <video autoplay muted loop>
+          <source src="{% static 'videos/redsea.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+      
+      <!-- فيديو القدية المخفي -->
+      <div class="qiddiya-hover-video">
+        <video autoplay muted loop>
+          <source src="{% static 'videos/qiddiya.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+      
+      <!-- فيديو الرياض المخفي -->
+      <div class="riyadh-hover-video">
+        <video autoplay muted loop>
+          <source src="{% static 'videos/riyadh.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+      
+      <a href="https://www.google.com/maps/place/NEOM,+Saudi+Arabia/@28.0,35.5,11z/data=!3m1!4b1!4m6!3m5!1s0x15a9f6d8c4b4e4c9:0x123456789abcdef!8m2!3d28.0!4d35.5!16s%2Fg%2F11c6qcqcqc" target="_blank" class="region neom">📍 Neom - The line</a>
+      <a href="https://www.google.com/maps/place/Qiddiya,+Saudi+Arabia/@24.6,46.6,12z/data=!3m1!4b1!4m6!3m5!1s0x3e2f030e4b4e4c9:0x456789abcdef123!8m2!3d24.6!4d46.6!16s%2Fg%2F11c6qcqcqd" target="_blank" class="region qiddiya">📍 Qiddiya</a>
+      <a href="https://www.google.com/maps/place/Eastern+Province,+Saudi+Arabia/@26.0,50.0,8z/data=!3m1!4b1!4m6!3m5!1s0x3e49cd3f4b4e4c9:0x789abcdef1234567!8m2!3d26.0!4d50.0!16s%2Fg%2F11c6qcqcqe" target="_blank" class="region spark">📍 Spark</a>
+      <a href="https://www.google.com/maps/place/Red+Sea+Project,+Saudi+Arabia/@22.3,38.5,10z/data=!3m1!4b1!4m6!3m5!1s0x15c4f6d8c4b4e4c9:0xabcdef123456789!8m2!3d22.3!4d38.5!16s%2Fg%2F11c6qcqcqf" target="_blank" class="region jeddah">📍 Red Sea</a>
+      <a href="https://www.google.com/maps/place/Riyadh,+Saudi+Arabia/@24.7136,46.6753,11z/data=!3m1!4b1!4m6!3m5!1s0x3e2f03890d489399:0xba974d1c58e8a5!8m2!3d24.7136!4d46.6753!16zL20vMGZrMHY" target="_blank" class="region riyadh">📍 Riyadh</a>
+    </div>
+    
+    <!-- النص التعريفي في اليمين -->
+    <div class="map-text">
+      <h2 class="typing-text">Our Future is <b>Saudi Arabia's</b></h2>
+      <p class="typing-description">Under the umbrella of Saudi Vision 2030, the Kingdom is launching into a new era of creativity and urban leadership. The construction of the world's greatest cities has begun, combining exceptional quality of life with advanced technology and environmental harmony. Discover how these destinations are redefining the concept of urban living globally.</p>
+    </div>
+  </div>
+</section>
+
+    <style>
+
+        .map-section {
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .map-bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        .map-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 13, 13, 0.5);
+            z-index: 2;
+            pointer-events: none;
+            transition: background 0.3s ease;
+        }
+        .dark-mode .map-section::after {
+            background: rgba(31, 73, 212, 0.409);
+        }
+        .map-container {
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 50px;
+            width: 100%;
+        }
+        .map-left {
+            position: relative;
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(5px);
+            text-align: center;
+            overflow: hidden;
+        }
+        .map-image {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+            transition: all 0.3s ease;
+        }
+        
+        /* فيديو نيوم المخفي */
+        .neom-hover-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: opacity 0.6s ease;
+            z-index: 5;
+        }  
+        .neom-hover-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(1px);
+        }
+        
+        /* فيديو البحر الأحمر المخفي */
+        .redsea-hover-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: opacity 0.6s ease;
+            z-index: 5;
+        }
+        .redsea-hover-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(1px) sepia(10%) saturate(120%);
+        }
+        
+        /* فيديو القدية المخفي */
+        .qiddiya-hover-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: opacity 0.6s ease;
+            z-index: 5;
+        }
+        .qiddiya-hover-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(1px) brightness(110%) contrast(120%);
+        }
+        
+        /* فيديو الرياض المخفي */
+        .riyadh-hover-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: opacity 0.6s ease;
+            z-index: 5;
+        }
+        .riyadh-hover-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(1px) sepia(15%) brightness(105%) contrast(110%);
+        }
+        
+        /* النص التعريفي بدون خلفية مع أنيميشن typing */
+        .map-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px;
+            text-align: right; /* النص على اليمين */
+        }
+        .typing-text {
+            font-size: 48px;
+            font-weight: 700;
+            color: rgb(9, 9, 9);
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-right: 3px solid transparent;
+            white-space: nowrap;
+            width: 0;
+        }
+        .typing-text.start-typing {
+            animation: typing 3s steps(40, end) forwards, blink-caret 0.75s step-end 4;
+            animation-fill-mode: forwards;
+        }
+        .typing-description {
+            font-size: 22px;
+            line-height: 1.8;
+            color: #181717;
+            opacity: 0;
+            text-align: left; 
+        }
+        .typing-description.start-fade {
+            animation: fadeInUp 2s ease-out 0.5s forwards;
+        }
+        
+        /* أنيميشن الكتابة */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        /* أنيميشن وميض الكيرسور */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #f6b74a; }
+        }
+        
+        /* أنيميشن ظهور النص التوضيحي */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .region { 
+            position: absolute;
+            background: rgba(246, 183, 74, 0.9);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none; 
+            display: inline-block;
+        }
+        .region:hover {
+            background: #63593d;
+            transform: scale(1.1);
+            color: white; 
+        }
+        .region:visited {
+            color: white; 
+        }
+
+        /* تأثير hover لنيوم */
+        .map-left.neom-hovered .neom-hover-video {
+            opacity: 0.8;
+        }
+        .neom:hover {
+            background: linear-gradient(135deg, #00d4ff, #7c4dff);
+            transform: scale(1.3);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.5);
+            z-index: 15;
+            color: white;
+        }
+        /* تأثير إضافي للخريطة عند hover على نيوم */
+        .map-left.neom-hovered .map-image {
+            filter: drop-shadow(0 10px 30px rgba(0, 212, 255, 0.3)) brightness(0.6);
+        }
+        
+        /* تأثير hover للبحر الأحمر */
+        .map-left.redsea-hovered .redsea-hover-video {
+            opacity: 0.75;
+        }
+        .jeddah:hover {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53, #ff6b9d);
+            transform: scale(1.25);
+            box-shadow: 0 8px 30px rgba(255, 107, 107, 0.6);
+            z-index: 15;
+            color: white;
+        }
+        /* تأثير إضافي للخريطة عند hover على البحر الأحمر */
+        .map-left.redsea-hovered .map-image {
+            filter: drop-shadow(0 10px 30px rgba(255, 107, 107, 0.4)) brightness(0.65) hue-rotate(10deg);
+        }
+        
+        /* تأثير hover للقدية */
+        .map-left.qiddiya-hovered .qiddiya-hover-video {
+            opacity: 0.8;
+        }
+        .qiddiya:hover {
+            background: linear-gradient(135deg, #ff9500, #ffcc00, #ff6b35);
+            transform: scale(1.3) rotate(2deg);
+            box-shadow: 0 8px 35px rgba(255, 149, 0, 0.7);
+            z-index: 15;
+            color: white;
+            animation: entertainment-bounce 1.5s ease-in-out infinite;
+        }
+        
+        /* أنيميشن القفزة الترفيهية */
+        @keyframes entertainment-bounce {
+            0%, 100% { 
+                transform: scale(1.3) rotate(2deg) translateY(0px);
+            }
+            50% { 
+                transform: scale(1.35) rotate(-1deg) translateY(-3px);
+            }
+        }
+        
+        /* تأثير إضافي للخريطة عند hover على القدية */
+        .map-left.qiddiya-hovered .map-image {
+            filter: drop-shadow(0 10px 30px rgba(255, 149, 0, 0.5)) brightness(0.7) saturate(130%);
+            transform: scale(1.02);
+        }
+        
+        /* تأثير hover للرياض */
+        .map-left.riyadh-hovered .riyadh-hover-video {
+            opacity: 0.85;
+        }
+        .riyadh:hover {
+            background: linear-gradient(135deg, #d4af37, #f4e04d, #b8860b);
+            transform: scale(1.4);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.8);
+            z-index: 20;
+            color: white;
+            border: 2px solid #ffd700;
+            animation: royal-glow 2s ease-in-out infinite alternate;
+        }
+        
+        /* أنيميشن التوهج الملكي */
+        @keyframes royal-glow {
+            0% { 
+                box-shadow: 0 10px 40px rgba(212, 175, 55, 0.8), 0 0 20px rgba(255, 215, 0, 0.6);
+            }
+            100% { 
+                box-shadow: 0 15px 50px rgba(212, 175, 55, 1), 0 0 30px rgba(255, 215, 0, 1);
+                transform: scale(1.45);
+            }
+        }
+        
+        /* تأثير إضافي للخريطة عند hover على الرياض */
+        .map-left.riyadh-hovered .map-image {
+            filter: drop-shadow(0 15px 35px rgba(212, 175, 55, 0.6)) brightness(0.6) sepia(20%) saturate(150%);
+            transform: scale(1.03);
+        }
+        
+        /* مواقع المناطق على الخريطة */
+        .neom { top: 26%; left: 14%; } /* شمال غرب - NEOM */
+        .riyadh { top: 45%; left: 50%; } /* وسط - الرياض */
+        .jeddah { top: 54%; left: 25%; } /* غرب - البحر الأحمر/جدة */
+        .qiddiya { top: 50%; left: 45%; } /* قريب من الرياض - القدية */
+        .spark { top: 28%; left: 56%; } /* شرق - سبارك */
+
+    </style>
+    
+    <!-- ربط ملف JavaScript المنفصل -->
+    <script src="{% static 'js/animations.js' %}"></script>
+
+
+
+<section class="features">
+    <video class="feature-video" autoplay muted loop>
+        <source src="{% static 'videos/new.mp4' %}" type="video/mp4">
+    </video>
+    <video class="feature-video dark-video" autoplay muted loop>
+        <source src="{% static 'videos/home_dark.mp4' %}" type="video/mp4">
+    </video>
+
+    <div class="feature-overlay">
+        <h2>Smart Cities Features</h2>
+
+        <div class="feature_container">
+            <div class="feature">
+                <img src="{% static 'image/leaf.jpg' %}" alt="Sustainability">
+                <h3>Sustainability</h3>
+                <p>Building eco-friendly cities that preserve the environment for future generations through green technologies and sustainable practices.</p>
+            </div>
+            <div class="feature">
+                <img src="{% static 'image/ai.jpg' %}" alt="Artificial Intelligence">
+                <h3>Artificial Intelligence</h3>
+                <p>Leveraging AI to create intelligent infrastructure that adapts, learns, and optimizes city operations for enhanced quality of life.</p>
+            </div>
+            <div class="feature">
+                <img src="{% static 'image/energy.jpg' %}" alt="Renewable Energy">
+                <h3>Renewable Energy</h3>
+                <p>Powering the future with clean, renewable energy sources including solar, wind, and hydrogen for a carbon-neutral tomorrow.</p>
+            </div>
+            <div class="feature">
+                <img src="{% static 'image/building.jpg' %}" alt="Urban Design">
+                <h3>Urban Design</h3>
+                <p>Creating innovative architectural masterpieces that blend functionality with aesthetics, redefining modern urban landscapes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="projects">
+    <h1>Our Visionary Projects</h1>
+
+    <div class="project-container">
+        <div class="project-card neom-card">
+            <h3>NEOM</h3>
+            <p>The future of living in harmony with technology and nature, inspired by the absolute belief in humanity's ability to build a new world free of pollution and boundaries.</p>
+            <a href="{% url 'main:neom' %}" class="btn-learn">Learn More ▶</a>
+        </div>
+        <div class="project-card redsea-card">
+            <h3>RED SEA</h3>
+            <p>The world's most ambitious regenerative tourism destination, where luxury meets the exceptional biodiversity of pristine shores.</p>
+            <a href="{% url 'main:jeddah' %}" class="btn-learn">Learn More ▶</a>
+        </div>
+        <div class="project-card qiddiya-card">
+            <h3>QIDDIYA</h3>
+            <p>The future capital of entertainment, sports, and arts; the excitement destination that unlocks the potential of the Kingdom's youth.</p>
+            <a href="{% url 'main:qiddiya' %}" class="btn-learn">Learn More ▶</a>
+        </div>
+        <div class="project-card spark-card">
+            <h3>SPARK</h3>
+            <p>The global industrial and logistics hub that strengthens the entire energy value chain, acting as an engine for sustainable economic growth.</p>
+            <a href="{% url 'main:spark' %}" class="btn-learn">Learn More ▶</a>
+        </div>
+        <div class="project-card line-card">
+            <h3>THE LINE</h3>
+            <p>An architectural and human revolution; a linear city with no roads, no cars, and no emissions, designed for human well-being in perfect harmony with nature.</p>
+            <a href="{% url 'main:the_line' %}" class="btn-learn">Learn More ▶</a>
+        </div>
+        <div class="project-card riyadh-card">
+            <h3>RIYADH</h3>
+            <p>Urban powerhouse of Saudi Arabia, undergoing a massive transformation with iconic mega-projects to establish its position as a global center for finance, business, and innovation.</p>
+            <a href="{% url 'main:riyadh' %}" class="btn-learn">Learn More ▶</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+

@@ -1,0 +1,89 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<section class="redsea-hero">
+  <video class="video-redsea" autoplay muted loop>
+  <source src="{% static 'videos/redsea.mp4' %}" type="video/mp4">
+</video>
+<div class="logo-redsea">
+  <img src="{% static 'image/tortoise.jpg' %}" alt="Red Sea Logo" style="width: 40px; height: auto; filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));">
+</div>
+
+  <div class="intro-redsea" id="intro-redsea">
+    <h4>RED SEA</h4>
+    <h1>For People <br>and Planet</h1>
+    <p>At Red Sea Global we believe thet the beautyof our natural <br>environment is a reflectisection of our own ethics and values.</p>
+    <a href="#redsea-about" class="button"> Scroll down ⤵ </a>
+  </div>
+  
+</section>
+
+
+<section class="redsea-about" id="redsea-about">
+  <h2>Red Sea Global</h2>
+  <p>
+    Welcome to Red Sea Global <strong>(RSG)</strong>, where luxury, sustainability, and innovation converge to redefine how development is done. We are spearheading new development and tourism models, putting people and planet first to deliver projects that actively enhance the well-being of customers, communities, and environments.
+    <br>
+    <br>
+    Our portfolio includes six world-leading destinations along<strong> Saudi Arabia's west coast.</strong> The Red Sea destination opened its first resort in 2023, will continue opening the 16 resorts of its first phase over 2024/2025, and will be completed in 2030 with 50 resorts.
+    <br>
+    <br>
+    Owned by the Public Investment Fund (PIF) of Saudi Arabia and chaired by HRH Crown Prince <strong>Mohammad bin Salman bin Abdulaziz Al-Saud, RSG </strong>is a cornerstone of Saudi Vision 2030, helping to transform the nation, creating significant economic opportunities for the people of <strong>Saudi Arabia</strong>, and actively enhancing the Kingdom’s rich environmental and cultural heritage.
+  </p>
+    
+</section>
+
+<section class="location">
+  <div class="location-jed">
+    <h2>Location & Environment</h2>
+    <p>
+      The project is located between Umluj and Al Wajh on Saudi Arabia’s western coast.
+      This area is home to pristine coral reefs, volcanic landscapes, and untouched islands.
+    </p>
+  </div>
+  <img src="{% static 'image/redsea-map.jpg' %}" alt="Red Sea Project Map" class="map-image">
+</section>
+
+
+<section class="redsea-slider">
+  <h2>⌞⌞ Red Sea Resorts ⌝⌝</h2>
+  <div class="slider-container">
+    <button class="prev">&#10094;</button>
+    
+    <div class="slider">
+      <div class="card">
+        <img src="{% static 'image/sixsenses.jpg' %}" alt="Six Senses Southern Dunes">
+        <h3>Six Senses Southern Dunes</h3>
+        <p>Luxury desert resort blending nature with sustainability.</p>
+      </div>
+      <div class="card">
+        <img src="{% static 'image/stregis.jpg' %}" alt="St. Regis Red Sea">
+        <h3>St. Regis Red Sea</h3>
+        <p>Elegant island retreat offering world-class hospitality.</p>
+      </div>
+      <div class="card">
+        <img src="{% static 'image/nujuma.jpg' %}" alt="Nujuma Ritz-Carlton Reserve">
+        <h3>Nujuma, Ritz-Carlton Reserve</h3>
+        <p>Exclusive villas floating over turquoise waters.</p>
+      </div>
+      <div class="card">
+        <img src="{% static 'image/desertrock.jpg' %}" alt="Desert Rock Resort">
+        <h3>Desert Rock Resort</h3>
+        <p>Built into the mountains — sustainable and breathtaking.</p>
+      </div>
+      <div class="card">
+        <img src="{% static 'image/amaala.jpg' %}" alt="AMAALA">
+        <h3>AMAALA</h3>
+        <p>The ultimate luxury wellness and lifestyle destination.</p>
+      </div>
+    </div>
+
+    <button class="next">&#10095;</button>
+  </div>
+</section>
+
+
+
+{%endblock %}

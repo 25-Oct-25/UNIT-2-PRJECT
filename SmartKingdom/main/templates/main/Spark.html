@@ -1,0 +1,84 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<!--  القسم الرئيسي -->
+<section class="spark-hero">
+  <div class="logo-spark">
+    <img src="{% static 'image/Sparklogo.jpg' %}" alt="SPARK Logo">
+  </div>
+  <h1>WORLD-CLASS <br> ECOSYSTEM in<br> the heart of the<br> energy market</h1>
+
+  <div class="interactive-map">
+    <div class="map-opints">
+      <div class="point" style="top: -50%; left: 60%;">
+        <div class="point-circle"></div>
+        <div class="point-info">
+          <h3>Logistics Zone.</h3> 
+          <p>SPARK is developing a state-of-the-art<br> logistics zone that will include an<br>inland dry port, bonded area, warehouses,<br> and support services</p>
+          </div>
+      </div>
+      <div class="point" style="top: -150%; left: 60%;">
+        <div class="point-circle"></div>
+        <div class="point-info">
+          <h3>Industrial community.</h3>
+          <p>Planned in clusters to enhance<br> efficiencies and developed to strict<br> environmental standards, tenants<br> can choose between pre-built</p>
+        </div>
+      </div>
+      <div class="point"style="top: -120%; left: 49%;">
+        <div class="point-circle"></div>
+        <div class="point-info">
+          <h3>Non-industrial community.</h3>
+          <p>Spread over 15km² , SPARK provides<br> provides non-industrial investment <br>opportunities across three key areas:<br> residential, commercial, and</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  التعريف بالمشروع -->
+<section class="spark-about">
+    <div class="about-header">
+      <h2>Why SPARK?</h2>
+      <img src="{% static 'image/why-spark.jpg' %}" alt="whySpark">
+      <p>King Salman Energy Park (SPARK) is being developed as an industrial ecosystem to capture the full economic value from the energy value chain in Saudi Arabia and throughout the region.
+        <br>
+         SPARK will contribute to Saudi Arabia Vision 2030 by supporting the Kingdom’s efforts in building a strong economy of which one of the pillars is revenue diversification.
+        <br>
+         Our energy hub will become a 21st century platform for the energy sector, where its tenants and investors will grow and prosper in a vibrant international industrial community built on excellence and innovation. It is expected to contribute more than $6 billion to the Kingdom’s GDP annually and create up to 100,000 direct and indirect jobs at the maturity.
+      </p>
+    </div>
+</section>    
+    <section class="spark-vision">
+      <div class="image-vision">
+        <img src="{% static 'image/vision.jpg' %}" alt="Vision Mission">
+        <div class="vision-block">
+          <h2><strong>Our Vision:</strong></h2>
+          <p>To be a leading industrial ecosystem with sustainability at its core, connecting the world to opportunities in the Saudi energy sector and beyond.</p>
+        </div>
+        <div class="mission-block">
+          <h2><strong>Our Mission:</strong></h2>
+          <p>To place our investors at the heart of the energy market, by providing a platform with world-class infrastructure and services that helps facilitate the growth of our customers’ businesses and brings sustained value to our communities.</p>
+        </div>
+      </div>
+</section>
+
+
+
+
+<!-- 🔹 Investment Call-to-Action Section -->
+<div class="video-frame-container">
+  <video autoplay muted loop class="video-frame">
+    <source src="{% static 'videos/projectspark.mp4' %}" type="video/mp4">
+  </video>
+</div>
+<div style="text-align:center; margin: 18px 0 40px 0; font-size:1.15rem;">
+  <strong>Watch Full Video</strong><br>
+  <div class="investore">
+    <h3>Are you interested in investing with SPARK? </h3>
+    <button a href='https://www.spark.sa/page/Become_an_Investor' class="investor-btn">Click Here..</button>
+  </div>
+</div>
+
+{%endblock %}

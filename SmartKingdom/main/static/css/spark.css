@@ -1,0 +1,402 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.spark-hero {
+    background-image: url("../image/newspark.jpg.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo-spark img{
+    width: 120px;
+    margin-left: 50px;
+    margin-top: 95px; 
+}
+
+.spark-hero h1 {
+    color: rgba(17, 18, 17, 0.827);
+    font-size: 2rem;
+    text-align: left;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 240px;
+    position: relative;
+    padding-left: 20px;
+    background: linear-gradient(270deg, #242525, #2b2e2c, #727672, #dde4df, #1516158d);
+    background-size: 1000% 1000%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 15s ease infinite;
+}
+.spark-hero h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15%;
+    bottom: 15%;
+    width: 4px;
+    background-color: #2da335ce;
+    border-radius: 2px;
+}
+
+.interactive-map {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin-top: 50px;
+}
+
+.map-points {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* تصميم الدوائر */
+.point {
+    position: absolute;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.point-circle {
+    width: 25px;
+    height: 25px;
+    background-color: #2e6024a7;
+    border: 3px solid white;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* تأثير النبض */
+.point-circle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #329b05b8;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* المعلومات */
+.point-info {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    width: 200px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.point-info h4 {
+    margin: 0 0 8px 0;
+    color: #8ee24db0;
+    font-size: 16px;
+}
+
+.point-info p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+.point:hover .point-circle {
+    transform: scale(1.2);
+    background-color: #4a8d14;
+}
+
+.point:hover .point-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* About */
+.spark-about {
+    display: flex;
+    padding: 60px 5%;
+    gap:40px;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+
+.spark-about .about-header h2 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    color: #55a845d6;
+}
+.spark-about .about-header img {
+    width: 90%;
+    border-radius: 100px 2px 100px 2px;;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    border: #4a8d14 solid 1px;
+}
+.about-header p {
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: #444;
+    text-align: left;
+    margin-left: 1200px !important;
+    margin-top: -270px; 
+    padding: 20px;
+}
+.spark-vision {
+    background-color: #ffffff;
+    display: flex;
+}
+
+.image-vision img {
+    width: 45%;
+    height: auto;
+    margin-left: 700px;
+    border-radius: 100px 2px 100px 2px;
+}
+.vision-block h2 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 22px;
+    margin-left: 300px;
+    margin-top: -300px;
+    padding-left: 0 !important;
+    color: #56a845e1;
+}
+.vision-block p {
+    width: 40%;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    color: #444;
+    padding: 15px;
+    text-align: center;
+    margin-left: 130px;
+    margin-bottom: -50px
+}
+.mission-block h2 {
+    font-size: 2.3rem;
+    text-align: left;
+    margin-bottom: 22px;
+    margin-left: 300px;
+    margin-top: 60px;
+    padding-left: 0 !important;
+    color: #56a845e6;
+}
+.mission-block p {
+    width: 40%;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    color: #444;
+    padding: 15px;
+    text-align: center;
+    margin-left: 130px;
+}
+/* ===== YouTube Video Frame Styling ===== */
+.video-frame-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 0 auto;
+    padding: 16px;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+    max-width: 650px;
+    background: #fff !important;
+    background-color: #fff !important;
+}
+.video-frame {
+    border-radius: 12px;
+    width: 100%;
+    max-width: 560px;
+    min-height: 315px;
+}
+
+/* زر الاستثمار */
+.investor-btn {
+    background: transparent;
+    color: #2da335;
+    border: 2px solid #2da335;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 1.08rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: none;
+    transition: background 0.3s, color 0.3s, border 0.3s, transform 0.2s;
+    cursor: pointer;
+    outline: none;
+}
+.investor-btn:hover {
+    background: #2da33522;
+    color: #155a1a;
+    border-color: #155a1a;
+    transform: scale(1.05);
+}
+
+/*   Responsive Layout   */
+@media (max-width: 1200px) {
+    .spark-hero h1 {
+        font-size: 1.5rem;
+        margin-top: 120px;
+    }
+    .logo-spark img {
+        width: 90px;
+        margin-top: 60px;
+    }
+}
+@media (max-width: 600px) {
+    .spark-hero {
+        height: 60vw;
+        min-height: 220px;
+        padding: 0 2vw;
+    }
+    .spark-hero h1 {
+        font-size: 1.1rem;
+        margin-top: 60px;
+        margin-left: 10px;
+        padding-left: 0;
+    }
+    .logo-spark img {
+        width: 60px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+}
+/* ===== ABOUT SECTION ===== */
+@media (max-width: 900px) {
+    .spark-about {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 2vw;
+    }
+    .about-header img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 600px) {
+    .spark-about {
+        padding: 18px 2vw;
+        gap: 10px;
+    }
+    .about-header h2 {
+        font-size: 1.2rem;
+    }
+    .about-header img {
+        width: 100%;
+        margin-bottom: 6px;
+    }
+    .about-header p {
+        font-size: 0.9rem;
+        padding: 8px;
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+    }
+}
+/* ===== VISION & MISSION SECTION ===== */
+@media (max-width: 1200px) {
+    .image-vision img {
+        margin-left: 0;
+        width: 80%;
+    }
+    .vision-block h2, .mission-block h2 {
+        margin-left: 0;
+        font-size: 2rem;
+    }
+    .vision-block p, .mission-block p {
+        width: 90%;
+        margin-left: 0;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 900px) {
+    .image-vision img {
+        width: 100%;
+        margin-left: 0;
+    }
+    .vision-block h2, .mission-block h2 {
+        font-size: 1.3rem;
+        margin-left: 0;
+    }
+    .vision-block p, .mission-block p {
+        width: 100%;
+        margin-left: 0;
+        font-size: 0.95rem;
+    }
+}
+@media (max-width: 600px) {
+    .image-vision img {
+        width: 100%;
+        margin-left: 0;
+        border-radius: 20px;
+    }
+    .vision-block h2, .mission-block h2 {
+        font-size: 1.1rem;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .vision-block p, .mission-block p {
+        width: 100%;
+        margin-left: 0;
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+}
+/* ===== INTERACTIVE MAP SECTION ===== */
+@media (max-width: 600px) {
+    .interactive-map {
+        height: 200px;
+        margin-top: 20px;
+    }
+}
+/* ===== VIDEO/IMAGE & CTA SECTION ===== */
+@media (max-width: 700px) {
+    .video-frame {
+        max-width: 100vw;
+        min-height: 120px;
+        height: 32vw;
+    }
+    .video-frame-container {
+        max-width: 99vw;
+        padding: 2px;
+        margin: 18px autخلo 0 auto;
+    }
+}
+/* ===== FOOTER SECTION ===== */
+@media (max-width: 600px) {
+    .spark-footer {
+        min-height: 80px;
+        height: 18vw;
+        max-height: 100px;
+    }
+}
